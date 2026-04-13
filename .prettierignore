@@ -1,0 +1,9 @@
+.yarn
+.next
+out
+dist
+build
+*.lock
+package-lock.json
+yarn.lock
+.pnp.*

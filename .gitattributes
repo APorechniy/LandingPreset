@@ -1,0 +1,28 @@
+/.yarn/**            linguist-vendored
+/.yarn/releases/*    binary
+/.yarn/plugins/**/*  binary
+/.pnp.*              binary linguist-generated
+
+* text eol=lf
+
+# Файлы, которые всегда должны быть LF
+*.js text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
+*.css text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.html text eol=lf
+
+# Бинарные файлы (не конвертировать)
+*.png binary
+*.jpg binary
+*.ico binary
+*.zip binary
+
+# Специальные файлы
+.gitattributes text eol=lf
+.gitignore text eol=lf
+.editorconfig text eol=lf
