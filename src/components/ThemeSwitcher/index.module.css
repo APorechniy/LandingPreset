@@ -1,0 +1,34 @@
+.switcher {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.themeToggle {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-md);
+    padding: 0.5rem;
+    cursor: pointer;
+    font-size: 1.25rem;
+    transition: all var(--transition-duration);
+}
+
+.themeToggle:hover {
+    transform: scale(1.05);
+    background: var(--bg-tertiary);
+}
+
+.schemeSelect {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-md);
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 0.875rem;
+}
+
+.schemeSelect:hover {
+    background: var(--bg-tertiary);
+}

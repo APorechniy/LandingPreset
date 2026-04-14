@@ -1,5 +1,8 @@
 import type { Metadata } from 'next'
+import { ThemeProvider } from '@/providers/ThemeProvider'
 import './global.css'
+import '../styles/themes.css'
+
 
 export const metadata: Metadata = {
     title: 'Landing Preset | Быстрые лендинги на Next.js + Yarn 4',
@@ -14,8 +17,12 @@ export default function RootLayout({
     children: React.ReactNode
 }) {
     return (
-        <html lang="ru">
-            <body>{children}</body>
+        <html lang="ru" suppressHydrationWarning>
+            <body>
+                <ThemeProvider>
+                    {children}
+                </ThemeProvider>
+            </body>
         </html>
     )
 }
