@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './global.css'
+import { Hero } from '@/sections/Hero'
 
 export const metadata: Metadata = {
     title: 'Landing Preset | Быстрые лендинги на Next.js + Yarn 4',
@@ -8,14 +9,10 @@ export const metadata: Metadata = {
     robots: 'index, follow',
 }
 
-export default function Page({
-    children,
-}: {
-    children: React.ReactNode
-}) {
+export default function Page() {
     return (
-        <html lang="ru">
-            <body>{children}</body>
-        </html>
+        <main>
+            <Hero />
+        </main>
     )
 }
