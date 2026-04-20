@@ -61,13 +61,27 @@ function generateStyledFile(styles) {
         const tagName = styleProps.__html || 'div';
         content += `export const ${componentName} = styled.${tagName}\`\n`;
 
-        // Добавляем все CSS свойства кроме __html
-        for (const [prop, value] of Object.entries(styleProps)) {
-            if (prop !== '__html') {
+        // Добавляем все базовые CSS свойства 
+        if (styleProps.base) {
+            for (const [prop, value] of Object.entries(styleProps.base)) {
                 const cssProp = camelToKebab(prop);
                 content += `    ${cssProp}: ${value};\n`;
             }
+        } else {
+            console.error('❌ Error generating files:', error.message);
+            process.exit(1);
         }
+
+        // Если есть - добавляем media-блок
+        if (styleProps.mobile && Object.entries(styleProps.mobile).length !== 0) {
+            content += `    @media(max-width: 768px) {\n`
+            for (const [prop, value] of Object.entries(styleProps.mobile)) {
+                const cssProp = camelToKebab(prop);
+                content += `      ${cssProp}: ${value};\n`;
+            }
+            content += `    }\n`
+        }
+
 
         content += '\`;\n\n';
     }

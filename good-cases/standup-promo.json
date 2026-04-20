@@ -1,0 +1,929 @@
+{
+    "globalCssTokens": {
+        "base": {
+            "--transition-fast": "0.15s cubic-bezier(0.4, 0, 0.2, 1)",
+            "--transition-smooth": "0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+            "--transition-bounce": "0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55)",
+            "--border-radius-sm": "0.5rem",
+            "--border-radius-md": "1rem",
+            "--border-radius-lg": "2rem",
+            "--border-radius-xl": "3rem",
+            "--border-radius-full": "9999px",
+            "--font-main": "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
+            "--font-display": "'Bebas Neue', 'Impact', sans-serif",
+            "--font-decor": "'Comic Sans MS', cursive",
+            "--container-width": "1280px"
+        },
+        "light": {
+            "--primary": "#1a1a2e",
+            "--primary-light": "#16213e",
+            "--accent": "#e94560",
+            "--accent-glow": "#ff6b81",
+            "--accent-secondary": "#533483",
+            "--accent-tertiary": "#f5a623",
+            "--background": "#ffffff",
+            "--background-alt": "#f8f9fa",
+            "--surface": "#ffffff",
+            "--surface-dark": "#1a1a2e",
+            "--text-main": "#1a1a2e",
+            "--text-muted": "#4a4a5e",
+            "--text-light": "#8a8a9e",
+            "--text-inverse": "#ffffff",
+            "--border-light": "#e0e0e0",
+            "--border-accent": "#e94560",
+            "--shadow-sm": "0 4px 12px rgba(26, 26, 46, 0.06)",
+            "--shadow-md": "0 12px 28px rgba(26, 26, 46, 0.1)",
+            "--shadow-lg": "0 24px 48px rgba(26, 26, 46, 0.15)",
+            "--shadow-neon": "0 0 30px rgba(233, 69, 96, 0.4)",
+            "--gradient-hero": "linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)",
+            "--gradient-accent": "linear-gradient(135deg, #e94560 0%, #ff6b81 100%)",
+            "--gradient-purple": "linear-gradient(135deg, #533483 0%, #7b4fba 100%)",
+            "--pattern-dots": "radial-gradient(circle at 2px 2px, rgba(233, 69, 96, 0.15) 1px, transparent 1px)",
+            "--pattern-lines": "repeating-linear-gradient(45deg, rgba(0,0,0,0.02) 0px, rgba(0,0,0,0.02) 2px, transparent 2px, transparent 8px)"
+        },
+        "dark": {
+            "--primary": "#e94560",
+            "--primary-light": "#ff6b81",
+            "--accent": "#f5a623",
+            "--accent-glow": "#ffc107",
+            "--accent-secondary": "#7b4fba",
+            "--accent-tertiary": "#00d2ff",
+            "--background": "#0f0f1a",
+            "--background-alt": "#1a1a2e",
+            "--surface": "#16213e",
+            "--surface-dark": "#0a0a15",
+            "--text-main": "#ffffff",
+            "--text-muted": "#b0b0c0",
+            "--text-light": "#707080",
+            "--text-inverse": "#1a1a2e",
+            "--border-light": "#2a2a40",
+            "--border-accent": "#f5a623",
+            "--shadow-sm": "0 4px 12px rgba(0, 0, 0, 0.3)",
+            "--shadow-md": "0 12px 28px rgba(0, 0, 0, 0.4)",
+            "--shadow-lg": "0 24px 48px rgba(0, 0, 0, 0.5)",
+            "--shadow-neon": "0 0 40px rgba(245, 166, 35, 0.5)",
+            "--gradient-hero": "linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%)",
+            "--gradient-accent": "linear-gradient(135deg, #f5a623 0%, #ffc107 100%)",
+            "--gradient-purple": "linear-gradient(135deg, #533483 0%, #7b4fba 100%)",
+            "--pattern-dots": "radial-gradient(circle at 2px 2px, rgba(245, 166, 35, 0.2) 1px, transparent 1px)",
+            "--pattern-lines": "repeating-linear-gradient(45deg, rgba(255,255,255,0.02) 0px, rgba(255,255,255,0.02) 2px, transparent 2px, transparent 8px)"
+        }
+    },
+    "sections": {
+        "Header": {
+            "styles": {
+                "HeaderWrapper": {
+                    "__html": "header",
+                    "base": {
+                        "position": "fixed",
+                        "top": "0",
+                        "left": "0",
+                        "right": "0",
+                        "z-index": "100",
+                        "background": "var(--background)",
+                        "border-bottom": "2px solid var(--border-accent)",
+                        "font-family": "var(--font-main)",
+                        "box-shadow": "var(--shadow-sm)"
+                    },
+                    "mobile": {
+                        "background": "rgba(255, 255, 255, 0.95)",
+                        "backdrop-filter": "blur(8px)"
+                    }
+                },
+                "HeaderContainer": {
+                    "__html": "div",
+                    "base": {
+                        "max-width": "var(--container-width)",
+                        "margin": "0 auto",
+                        "padding": "1rem 2rem",
+                        "display": "flex",
+                        "align-items": "center",
+                        "justify-content": "space-between"
+                    },
+                    "mobile": {
+                        "padding": "0.75rem 1rem"
+                    }
+                },
+                "LogoContainer": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "align-items": "center",
+                        "gap": "0.5rem"
+                    },
+                    "mobile": {}
+                },
+                "LogoEmoji": {
+                    "__html": "span",
+                    "base": {
+                        "font-size": "2rem",
+                        "line-height": "1"
+                    },
+                    "mobile": {
+                        "font-size": "1.75rem"
+                    }
+                },
+                "LogoText": {
+                    "__html": "span",
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "1.75rem",
+                        "font-weight": "700",
+                        "color": "var(--text-main)",
+                        "letter-spacing": "-0.02em"
+                    },
+                    "mobile": {
+                        "font-size": "1.25rem"
+                    }
+                },
+                "LogoAccent": {
+                    "__html": "span",
+                    "base": {
+                        "color": "var(--accent)"
+                    },
+                    "mobile": {}
+                },
+                "NavContainer": {
+                    "__html": "nav",
+                    "base": {
+                        "display": "flex",
+                        "align-items": "center",
+                        "gap": "2rem"
+                    },
+                    "mobile": {
+                        "display": "none"
+                    }
+                },
+                "NavItemOne": {
+                    "__html": "a",
+                    "base": {
+                        "color": "var(--text-main)",
+                        "font-weight": "600",
+                        "font-size": "0.95rem",
+                        "cursor": "pointer",
+                        "transition": "color var(--transition-fast)",
+                        "text-transform": "uppercase",
+                        "letter-spacing": "0.5px"
+                    },
+                    "mobile": {}
+                },
+                "NavItemTwo": {
+                    "__html": "a",
+                    "base": {
+                        "color": "var(--text-main)",
+                        "font-weight": "600",
+                        "font-size": "0.95rem",
+                        "cursor": "pointer",
+                        "transition": "color var(--transition-fast)",
+                        "text-transform": "uppercase",
+                        "letter-spacing": "0.5px"
+                    },
+                    "mobile": {}
+                },
+                "NavItemThree": {
+                    "__html": "a",
+                    "base": {
+                        "color": "var(--text-main)",
+                        "font-weight": "600",
+                        "font-size": "0.95rem",
+                        "cursor": "pointer",
+                        "transition": "color var(--transition-fast)",
+                        "text-transform": "uppercase",
+                        "letter-spacing": "0.5px"
+                    },
+                    "mobile": {}
+                },
+                "NavItemFour": {
+                    "__html": "a",
+                    "base": {
+                        "color": "var(--text-main)",
+                        "font-weight": "600",
+                        "font-size": "0.95rem",
+                        "cursor": "pointer",
+                        "transition": "color var(--transition-fast)",
+                        "text-transform": "uppercase",
+                        "letter-spacing": "0.5px"
+                    },
+                    "mobile": {}
+                },
+                "HeaderActions": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "align-items": "center",
+                        "gap": "1rem"
+                    },
+                    "mobile": {}
+                },
+                "HeaderCta": {
+                    "__html": "button",
+                    "base": {
+                        "background": "var(--gradient-accent)",
+                        "color": "white",
+                        "border": "none",
+                        "border-radius": "var(--border-radius-full)",
+                        "padding": "0.75rem 1.75rem",
+                        "font-weight": "700",
+                        "font-size": "0.9rem",
+                        "cursor": "pointer",
+                        "transition": "all var(--transition-smooth)",
+                        "text-transform": "uppercase",
+                        "letter-spacing": "1px",
+                        "box-shadow": "var(--shadow-neon)"
+                    },
+                    "mobile": {
+                        "padding": "0.5rem 1rem",
+                        "font-size": "0.8rem"
+                    }
+                },
+                "MobileMenuButton": {
+                    "__html": "button",
+                    "base": {
+                        "display": "none",
+                        "background": "transparent",
+                        "border": "2px solid var(--border-accent)",
+                        "border-radius": "var(--border-radius-sm)",
+                        "padding": "0.5rem 0.75rem",
+                        "cursor": "pointer",
+                        "color": "var(--text-main)",
+                        "font-weight": "700"
+                    },
+                    "mobile": {
+                        "display": "block"
+                    }
+                }
+            },
+            "mainContent": {
+                "HeaderWrapper": {
+                    "HeaderContainer": {
+                        "LogoContainer": {
+                            "LogoEmoji": {
+                                "content": "🎤"
+                            },
+                            "LogoText": {
+                                "content": "ШУТКИ",
+                                "LogoAccent": {
+                                    "content": "ПРО"
+                                }
+                            }
+                        },
+                        "NavContainer": {
+                            "NavItemOne": {
+                                "content": "Афиша"
+                            },
+                            "NavItemTwo": {
+                                "content": "О комике"
+                            },
+                            "NavItemThree": {
+                                "content": "Видео"
+                            },
+                            "NavItemFour": {
+                                "content": "Контакты"
+                            }
+                        },
+                        "HeaderActions": {
+                            "HeaderCta": {
+                                "content": "Билеты"
+                            },
+                            "MobileMenuButton": {
+                                "content": "☰ МЕНЮ"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "Hero": {
+            "styles": {
+                "HeroSection": {
+                    "__html": "section",
+                    "base": {
+                        "width": "100%",
+                        "min-height": "100vh",
+                        "display": "flex",
+                        "align-items": "center",
+                        "padding": "6rem 0 0 0",
+                        "background": "var(--gradient-hero)",
+                        "position": "relative",
+                        "overflow": "hidden",
+                        "font-family": "var(--font-main)"
+                    },
+                    "mobile": {
+                        "min-height": "auto",
+                        "padding": "5rem 0 0 0"
+                    }
+                },
+                "HeroPattern": {
+                    "__html": "div",
+                    "base": {
+                        "position": "absolute",
+                        "top": "0",
+                        "left": "0",
+                        "right": "0",
+                        "bottom": "0",
+                        "background": "var(--pattern-dots)",
+                        "background-size": "40px 40px",
+                        "opacity": "0.6",
+                        "pointer-events": "none"
+                    },
+                    "mobile": {}
+                },
+                "HeroContainer": {
+                    "__html": "div",
+                    "base": {
+                        "width": "100%",
+                        "height": "100%",
+                        "display": "flex",
+                        "align-items": "center",
+                        "position": "relative",
+                        "z-index": "2"
+                    },
+                    "mobile": {
+                        "flex-direction": "column"
+                    }
+                },
+                "HeroContent": {
+                    "__html": "div",
+                    "base": {
+                        "width": "40%",
+                        "padding-left": "max(2rem, calc((100vw - var(--container-width)) / 2 + 2rem))",
+                        "padding-right": "2rem",
+                        "display": "flex",
+                        "flex-direction": "column",
+                        "gap": "1.5rem"
+                    },
+                    "mobile": {
+                        "width": "100%",
+                        "padding": "2rem 1rem",
+                        "text-align": "center",
+                        "align-items": "center"
+                    }
+                },
+                "HeroBadge": {
+                    "__html": "div",
+                    "base": {
+                        "display": "inline-flex",
+                        "align-items": "center",
+                        "gap": "0.5rem",
+                        "background": "var(--gradient-purple)",
+                        "border-radius": "var(--border-radius-full)",
+                        "padding": "0.5rem 1.25rem",
+                        "width": "fit-content",
+                        "transform": "rotate(-2deg)"
+                    },
+                    "mobile": {
+                        "margin": "0 auto"
+                    }
+                },
+                "BadgeText": {
+                    "__html": "span",
+                    "base": {
+                        "color": "white",
+                        "font-weight": "700",
+                        "text-transform": "uppercase",
+                        "letter-spacing": "1px",
+                        "font-size": "0.9rem"
+                    },
+                    "mobile": {}
+                },
+                "HeroTitle": {
+                    "__html": "h1",
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "clamp(3.5rem, 7vw, 6rem)",
+                        "font-weight": "700",
+                        "line-height": "0.95",
+                        "color": "white",
+                        "margin": "0",
+                        "text-transform": "uppercase"
+                    },
+                    "mobile": {
+                        "font-size": "clamp(2.5rem, 12vw, 4rem)"
+                    }
+                },
+                "HeroTitleLineOne": {
+                    "__html": "span",
+                    "base": {
+                        "display": "block"
+                    },
+                    "mobile": {}
+                },
+                "HeroTitleLineTwo": {
+                    "__html": "span",
+                    "base": {
+                        "display": "block",
+                        "color": "var(--accent-tertiary)",
+                        "text-shadow": "0 0 20px rgba(245, 166, 35, 0.5)"
+                    },
+                    "mobile": {}
+                },
+                "HeroDescription": {
+                    "__html": "p",
+                    "base": {
+                        "font-size": "1.2rem",
+                        "line-height": "1.6",
+                        "color": "rgba(255,255,255,0.8)",
+                        "margin": "0",
+                        "max-width": "90%"
+                    },
+                    "mobile": {
+                        "font-size": "1rem",
+                        "max-width": "100%"
+                    }
+                },
+                "HeroMeta": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "gap": "2rem",
+                        "margin-top": "1rem"
+                    },
+                    "mobile": {
+                        "justify-content": "center",
+                        "gap": "1.5rem"
+                    }
+                },
+                "MetaItemOne": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "align-items": "center",
+                        "gap": "0.75rem"
+                    },
+                    "mobile": {}
+                },
+                "MetaItemTwo": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "align-items": "center",
+                        "gap": "0.75rem"
+                    },
+                    "mobile": {}
+                },
+                "MetaIcon": {
+                    "__html": "span",
+                    "base": {
+                        "font-size": "1.5rem"
+                    },
+                    "mobile": {
+                        "font-size": "1.25rem"
+                    }
+                },
+                "MetaText": {
+                    "__html": "span",
+                    "base": {
+                        "color": "rgba(255,255,255,0.9)",
+                        "font-weight": "500"
+                    },
+                    "mobile": {
+                        "font-size": "0.9rem"
+                    }
+                },
+                "HeroCta": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "gap": "1rem",
+                        "margin-top": "1.5rem"
+                    },
+                    "mobile": {
+                        "flex-direction": "column",
+                        "width": "100%",
+                        "max-width": "300px"
+                    }
+                },
+                "PrimaryButton": {
+                    "__html": "button",
+                    "base": {
+                        "background": "var(--gradient-accent)",
+                        "color": "var(--text-inverse)",
+                        "border": "none",
+                        "border-radius": "var(--border-radius-full)",
+                        "padding": "1.25rem 2.5rem",
+                        "font-weight": "700",
+                        "font-size": "1.2rem",
+                        "cursor": "pointer",
+                        "transition": "all var(--transition-smooth)",
+                        "box-shadow": "var(--shadow-neon)",
+                        "text-transform": "uppercase"
+                    },
+                    "mobile": {
+                        "padding": "1rem",
+                        "font-size": "1.1rem",
+                        "width": "100%"
+                    }
+                },
+                "SecondaryButton": {
+                    "__html": "button",
+                    "base": {
+                        "background": "transparent",
+                        "color": "white",
+                        "border": "2px solid rgba(255,255,255,0.3)",
+                        "border-radius": "var(--border-radius-full)",
+                        "padding": "1.25rem 2.5rem",
+                        "font-weight": "600",
+                        "font-size": "1.2rem",
+                        "cursor": "pointer",
+                        "transition": "all var(--transition-smooth)",
+                        "text-transform": "uppercase"
+                    },
+                    "mobile": {
+                        "padding": "1rem",
+                        "font-size": "1.1rem",
+                        "width": "100%"
+                    }
+                },
+                "HeroVisual": {
+                    "__html": "div",
+                    "base": {
+                        "width": "60%",
+                        "height": "100%",
+                        "position": "relative",
+                        "display": "flex",
+                        "align-items": "flex-end",
+                        "justify-content": "flex-end"
+                    },
+                    "mobile": {
+                        "width": "100%",
+                        "justify-content": "center"
+                    }
+                },
+                "ComicImage": {
+                    "__html": "div",
+                    "base": {
+                        "width": "100%",
+                        "height": "85vh",
+                        "max-width": "700px",
+                        "background": "linear-gradient(135deg, var(--accent-secondary), var(--accent))",
+                        "border-radius": "var(--border-radius-lg) 0 0 var(--border-radius-lg)",
+                        "position": "relative",
+                        "box-shadow": "-20px 0 60px rgba(0,0,0,0.3)",
+                        "border": "3px solid var(--accent-tertiary)",
+                        "border-right": "none"
+                    },
+                    "mobile": {
+                        "height": "400px",
+                        "max-width": "100%",
+                        "border-radius": "var(--border-radius-lg) var(--border-radius-lg) 0 0",
+                        "border": "3px solid var(--accent-tertiary)",
+                        "border-bottom": "none"
+                    }
+                },
+                "FloatingQuoteOne": {
+                    "__html": "div",
+                    "base": {
+                        "position": "absolute",
+                        "top": "15%",
+                        "left": "-2rem",
+                        "background": "var(--surface)",
+                        "border-radius": "var(--border-radius-md)",
+                        "padding": "1rem 1.5rem",
+                        "box-shadow": "var(--shadow-lg)",
+                        "transform": "rotate(-5deg)",
+                        "border-left": "4px solid var(--accent)"
+                    },
+                    "mobile": {
+                        "left": "0.5rem",
+                        "top": "5%",
+                        "padding": "0.75rem 1rem"
+                    }
+                },
+                "FloatingQuoteTwo": {
+                    "__html": "div",
+                    "base": {
+                        "position": "absolute",
+                        "bottom": "20%",
+                        "right": "-1rem",
+                        "background": "var(--surface-dark)",
+                        "border-radius": "var(--border-radius-md)",
+                        "padding": "1rem 1.5rem",
+                        "box-shadow": "var(--shadow-lg)",
+                        "transform": "rotate(3deg)",
+                        "border-right": "4px solid var(--accent-tertiary)"
+                    },
+                    "mobile": {
+                        "right": "0.5rem",
+                        "bottom": "10%",
+                        "padding": "0.75rem 1rem"
+                    }
+                },
+                "QuoteText": {
+                    "__html": "p",
+                    "base": {
+                        "font-weight": "600",
+                        "margin": "0",
+                        "color": "var(--text-main)"
+                    },
+                    "mobile": {
+                        "font-size": "0.85rem"
+                    }
+                },
+                "QuoteTextLight": {
+                    "__html": "p",
+                    "base": {
+                        "font-weight": "600",
+                        "margin": "0",
+                        "color": "white"
+                    },
+                    "mobile": {
+                        "font-size": "0.85rem"
+                    }
+                },
+                "QuoteAuthor": {
+                    "__html": "p",
+                    "base": {
+                        "color": "var(--accent)",
+                        "font-size": "0.8rem",
+                        "margin": "0.25rem 0 0"
+                    },
+                    "mobile": {}
+                },
+                "ScrollHint": {
+                    "__html": "div",
+                    "base": {
+                        "position": "absolute",
+                        "bottom": "2rem",
+                        "left": "50%",
+                        "transform": "translateX(-50%)",
+                        "color": "rgba(255,255,255,0.5)",
+                        "font-size": "0.9rem",
+                        "display": "flex",
+                        "flex-direction": "column",
+                        "align-items": "center",
+                        "gap": "0.5rem"
+                    },
+                    "mobile": {
+                        "display": "none"
+                    }
+                }
+            },
+            "mainContent": {
+                "HeroSection": {
+                    "HeroPattern": {
+                        "content": ""
+                    },
+                    "HeroContainer": {
+                        "HeroContent": {
+                            "HeroBadge": {
+                                "BadgeText": {
+                                    "content": "🔥 ТУР 2026 🔥"
+                                }
+                            },
+                            "HeroTitle": {
+                                "HeroTitleLineOne": {
+                                    "content": "СМЕХ БЕЗ"
+                                },
+                                "HeroTitleLineTwo": {
+                                    "content": "ТОРМОЗОВ"
+                                }
+                            },
+                            "HeroDescription": {
+                                "content": "Алексей «Шутник» Смирнов с новой программой. Честно о жизни, работе и бывших. Будет больно от смеха."
+                            },
+                            "HeroMeta": {
+                                "MetaItemOne": {
+                                    "MetaIcon": {
+                                        "content": "📍"
+                                    },
+                                    "MetaText": {
+                                        "content": "Москва, Crocus City Hall"
+                                    }
+                                },
+                                "MetaItemTwo": {
+                                    "MetaIcon": {
+                                        "content": "📅"
+                                    },
+                                    "MetaText": {
+                                        "content": "15 Ноября, 19:00"
+                                    }
+                                }
+                            },
+                            "HeroCta": {
+                                "PrimaryButton": {
+                                    "content": "Купить билет"
+                                },
+                                "SecondaryButton": {
+                                    "content": "Смотреть трейлер"
+                                }
+                            }
+                        },
+                        "HeroVisual": {
+                            "ComicImage": {
+                                "FloatingQuoteOne": {
+                                    "QuoteText": {
+                                        "content": "«Я сам в шоке, что приехал»"
+                                    },
+                                    "QuoteAuthor": {
+                                        "content": "— Зритель из Воронежа"
+                                    }
+                                },
+                                "FloatingQuoteTwo": {
+                                    "QuoteTextLight": {
+                                        "content": "«У меня пресс заболел!»"
+                                    },
+                                    "QuoteAuthor": {
+                                        "content": "— Девушка с 3 ряда"
+                                    }
+                                }
+                            }
+                        },
+                        "ScrollHint": {
+                            "content": "↓ Листай, там смешнее ↓"
+                        }
+                    }
+                }
+            }
+        },
+        "VideoTeaser": {
+            "styles": {
+                "TeaserSection": {
+                    "__html": "section",
+                    "base": {
+                        "padding": "5rem 2rem",
+                        "background": "var(--background-alt)",
+                        "font-family": "var(--font-main)"
+                    },
+                    "mobile": {
+                        "padding": "3rem 1rem"
+                    }
+                },
+                "TeaserContainer": {
+                    "__html": "div",
+                    "base": {
+                        "max-width": "1000px",
+                        "margin": "0 auto"
+                    },
+                    "mobile": {}
+                },
+                "SectionHeader": {
+                    "__html": "div",
+                    "base": {
+                        "text-align": "center",
+                        "margin-bottom": "3rem"
+                    },
+                    "mobile": {
+                        "margin-bottom": "1.5rem"
+                    }
+                },
+                "SectionTitle": {
+                    "__html": "h2",
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "clamp(2rem, 4vw, 3rem)",
+                        "color": "var(--text-main)",
+                        "text-transform": "uppercase"
+                    },
+                    "mobile": {
+                        "font-size": "1.8rem"
+                    }
+                },
+                "VideoPlaceholder": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--surface-dark)",
+                        "border-radius": "var(--border-radius-lg)",
+                        "aspect-ratio": "16 / 9",
+                        "border": "3px solid var(--border-accent)",
+                        "box-shadow": "var(--shadow-neon)",
+                        "display": "flex",
+                        "align-items": "center",
+                        "justify-content": "center",
+                        "cursor": "pointer"
+                    },
+                    "mobile": {}
+                },
+                "PlayButton": {
+                    "__html": "div",
+                    "base": {
+                        "width": "80px",
+                        "height": "80px",
+                        "background": "var(--gradient-accent)",
+                        "border-radius": "50%",
+                        "display": "flex",
+                        "align-items": "center",
+                        "justify-content": "center",
+                        "box-shadow": "var(--shadow-neon)"
+                    },
+                    "mobile": {
+                        "width": "60px",
+                        "height": "60px"
+                    }
+                },
+                "PlayIcon": {
+                    "__html": "span",
+                    "base": {
+                        "color": "white",
+                        "font-size": "2.5rem",
+                        "margin-left": "0.5rem"
+                    },
+                    "mobile": {
+                        "font-size": "2rem"
+                    }
+                }
+            },
+            "mainContent": {
+                "TeaserSection": {
+                    "TeaserContainer": {
+                        "SectionHeader": {
+                            "SectionTitle": {
+                                "content": "Что говорят зрители?"
+                            }
+                        },
+                        "VideoPlaceholder": {
+                            "PlayButton": {
+                                "PlayIcon": {
+                                    "content": "▶"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "Footer": {
+            "styles": {
+                "FooterWrapper": {
+                    "__html": "footer",
+                    "base": {
+                        "background": "var(--surface-dark)",
+                        "padding": "3rem 2rem",
+                        "font-family": "var(--font-main)"
+                    },
+                    "mobile": {
+                        "padding": "2rem 1rem"
+                    }
+                },
+                "FooterContainer": {
+                    "__html": "div",
+                    "base": {
+                        "max-width": "var(--container-width)",
+                        "margin": "0 auto",
+                        "display": "flex",
+                        "justify-content": "space-between",
+                        "align-items": "center"
+                    },
+                    "mobile": {
+                        "flex-direction": "column",
+                        "gap": "1.5rem",
+                        "text-align": "center"
+                    }
+                },
+                "FooterCopy": {
+                    "__html": "p",
+                    "base": {
+                        "color": "rgba(255,255,255,0.6)",
+                        "font-size": "0.9rem",
+                        "margin": "0"
+                    },
+                    "mobile": {}
+                },
+                "FooterSocial": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "gap": "1.5rem"
+                    },
+                    "mobile": {}
+                },
+                "SocialLinkOne": {
+                    "__html": "span",
+                    "base": {
+                        "color": "rgba(255,255,255,0.7)",
+                        "cursor": "pointer",
+                        "transition": "color var(--transition-fast)",
+                        "font-weight": "600"
+                    },
+                    "mobile": {}
+                },
+                "SocialLinkTwo": {
+                    "__html": "span",
+                    "base": {
+                        "color": "rgba(255,255,255,0.7)",
+                        "cursor": "pointer",
+                        "transition": "color var(--transition-fast)",
+                        "font-weight": "600"
+                    },
+                    "mobile": {}
+                }
+            },
+            "mainContent": {
+                "FooterWrapper": {
+                    "FooterContainer": {
+                        "FooterCopy": {
+                            "content": "© 2026 Алексей Смирнов. Все шутки защищены."
+                        },
+                        "FooterSocial": {
+                            "SocialLinkOne": {
+                                "content": "YouTube"
+                            },
+                            "SocialLinkTwo": {
+                                "content": "Telegram"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
