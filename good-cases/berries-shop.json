@@ -1,0 +1,1716 @@
+{
+    "globalCssTokens": {
+        "base": {
+            "--transition-smooth": "0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+            "--transition-slow": "0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+            "--border-radius-sm": "0.75rem",
+            "--border-radius-md": "1.5rem",
+            "--border-radius-lg": "2.5rem",
+            "--border-radius-xl": "4rem",
+            "--border-radius-full": "9999px",
+            "--font-main": "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
+            "--font-display": "'Playfair Display', Georgia, serif",
+            "--font-decor": "'Cormorant Garamond', serif",
+            "--container-width": "1280px"
+        },
+        "light": {
+            "--primary": "#2d1b0e",
+            "--primary-light": "#4a2e1c",
+            "--primary-dark": "#1a0e06",
+            "--accent": "#8b1e3f",
+            "--accent-light": "#b32d54",
+            "--accent-soft": "#fdf0f3",
+            "--secondary": "#2d6a4f",
+            "--secondary-light": "#40916c",
+            "--secondary-soft": "#e8f5e9",
+            "--berry-blueberry": "#3c2a5c",
+            "--berry-cranberry": "#a12336",
+            "--berry-cloudberry": "#e8a135",
+            "--berry-lingonberry": "#c41e3a",
+            "--background": "#fdfbf9",
+            "--background-alt": "#f5f0e8",
+            "--surface": "#ffffff",
+            "--surface-warm": "#faf6f0",
+            "--text-main": "#1a0e06",
+            "--text-muted": "#5c3d2e",
+            "--text-light": "#8b6c5c",
+            "--border-light": "#e8dcd0",
+            "--border-medium": "#d4c4b5",
+            "--shadow-sm": "0 4px 12px rgba(45, 27, 14, 0.04)",
+            "--shadow-md": "0 12px 28px rgba(45, 27, 14, 0.08)",
+            "--shadow-lg": "0 24px 48px rgba(45, 27, 14, 0.12)",
+            "--shadow-natural": "0 16px 40px rgba(45, 106, 79, 0.1)",
+            "--gradient-hero": "linear-gradient(135deg, #2d1b0e 0%, #4a2e1c 50%, #2d1b0e 100%)",
+            "--gradient-berry": "linear-gradient(135deg, #8b1e3f 0%, #c41e3a 100%)",
+            "--gradient-nature": "linear-gradient(135deg, #2d6a4f 0%, #40916c 100%)",
+            "--pattern-north": "repeating-linear-gradient(45deg, rgba(45, 27, 14, 0.03) 0px, rgba(45, 27, 14, 0.03) 2px, transparent 2px, transparent 8px)"
+        },
+        "dark": {
+            "--primary": "#f5e6d3",
+            "--primary-light": "#ffe8cc",
+            "--primary-dark": "#d4b89c",
+            "--accent": "#e84a6e",
+            "--accent-light": "#ff6b8a",
+            "--accent-soft": "#3d1a24",
+            "--secondary": "#52b788",
+            "--secondary-light": "#74c69d",
+            "--secondary-soft": "#1a3329",
+            "--berry-blueberry": "#6b4e8a",
+            "--berry-cranberry": "#d94a64",
+            "--berry-cloudberry": "#f5b342",
+            "--berry-lingonberry": "#e63950",
+            "--background": "#1a0e06",
+            "--background-alt": "#24160c",
+            "--surface": "#2d1b0e",
+            "--surface-warm": "#362012",
+            "--text-main": "#f5e6d3",
+            "--text-muted": "#d4b89c",
+            "--text-light": "#a8846a",
+            "--border-light": "#3d2618",
+            "--border-medium": "#5c3d2e",
+            "--shadow-sm": "0 4px 12px rgba(0, 0, 0, 0.3)",
+            "--shadow-md": "0 12px 28px rgba(0, 0, 0, 0.4)",
+            "--shadow-lg": "0 24px 48px rgba(0, 0, 0, 0.5)",
+            "--shadow-natural": "0 16px 40px rgba(82, 183, 136, 0.15)",
+            "--gradient-hero": "linear-gradient(135deg, #1a0e06 0%, #2d1b0e 50%, #1a0e06 100%)",
+            "--gradient-berry": "linear-gradient(135deg, #a12336 0%, #d94a64 100%)",
+            "--gradient-nature": "linear-gradient(135deg, #2d6a4f 0%, #52b788 100%)",
+            "--pattern-north": "repeating-linear-gradient(45deg, rgba(245, 230, 211, 0.05) 0px, rgba(245, 230, 211, 0.05) 2px, transparent 2px, transparent 8px)"
+        }
+    },
+    "sections": {
+        "Header": {
+            "styles": {
+                "HeaderWrapper": {
+                    "__html": "header",
+                    "base": {
+                        "position": "sticky",
+                        "top": "0",
+                        "z-index": "100",
+                        "background": "rgba(253, 251, 249, 0.9)",
+                        "backdrop-filter": "blur(12px)",
+                        "border-bottom": "1px solid var(--border-light)",
+                        "font-family": "var(--font-main)"
+                    },
+                    "mobile": {
+                        "padding": "0"
+                    }
+                },
+                "HeaderContainer": {
+                    "__html": "div",
+                    "base": {
+                        "max-width": "var(--container-width)",
+                        "margin": "0 auto",
+                        "padding": "1rem 2rem",
+                        "display": "flex",
+                        "align-items": "center",
+                        "justify-content": "space-between"
+                    },
+                    "mobile": {
+                        "padding": "0.75rem 1rem",
+                        "flex-wrap": "wrap"
+                    }
+                },
+                "LogoContainer": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "align-items": "center",
+                        "gap": "0.75rem"
+                    },
+                    "mobile": {
+                        "gap": "0.5rem"
+                    }
+                },
+                "LogoIcon": {
+                    "__html": "div",
+                    "base": {
+                        "width": "2.75rem",
+                        "height": "2.75rem",
+                        "background": "var(--gradient-nature)",
+                        "border-radius": "50%",
+                        "display": "flex",
+                        "align-items": "center",
+                        "justify-content": "center",
+                        "color": "white",
+                        "font-size": "1.5rem",
+                        "box-shadow": "var(--shadow-natural)"
+                    },
+                    "mobile": {
+                        "width": "2.25rem",
+                        "height": "2.25rem",
+                        "font-size": "1.25rem"
+                    }
+                },
+                "LogoText": {
+                    "__html": "span",
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "1.75rem",
+                        "font-weight": "700",
+                        "color": "var(--primary)",
+                        "letter-spacing": "-0.01em"
+                    },
+                    "mobile": {
+                        "font-size": "1.25rem"
+                    }
+                },
+                "LogoAccent": {
+                    "__html": "span",
+                    "base": {
+                        "color": "var(--accent)"
+                    },
+                    "mobile": {}
+                },
+                "NavContainer": {
+                    "__html": "nav",
+                    "base": {
+                        "display": "flex",
+                        "align-items": "center",
+                        "gap": "2.5rem"
+                    },
+                    "mobile": {
+                        "display": "none"
+                    }
+                },
+                "NavItemOne": {
+                    "__html": "a",
+                    "base": {
+                        "color": "var(--text-main)",
+                        "font-weight": "500",
+                        "font-size": "1rem",
+                        "cursor": "pointer",
+                        "transition": "color var(--transition-smooth)",
+                        "padding": "0.5rem 0",
+                        "border-bottom": "2px solid transparent"
+                    },
+                    "mobile": {}
+                },
+                "NavItemTwo": {
+                    "__html": "a",
+                    "base": {
+                        "color": "var(--text-main)",
+                        "font-weight": "500",
+                        "font-size": "1rem",
+                        "cursor": "pointer",
+                        "transition": "color var(--transition-smooth)",
+                        "padding": "0.5rem 0",
+                        "border-bottom": "2px solid transparent"
+                    },
+                    "mobile": {}
+                },
+                "NavItemThree": {
+                    "__html": "a",
+                    "base": {
+                        "color": "var(--text-main)",
+                        "font-weight": "500",
+                        "font-size": "1rem",
+                        "cursor": "pointer",
+                        "transition": "color var(--transition-smooth)",
+                        "padding": "0.5rem 0",
+                        "border-bottom": "2px solid transparent"
+                    },
+                    "mobile": {}
+                },
+                "NavItemFour": {
+                    "__html": "a",
+                    "base": {
+                        "color": "var(--text-main)",
+                        "font-weight": "500",
+                        "font-size": "1rem",
+                        "cursor": "pointer",
+                        "transition": "color var(--transition-smooth)",
+                        "padding": "0.5rem 0",
+                        "border-bottom": "2px solid transparent"
+                    },
+                    "mobile": {}
+                },
+                "NavItemFive": {
+                    "__html": "a",
+                    "base": {
+                        "color": "var(--text-main)",
+                        "font-weight": "500",
+                        "font-size": "1rem",
+                        "cursor": "pointer",
+                        "transition": "color var(--transition-smooth)",
+                        "padding": "0.5rem 0",
+                        "border-bottom": "2px solid transparent"
+                    },
+                    "mobile": {}
+                },
+                "HeaderActions": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "align-items": "center",
+                        "gap": "1.5rem"
+                    },
+                    "mobile": {
+                        "gap": "0.75rem"
+                    }
+                },
+                "PhoneContainer": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "flex-direction": "column",
+                        "align-items": "flex-end"
+                    },
+                    "mobile": {
+                        "display": "none"
+                    }
+                },
+                "PhoneNumber": {
+                    "__html": "span",
+                    "base": {
+                        "color": "var(--text-main)",
+                        "font-weight": "600",
+                        "font-size": "1rem"
+                    },
+                    "mobile": {}
+                },
+                "PhoneLabel": {
+                    "__html": "span",
+                    "base": {
+                        "color": "var(--text-light)",
+                        "font-size": "0.7rem",
+                        "text-transform": "uppercase",
+                        "letter-spacing": "1px"
+                    },
+                    "mobile": {}
+                },
+                "CartButton": {
+                    "__html": "button",
+                    "base": {
+                        "background": "var(--secondary-soft)",
+                        "color": "var(--secondary)",
+                        "border": "none",
+                        "border-radius": "var(--border-radius-full)",
+                        "padding": "0.65rem 1.5rem",
+                        "font-weight": "600",
+                        "font-size": "0.9rem",
+                        "cursor": "pointer",
+                        "transition": "all var(--transition-smooth)",
+                        "display": "flex",
+                        "align-items": "center",
+                        "gap": "0.5rem"
+                    },
+                    "mobile": {
+                        "padding": "0.5rem 1rem",
+                        "font-size": "0.8rem"
+                    }
+                },
+                "MobileMenuButton": {
+                    "__html": "button",
+                    "base": {
+                        "display": "none",
+                        "background": "transparent",
+                        "border": "1px solid var(--border-medium)",
+                        "border-radius": "var(--border-radius-sm)",
+                        "padding": "0.5rem 0.75rem",
+                        "cursor": "pointer",
+                        "color": "var(--text-main)"
+                    },
+                    "mobile": {
+                        "display": "block"
+                    }
+                }
+            },
+            "mainContent": {
+                "HeaderWrapper": {
+                    "HeaderContainer": {
+                        "LogoContainer": {
+                            "LogoIcon": {
+                                "content": "🍇"
+                            },
+                            "LogoText": {
+                                "content": "Ямал",
+                                "LogoAccent": {
+                                    "content": "Дары"
+                                }
+                            }
+                        },
+                        "NavContainer": {
+                            "NavItemOne": {
+                                "content": "Каталог"
+                            },
+                            "NavItemTwo": {
+                                "content": "Ягоды"
+                            },
+                            "NavItemThree": {
+                                "content": "Грибы"
+                            },
+                            "NavItemFour": {
+                                "content": "О нас"
+                            },
+                            "NavItemFive": {
+                                "content": "Доставка"
+                            }
+                        },
+                        "HeaderActions": {
+                            "PhoneContainer": {
+                                "PhoneNumber": {
+                                    "content": "+7 (349) 22-33-44"
+                                },
+                                "PhoneLabel": {
+                                    "content": "Сборщики на связи"
+                                }
+                            },
+                            "CartButton": {
+                                "content": "🛒 Корзина"
+                            },
+                            "MobileMenuButton": {
+                                "content": "☰"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "Hero": {
+            "styles": {
+                "HeroSection": {
+                    "__html": "section",
+                    "base": {
+                        "width": "100%",
+                        "min-height": "90vh",
+                        "display": "flex",
+                        "align-items": "center",
+                        "padding": "6rem 2rem",
+                        "background": "var(--gradient-hero)",
+                        "position": "relative",
+                        "overflow": "hidden",
+                        "font-family": "var(--font-main)"
+                    },
+                    "mobile": {
+                        "min-height": "auto",
+                        "padding": "5rem 1rem 3rem"
+                    }
+                },
+                "HeroPattern": {
+                    "__html": "div",
+                    "base": {
+                        "position": "absolute",
+                        "top": "0",
+                        "left": "0",
+                        "right": "0",
+                        "bottom": "0",
+                        "background": "var(--pattern-north)",
+                        "opacity": "0.5",
+                        "pointer-events": "none"
+                    },
+                    "mobile": {}
+                },
+                "HeroContainer": {
+                    "__html": "div",
+                    "base": {
+                        "max-width": "var(--container-width)",
+                        "margin": "0 auto",
+                        "width": "100%",
+                        "position": "relative",
+                        "z-index": "2"
+                    },
+                    "mobile": {}
+                },
+                "HeroGrid": {
+                    "__html": "div",
+                    "base": {
+                        "display": "grid",
+                        "grid-template-columns": "1fr 1fr",
+                        "gap": "4rem",
+                        "align-items": "center"
+                    },
+                    "mobile": {
+                        "grid-template-columns": "1fr",
+                        "gap": "2rem"
+                    }
+                },
+                "HeroContent": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "flex-direction": "column",
+                        "gap": "1.75rem"
+                    },
+                    "mobile": {
+                        "gap": "1.25rem",
+                        "text-align": "center",
+                        "align-items": "center"
+                    }
+                },
+                "HeroBadge": {
+                    "__html": "div",
+                    "base": {
+                        "display": "inline-flex",
+                        "align-items": "center",
+                        "gap": "0.75rem",
+                        "background": "rgba(255,255,255,0.1)",
+                        "backdrop-filter": "blur(8px)",
+                        "border": "1px solid rgba(255,255,255,0.2)",
+                        "border-radius": "var(--border-radius-full)",
+                        "padding": "0.5rem 1.5rem",
+                        "width": "fit-content"
+                    },
+                    "mobile": {
+                        "margin": "0 auto"
+                    }
+                },
+                "BadgeIcon": {
+                    "__html": "span",
+                    "base": {
+                        "font-size": "1.25rem"
+                    },
+                    "mobile": {}
+                },
+                "BadgeText": {
+                    "__html": "span",
+                    "base": {
+                        "color": "white",
+                        "font-weight": "500",
+                        "letter-spacing": "1px"
+                    },
+                    "mobile": {
+                        "font-size": "0.85rem"
+                    }
+                },
+                "HeroTitle": {
+                    "__html": "h1",
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "clamp(3rem, 6vw, 5rem)",
+                        "font-weight": "700",
+                        "line-height": "1.15",
+                        "color": "white",
+                        "margin": "0"
+                    },
+                    "mobile": {
+                        "font-size": "clamp(2.5rem, 10vw, 3.5rem)",
+                        "line-height": "1.2"
+                    }
+                },
+                "HeroTitleAccent": {
+                    "__html": "span",
+                    "base": {
+                        "color": "var(--berry-cloudberry)",
+                        "display": "block"
+                    },
+                    "mobile": {}
+                },
+                "HeroDescription": {
+                    "__html": "p",
+                    "base": {
+                        "font-size": "1.25rem",
+                        "line-height": "1.7",
+                        "color": "rgba(255,255,255,0.85)",
+                        "margin": "0",
+                        "max-width": "90%"
+                    },
+                    "mobile": {
+                        "font-size": "1rem",
+                        "max-width": "100%"
+                    }
+                },
+                "HeroFeatures": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "gap": "2rem",
+                        "margin-top": "1rem"
+                    },
+                    "mobile": {
+                        "justify-content": "center",
+                        "gap": "1.5rem"
+                    }
+                },
+                "FeatureItemOne": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "align-items": "center",
+                        "gap": "0.75rem"
+                    },
+                    "mobile": {}
+                },
+                "FeatureItemTwo": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "align-items": "center",
+                        "gap": "0.75rem"
+                    },
+                    "mobile": {}
+                },
+                "FeatureItemThree": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "align-items": "center",
+                        "gap": "0.75rem"
+                    },
+                    "mobile": {}
+                },
+                "FeatureIcon": {
+                    "__html": "span",
+                    "base": {
+                        "font-size": "1.5rem"
+                    },
+                    "mobile": {
+                        "font-size": "1.25rem"
+                    }
+                },
+                "FeatureText": {
+                    "__html": "span",
+                    "base": {
+                        "color": "rgba(255,255,255,0.8)",
+                        "font-weight": "500"
+                    },
+                    "mobile": {
+                        "font-size": "0.85rem"
+                    }
+                },
+                "HeroCta": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "gap": "1.5rem",
+                        "margin-top": "1.5rem"
+                    },
+                    "mobile": {
+                        "flex-direction": "column",
+                        "width": "100%",
+                        "max-width": "300px"
+                    }
+                },
+                "PrimaryButton": {
+                    "__html": "button",
+                    "base": {
+                        "background": "var(--gradient-nature)",
+                        "color": "white",
+                        "border": "none",
+                        "border-radius": "var(--border-radius-full)",
+                        "padding": "1.25rem 2.5rem",
+                        "font-weight": "600",
+                        "font-size": "1.1rem",
+                        "cursor": "pointer",
+                        "transition": "all var(--transition-smooth)",
+                        "box-shadow": "var(--shadow-natural)"
+                    },
+                    "mobile": {
+                        "padding": "1rem 1.5rem",
+                        "font-size": "1rem",
+                        "width": "100%"
+                    }
+                },
+                "SecondaryButton": {
+                    "__html": "button",
+                    "base": {
+                        "background": "transparent",
+                        "color": "white",
+                        "border": "1px solid rgba(255,255,255,0.4)",
+                        "border-radius": "var(--border-radius-full)",
+                        "padding": "1.25rem 2.5rem",
+                        "font-weight": "600",
+                        "font-size": "1.1rem",
+                        "cursor": "pointer",
+                        "transition": "all var(--transition-smooth)"
+                    },
+                    "mobile": {
+                        "padding": "1rem 1.5rem",
+                        "font-size": "1rem",
+                        "width": "100%"
+                    }
+                },
+                "HeroVisual": {
+                    "__html": "div",
+                    "base": {
+                        "position": "relative",
+                        "display": "flex",
+                        "justify-content": "center",
+                        "align-items": "center"
+                    },
+                    "mobile": {
+                        "order": "-1"
+                    }
+                },
+                "VisualCircle": {
+                    "__html": "div",
+                    "base": {
+                        "width": "100%",
+                        "aspect-ratio": "1",
+                        "max-width": "450px",
+                        "background": "radial-gradient(circle at 30% 30%, var(--berry-cloudberry), var(--berry-lingonberry))",
+                        "border-radius": "50%",
+                        "box-shadow": "0 0 80px rgba(232, 161, 53, 0.3)",
+                        "position": "relative",
+                        "margin": "0 auto"
+                    },
+                    "mobile": {
+                        "max-width": "280px"
+                    }
+                },
+                "FloatingCardOne": {
+                    "__html": "div",
+                    "base": {
+                        "position": "absolute",
+                        "top": "0",
+                        "right": "0",
+                        "background": "var(--surface-warm)",
+                        "border-radius": "var(--border-radius-md)",
+                        "padding": "1rem 1.5rem",
+                        "box-shadow": "var(--shadow-md)",
+                        "border": "1px solid var(--border-light)"
+                    },
+                    "mobile": {
+                        "padding": "0.75rem 1rem",
+                        "right": "-0.5rem"
+                    }
+                },
+                "FloatingCardTwo": {
+                    "__html": "div",
+                    "base": {
+                        "position": "absolute",
+                        "bottom": "10%",
+                        "left": "0",
+                        "background": "var(--surface-warm)",
+                        "border-radius": "var(--border-radius-md)",
+                        "padding": "1rem 1.5rem",
+                        "box-shadow": "var(--shadow-md)",
+                        "border": "1px solid var(--border-light)"
+                    },
+                    "mobile": {
+                        "padding": "0.75rem 1rem",
+                        "left": "-0.5rem",
+                        "bottom": "0"
+                    }
+                },
+                "FloatingText": {
+                    "__html": "p",
+                    "base": {
+                        "color": "var(--text-main)",
+                        "font-weight": "600",
+                        "margin": "0"
+                    },
+                    "mobile": {
+                        "font-size": "0.85rem"
+                    }
+                },
+                "FloatingSub": {
+                    "__html": "p",
+                    "base": {
+                        "color": "var(--accent)",
+                        "font-size": "0.85rem",
+                        "margin": "0.25rem 0 0"
+                    },
+                    "mobile": {
+                        "font-size": "0.75rem"
+                    }
+                }
+            },
+            "mainContent": {
+                "HeroSection": {
+                    "HeroPattern": {
+                        "content": ""
+                    },
+                    "HeroContainer": {
+                        "HeroGrid": {
+                            "HeroContent": {
+                                "HeroBadge": {
+                                    "BadgeIcon": {
+                                        "content": "❄️"
+                                    },
+                                    "BadgeText": {
+                                        "content": "Собрано вручную на Ямале"
+                                    }
+                                },
+                                "HeroTitle": {
+                                    "content": "Вкус северной ",
+                                    "HeroTitleAccent": {
+                                        "content": "природы"
+                                    }
+                                },
+                                "HeroDescription": {
+                                    "content": "Дикорастущие ягоды и грибы с бескрайних просторов Ямала. Заморозка шоковой заморозки, доставка по всей России."
+                                },
+                                "HeroFeatures": {
+                                    "FeatureItemOne": {
+                                        "FeatureIcon": {
+                                            "content": "🌿"
+                                        },
+                                        "FeatureText": {
+                                            "content": "100% органика"
+                                        }
+                                    },
+                                    "FeatureItemTwo": {
+                                        "FeatureIcon": {
+                                            "content": "🧊"
+                                        },
+                                        "FeatureText": {
+                                            "content": "Шоковая заморозка"
+                                        }
+                                    },
+                                    "FeatureItemThree": {
+                                        "FeatureIcon": {
+                                            "content": "🚚"
+                                        },
+                                        "FeatureText": {
+                                            "content": "Доставка СДЭК"
+                                        }
+                                    }
+                                },
+                                "HeroCta": {
+                                    "PrimaryButton": {
+                                        "content": "В каталог"
+                                    },
+                                    "SecondaryButton": {
+                                        "content": "О продукции"
+                                    }
+                                }
+                            },
+                            "HeroVisual": {
+                                "VisualCircle": {
+                                    "FloatingCardOne": {
+                                        "FloatingText": {
+                                            "content": "Морошка свежая"
+                                        },
+                                        "FloatingSub": {
+                                            "content": "от 890 ₽ / кг"
+                                        }
+                                    },
+                                    "FloatingCardTwo": {
+                                        "FloatingText": {
+                                            "content": "Белые грибы"
+                                        },
+                                        "FloatingSub": {
+                                            "content": "от 1200 ₽ / кг"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "Advantages": {
+            "styles": {
+                "AdvantagesSection": {
+                    "__html": "section",
+                    "base": {
+                        "padding": "5rem 2rem",
+                        "background": "var(--background)",
+                        "font-family": "var(--font-main)"
+                    },
+                    "mobile": {
+                        "padding": "3rem 1rem"
+                    }
+                },
+                "AdvantagesContainer": {
+                    "__html": "div",
+                    "base": {
+                        "max-width": "var(--container-width)",
+                        "margin": "0 auto"
+                    },
+                    "mobile": {}
+                },
+                "AdvantagesGrid": {
+                    "__html": "div",
+                    "base": {
+                        "display": "grid",
+                        "grid-template-columns": "repeat(4, 1fr)",
+                        "gap": "2rem"
+                    },
+                    "mobile": {
+                        "grid-template-columns": "1fr",
+                        "gap": "1rem"
+                    }
+                },
+                "AdvantageCardOne": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--surface-warm)",
+                        "border-radius": "var(--border-radius-lg)",
+                        "padding": "2rem 1.5rem",
+                        "border": "1px solid var(--border-light)",
+                        "text-align": "center",
+                        "transition": "transform var(--transition-smooth)"
+                    },
+                    "mobile": {
+                        "padding": "1.5rem"
+                    }
+                },
+                "AdvantageCardTwo": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--surface-warm)",
+                        "border-radius": "var(--border-radius-lg)",
+                        "padding": "2rem 1.5rem",
+                        "border": "1px solid var(--border-light)",
+                        "text-align": "center"
+                    },
+                    "mobile": {
+                        "padding": "1.5rem"
+                    }
+                },
+                "AdvantageCardThree": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--surface-warm)",
+                        "border-radius": "var(--border-radius-lg)",
+                        "padding": "2rem 1.5rem",
+                        "border": "1px solid var(--border-light)",
+                        "text-align": "center"
+                    },
+                    "mobile": {
+                        "padding": "1.5rem"
+                    }
+                },
+                "AdvantageCardFour": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--surface-warm)",
+                        "border-radius": "var(--border-radius-lg)",
+                        "padding": "2rem 1.5rem",
+                        "border": "1px solid var(--border-light)",
+                        "text-align": "center"
+                    },
+                    "mobile": {
+                        "padding": "1.5rem"
+                    }
+                },
+                "AdvantageIcon": {
+                    "__html": "div",
+                    "base": {
+                        "font-size": "2.5rem",
+                        "margin-bottom": "1.5rem"
+                    },
+                    "mobile": {
+                        "font-size": "2rem",
+                        "margin-bottom": "1rem"
+                    }
+                },
+                "AdvantageTitle": {
+                    "__html": "h3",
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "1.3rem",
+                        "font-weight": "600",
+                        "color": "var(--text-main)",
+                        "margin-bottom": "0.75rem"
+                    },
+                    "mobile": {
+                        "font-size": "1.2rem"
+                    }
+                },
+                "AdvantageDesc": {
+                    "__html": "p",
+                    "base": {
+                        "color": "var(--text-muted)",
+                        "line-height": "1.6",
+                        "font-size": "0.95rem"
+                    },
+                    "mobile": {
+                        "font-size": "0.9rem"
+                    }
+                }
+            },
+            "mainContent": {
+                "AdvantagesSection": {
+                    "AdvantagesContainer": {
+                        "AdvantagesGrid": {
+                            "AdvantageCardOne": {
+                                "AdvantageIcon": {
+                                    "content": "🌲"
+                                },
+                                "AdvantageTitle": {
+                                    "content": "Дикоросы"
+                                },
+                                "AdvantageDesc": {
+                                    "content": "Собрано в экологически чистых районах Ямала"
+                                }
+                            },
+                            "AdvantageCardTwo": {
+                                "AdvantageIcon": {
+                                    "content": "❄️"
+                                },
+                                "AdvantageTitle": {
+                                    "content": "Шоковая заморозка"
+                                },
+                                "AdvantageDesc": {
+                                    "content": "Сохраняет 99% витаминов и свежий вкус"
+                                }
+                            },
+                            "AdvantageCardThree": {
+                                "AdvantageIcon": {
+                                    "content": "📦"
+                                },
+                                "AdvantageTitle": {
+                                    "content": "Быстрая доставка"
+                                },
+                                "AdvantageDesc": {
+                                    "content": "Термобоксы, доставка по РФ от 2 дней"
+                                }
+                            },
+                            "AdvantageCardFour": {
+                                "AdvantageIcon": {
+                                    "content": "🤝"
+                                },
+                                "AdvantageTitle": {
+                                    "content": "Сезонные скидки"
+                                },
+                                "AdvantageDesc": {
+                                    "content": "Выгодные предложения на сборы урожая"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "Products": {
+            "styles": {
+                "ProductsSection": {
+                    "__html": "section",
+                    "base": {
+                        "padding": "6rem 2rem",
+                        "background": "var(--background-alt)",
+                        "font-family": "var(--font-main)"
+                    },
+                    "mobile": {
+                        "padding": "3rem 1rem"
+                    }
+                },
+                "ProductsContainer": {
+                    "__html": "div",
+                    "base": {
+                        "max-width": "var(--container-width)",
+                        "margin": "0 auto"
+                    },
+                    "mobile": {}
+                },
+                "SectionHeader": {
+                    "__html": "div",
+                    "base": {
+                        "text-align": "center",
+                        "margin-bottom": "4rem"
+                    },
+                    "mobile": {
+                        "margin-bottom": "2rem"
+                    }
+                },
+                "SectionTitle": {
+                    "__html": "h2",
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "clamp(2.5rem, 4vw, 3.5rem)",
+                        "color": "var(--text-main)",
+                        "font-weight": "700",
+                        "margin-bottom": "1rem"
+                    },
+                    "mobile": {
+                        "font-size": "2rem"
+                    }
+                },
+                "SectionSubtitle": {
+                    "__html": "p",
+                    "base": {
+                        "color": "var(--text-muted)",
+                        "font-size": "1.2rem"
+                    },
+                    "mobile": {
+                        "font-size": "1rem"
+                    }
+                },
+                "ProductsGrid": {
+                    "__html": "div",
+                    "base": {
+                        "display": "grid",
+                        "grid-template-columns": "repeat(4, 1fr)",
+                        "gap": "2rem"
+                    },
+                    "mobile": {
+                        "grid-template-columns": "1fr",
+                        "gap": "1.5rem"
+                    }
+                },
+                "ProductCardOne": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--surface)",
+                        "border-radius": "var(--border-radius-lg)",
+                        "overflow": "hidden",
+                        "border": "1px solid var(--border-light)",
+                        "transition": "all var(--transition-smooth)",
+                        "box-shadow": "var(--shadow-sm)"
+                    },
+                    "mobile": {}
+                },
+                "ProductCardTwo": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--surface)",
+                        "border-radius": "var(--border-radius-lg)",
+                        "overflow": "hidden",
+                        "border": "1px solid var(--border-light)",
+                        "transition": "all var(--transition-smooth)",
+                        "box-shadow": "var(--shadow-sm)"
+                    },
+                    "mobile": {}
+                },
+                "ProductCardThree": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--surface)",
+                        "border-radius": "var(--border-radius-lg)",
+                        "overflow": "hidden",
+                        "border": "1px solid var(--border-light)",
+                        "transition": "all var(--transition-smooth)",
+                        "box-shadow": "var(--shadow-sm)"
+                    },
+                    "mobile": {}
+                },
+                "ProductCardFour": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--surface)",
+                        "border-radius": "var(--border-radius-lg)",
+                        "overflow": "hidden",
+                        "border": "1px solid var(--border-light)",
+                        "transition": "all var(--transition-smooth)",
+                        "box-shadow": "var(--shadow-sm)"
+                    },
+                    "mobile": {}
+                },
+                "ProductImage": {
+                    "__html": "div",
+                    "base": {
+                        "height": "220px",
+                        "background": "var(--primary-light)",
+                        "position": "relative"
+                    },
+                    "mobile": {
+                        "height": "180px"
+                    }
+                },
+                "ProductBadge": {
+                    "__html": "span",
+                    "base": {
+                        "position": "absolute",
+                        "top": "1rem",
+                        "left": "1rem",
+                        "background": "var(--accent)",
+                        "color": "white",
+                        "padding": "0.25rem 0.75rem",
+                        "border-radius": "var(--border-radius-full)",
+                        "font-size": "0.75rem",
+                        "font-weight": "600"
+                    },
+                    "mobile": {}
+                },
+                "ProductContent": {
+                    "__html": "div",
+                    "base": {
+                        "padding": "1.5rem"
+                    },
+                    "mobile": {
+                        "padding": "1.25rem"
+                    }
+                },
+                "ProductName": {
+                    "__html": "h3",
+                    "base": {
+                        "font-size": "1.2rem",
+                        "font-weight": "600",
+                        "color": "var(--text-main)",
+                        "margin-bottom": "0.5rem"
+                    },
+                    "mobile": {
+                        "font-size": "1.1rem"
+                    }
+                },
+                "ProductDesc": {
+                    "__html": "p",
+                    "base": {
+                        "color": "var(--text-muted)",
+                        "font-size": "0.9rem",
+                        "margin-bottom": "1rem"
+                    },
+                    "mobile": {}
+                },
+                "ProductPrice": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "align-items": "baseline",
+                        "gap": "0.5rem",
+                        "margin-bottom": "1rem"
+                    },
+                    "mobile": {}
+                },
+                "PriceCurrent": {
+                    "__html": "span",
+                    "base": {
+                        "font-size": "1.5rem",
+                        "font-weight": "700",
+                        "color": "var(--secondary)"
+                    },
+                    "mobile": {
+                        "font-size": "1.3rem"
+                    }
+                },
+                "PriceUnit": {
+                    "__html": "span",
+                    "base": {
+                        "color": "var(--text-light)",
+                        "font-size": "0.9rem"
+                    },
+                    "mobile": {}
+                },
+                "ProductButton": {
+                    "__html": "button",
+                    "base": {
+                        "width": "100%",
+                        "background": "var(--secondary-soft)",
+                        "color": "var(--secondary)",
+                        "border": "none",
+                        "border-radius": "var(--border-radius-full)",
+                        "padding": "0.75rem",
+                        "font-weight": "600",
+                        "cursor": "pointer",
+                        "transition": "all var(--transition-smooth)"
+                    },
+                    "mobile": {
+                        "padding": "0.65rem"
+                    }
+                }
+            },
+            "mainContent": {
+                "ProductsSection": {
+                    "ProductsContainer": {
+                        "SectionHeader": {
+                            "SectionTitle": {
+                                "content": "Популярные товары"
+                            },
+                            "SectionSubtitle": {
+                                "content": "Свежий урожай этого сезона"
+                            }
+                        },
+                        "ProductsGrid": {
+                            "ProductCardOne": {
+                                "ProductImage": {
+                                    "ProductBadge": {
+                                        "content": "Хит"
+                                    }
+                                },
+                                "ProductContent": {
+                                    "ProductName": {
+                                        "content": "Морошка"
+                                    },
+                                    "ProductDesc": {
+                                        "content": "Собрано вручную, 1 кг"
+                                    },
+                                    "ProductPrice": {
+                                        "PriceCurrent": {
+                                            "content": "890 ₽"
+                                        },
+                                        "PriceUnit": {
+                                            "content": "/ кг"
+                                        }
+                                    },
+                                    "ProductButton": {
+                                        "content": "В корзину"
+                                    }
+                                }
+                            },
+                            "ProductCardTwo": {
+                                "ProductImage": {
+                                    "ProductBadge": {
+                                        "content": "Новинка"
+                                    }
+                                },
+                                "ProductContent": {
+                                    "ProductName": {
+                                        "content": "Белые грибы"
+                                    },
+                                    "ProductDesc": {
+                                        "content": "Отборные, 1 кг"
+                                    },
+                                    "ProductPrice": {
+                                        "PriceCurrent": {
+                                            "content": "1200 ₽"
+                                        },
+                                        "PriceUnit": {
+                                            "content": "/ кг"
+                                        }
+                                    },
+                                    "ProductButton": {
+                                        "content": "В корзину"
+                                    }
+                                }
+                            },
+                            "ProductCardThree": {
+                                "ProductImage": {
+                                    "ProductBadge": {
+                                        "content": "Скидка"
+                                    }
+                                },
+                                "ProductContent": {
+                                    "ProductName": {
+                                        "content": "Брусника"
+                                    },
+                                    "ProductDesc": {
+                                        "content": "Лесная, 1 кг"
+                                    },
+                                    "ProductPrice": {
+                                        "PriceCurrent": {
+                                            "content": "650 ₽"
+                                        },
+                                        "PriceUnit": {
+                                            "content": "/ кг"
+                                        }
+                                    },
+                                    "ProductButton": {
+                                        "content": "В корзину"
+                                    }
+                                }
+                            },
+                            "ProductCardFour": {
+                                "ProductImage": {
+                                    "ProductBadge": {
+                                        "content": "Хит"
+                                    }
+                                },
+                                "ProductContent": {
+                                    "ProductName": {
+                                        "content": "Черника"
+                                    },
+                                    "ProductDesc": {
+                                        "content": "Северная, 1 кг"
+                                    },
+                                    "ProductPrice": {
+                                        "PriceCurrent": {
+                                            "content": "750 ₽"
+                                        },
+                                        "PriceUnit": {
+                                            "content": "/ кг"
+                                        }
+                                    },
+                                    "ProductButton": {
+                                        "content": "В корзину"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "OrderForm": {
+            "styles": {
+                "OrderSection": {
+                    "__html": "section",
+                    "base": {
+                        "padding": "6rem 2rem",
+                        "background": "var(--background)",
+                        "font-family": "var(--font-main)"
+                    },
+                    "mobile": {
+                        "padding": "3rem 1rem"
+                    }
+                },
+                "OrderContainer": {
+                    "__html": "div",
+                    "base": {
+                        "max-width": "700px",
+                        "margin": "0 auto"
+                    },
+                    "mobile": {}
+                },
+                "OrderCard": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--surface-warm)",
+                        "border-radius": "var(--border-radius-xl)",
+                        "padding": "3rem",
+                        "border": "1px solid var(--border-light)",
+                        "box-shadow": "var(--shadow-natural)"
+                    },
+                    "mobile": {
+                        "padding": "1.5rem"
+                    }
+                },
+                "OrderTitle": {
+                    "__html": "h2",
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "2.5rem",
+                        "font-weight": "700",
+                        "color": "var(--text-main)",
+                        "text-align": "center",
+                        "margin-bottom": "1rem"
+                    },
+                    "mobile": {
+                        "font-size": "1.8rem"
+                    }
+                },
+                "OrderSubtitle": {
+                    "__html": "p",
+                    "base": {
+                        "text-align": "center",
+                        "color": "var(--text-muted)",
+                        "margin-bottom": "2.5rem"
+                    },
+                    "mobile": {
+                        "font-size": "0.9rem",
+                        "margin-bottom": "1.5rem"
+                    }
+                },
+                "FormGroupOne": {
+                    "__html": "div",
+                    "base": {
+                        "margin-bottom": "1.5rem"
+                    },
+                    "mobile": {}
+                },
+                "FormGroupTwo": {
+                    "__html": "div",
+                    "base": {
+                        "margin-bottom": "1.5rem"
+                    },
+                    "mobile": {}
+                },
+                "FormGroupThree": {
+                    "__html": "div",
+                    "base": {
+                        "margin-bottom": "2rem"
+                    },
+                    "mobile": {}
+                },
+                "FormLabel": {
+                    "__html": "div",
+                    "base": {
+                        "color": "var(--text-main)",
+                        "font-weight": "600",
+                        "margin-bottom": "0.5rem"
+                    },
+                    "mobile": {
+                        "font-size": "0.9rem"
+                    }
+                },
+                "FormInputOne": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--surface)",
+                        "border": "1px solid var(--border-light)",
+                        "border-radius": "var(--border-radius-full)",
+                        "padding": "1rem 1.5rem",
+                        "color": "var(--text-main)",
+                        "cursor": "text"
+                    },
+                    "mobile": {
+                        "padding": "0.85rem 1.25rem"
+                    }
+                },
+                "FormInputTwo": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--surface)",
+                        "border": "1px solid var(--border-light)",
+                        "border-radius": "var(--border-radius-full)",
+                        "padding": "1rem 1.5rem",
+                        "color": "var(--text-main)",
+                        "cursor": "text"
+                    },
+                    "mobile": {
+                        "padding": "0.85rem 1.25rem"
+                    }
+                },
+                "FormTextarea": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--surface)",
+                        "border": "1px solid var(--border-light)",
+                        "border-radius": "var(--border-radius-md)",
+                        "padding": "1rem 1.5rem",
+                        "color": "var(--text-main)",
+                        "min-height": "100px",
+                        "cursor": "text"
+                    },
+                    "mobile": {
+                        "padding": "0.85rem 1.25rem",
+                        "min-height": "80px"
+                    }
+                },
+                "FormPlaceholder": {
+                    "__html": "span",
+                    "base": {
+                        "color": "var(--text-light)"
+                    },
+                    "mobile": {}
+                },
+                "FormSubmit": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--gradient-nature)",
+                        "color": "white",
+                        "border": "none",
+                        "border-radius": "var(--border-radius-full)",
+                        "padding": "1.25rem",
+                        "text-align": "center",
+                        "font-weight": "600",
+                        "font-size": "1.1rem",
+                        "cursor": "pointer",
+                        "box-shadow": "var(--shadow-natural)"
+                    },
+                    "mobile": {
+                        "padding": "1rem",
+                        "font-size": "1rem"
+                    }
+                }
+            },
+            "mainContent": {
+                "OrderSection": {
+                    "OrderContainer": {
+                        "OrderCard": {
+                            "OrderTitle": {
+                                "content": "Заказать свежий урожай"
+                            },
+                            "OrderSubtitle": {
+                                "content": "Оставьте заявку, и мы свяжемся с вами для подтверждения"
+                            },
+                            "FormGroupOne": {
+                                "FormLabel": {
+                                    "content": "Ваше имя"
+                                },
+                                "FormInputOne": {
+                                    "FormPlaceholder": {
+                                        "content": "Иван Петров"
+                                    }
+                                }
+                            },
+                            "FormGroupTwo": {
+                                "FormLabel": {
+                                    "content": "Телефон"
+                                },
+                                "FormInputTwo": {
+                                    "FormPlaceholder": {
+                                        "content": "+7 (___) ___-__-__"
+                                    }
+                                }
+                            },
+                            "FormGroupThree": {
+                                "FormLabel": {
+                                    "content": "Комментарий к заказу"
+                                },
+                                "FormTextarea": {
+                                    "FormPlaceholder": {
+                                        "content": "Какие ягоды или грибы вас интересуют?"
+                                    }
+                                }
+                            },
+                            "FormSubmit": {
+                                "content": "Отправить заявку"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "Footer": {
+            "styles": {
+                "FooterWrapper": {
+                    "__html": "footer",
+                    "base": {
+                        "background": "var(--primary-dark)",
+                        "padding": "4rem 2rem 2rem",
+                        "font-family": "var(--font-main)",
+                        "color": "white"
+                    },
+                    "mobile": {
+                        "padding": "2rem 1rem 1.5rem"
+                    }
+                },
+                "FooterContainer": {
+                    "__html": "div",
+                    "base": {
+                        "max-width": "var(--container-width)",
+                        "margin": "0 auto"
+                    },
+                    "mobile": {}
+                },
+                "FooterTop": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "justify-content": "space-between",
+                        "align-items": "center",
+                        "padding-bottom": "3rem",
+                        "border-bottom": "1px solid rgba(255,255,255,0.1)"
+                    },
+                    "mobile": {
+                        "flex-direction": "column",
+                        "gap": "1.5rem",
+                        "padding-bottom": "1.5rem"
+                    }
+                },
+                "FooterLogo": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "align-items": "center",
+                        "gap": "0.5rem"
+                    },
+                    "mobile": {}
+                },
+                "LogoTextLight": {
+                    "__html": "span",
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "1.5rem",
+                        "font-weight": "700",
+                        "color": "white"
+                    },
+                    "mobile": {
+                        "font-size": "1.25rem"
+                    }
+                },
+                "FooterSocial": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "gap": "1.5rem"
+                    },
+                    "mobile": {
+                        "gap": "1rem"
+                    }
+                },
+                "SocialLinkOne": {
+                    "__html": "span",
+                    "base": {
+                        "color": "rgba(255,255,255,0.7)",
+                        "cursor": "pointer",
+                        "transition": "color var(--transition-smooth)"
+                    },
+                    "mobile": {
+                        "font-size": "0.9rem"
+                    }
+                },
+                "SocialLinkTwo": {
+                    "__html": "span",
+                    "base": {
+                        "color": "rgba(255,255,255,0.7)",
+                        "cursor": "pointer",
+                        "transition": "color var(--transition-smooth)"
+                    },
+                    "mobile": {
+                        "font-size": "0.9rem"
+                    }
+                },
+                "SocialLinkThree": {
+                    "__html": "span",
+                    "base": {
+                        "color": "rgba(255,255,255,0.7)",
+                        "cursor": "pointer",
+                        "transition": "color var(--transition-smooth)"
+                    },
+                    "mobile": {
+                        "font-size": "0.9rem"
+                    }
+                },
+                "FooterBottom": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "justify-content": "space-between",
+                        "align-items": "center",
+                        "padding-top": "2rem"
+                    },
+                    "mobile": {
+                        "flex-direction": "column",
+                        "gap": "1rem",
+                        "text-align": "center",
+                        "padding-top": "1.5rem"
+                    }
+                },
+                "FooterCopy": {
+                    "__html": "p",
+                    "base": {
+                        "color": "rgba(255,255,255,0.5)",
+                        "font-size": "0.9rem"
+                    },
+                    "mobile": {
+                        "font-size": "0.8rem"
+                    }
+                },
+                "FooterLinks": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "gap": "2rem"
+                    },
+                    "mobile": {
+                        "gap": "1.5rem"
+                    }
+                },
+                "FooterLinkOne": {
+                    "__html": "span",
+                    "base": {
+                        "color": "rgba(255,255,255,0.5)",
+                        "font-size": "0.9rem",
+                        "cursor": "pointer"
+                    },
+                    "mobile": {
+                        "font-size": "0.8rem"
+                    }
+                },
+                "FooterLinkTwo": {
+                    "__html": "span",
+                    "base": {
+                        "color": "rgba(255,255,255,0.5)",
+                        "font-size": "0.9rem",
+                        "cursor": "pointer"
+                    },
+                    "mobile": {
+                        "font-size": "0.8rem"
+                    }
+                }
+            },
+            "mainContent": {
+                "FooterWrapper": {
+                    "FooterContainer": {
+                        "FooterTop": {
+                            "FooterLogo": {
+                                "LogoTextLight": {
+                                    "content": "🍇 ЯмалДары"
+                                }
+                            },
+                            "FooterSocial": {
+                                "SocialLinkOne": {
+                                    "content": "Telegram"
+                                },
+                                "SocialLinkTwo": {
+                                    "content": "VK"
+                                },
+                                "SocialLinkThree": {
+                                    "content": "WhatsApp"
+                                }
+                            }
+                        },
+                        "FooterBottom": {
+                            "FooterCopy": {
+                                "content": "© 2026 ЯмалДары. Собрано с любовью к северу."
+                            },
+                            "FooterLinks": {
+                                "FooterLinkOne": {
+                                    "content": "Политика"
+                                },
+                                "FooterLinkTwo": {
+                                    "content": "Контакты"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
