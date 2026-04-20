@@ -1,0 +1,1936 @@
+{
+    "globalCssTokens": {
+        "base": {
+            "--transition-smooth": "0.35s cubic-bezier(0.4, 0, 0.2, 1)",
+            "--transition-bounce": "0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55)",
+            "--border-radius-sm": "0.5rem",
+            "--border-radius-md": "1rem",
+            "--border-radius-lg": "2rem",
+            "--border-radius-xl": "3rem",
+            "--border-radius-full": "9999px",
+            "--font-main": "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
+            "--font-display": "'Montserrat', 'Inter', sans-serif",
+            "--container-width": "1280px"
+        },
+        "light": {
+            "--primary": "#0a1c3a",
+            "--primary-light": "#1a3a6e",
+            "--primary-dark": "#050d1a",
+            "--accent": "#c9a13b",
+            "--accent-glow": "#e8c56d",
+            "--accent-secondary": "#2a9d8f",
+            "--background": "#ffffff",
+            "--background-alt": "#f4f7fc",
+            "--surface": "#ffffff",
+            "--surface-elevated": "#fafcff",
+            "--text-main": "#0a1c3a",
+            "--text-muted": "#3a4a5e",
+            "--text-light": "#6a7a8e",
+            "--text-inverse": "#ffffff",
+            "--border-light": "#e0e8f0",
+            "--border-accent": "#c9a13b",
+            "--shadow-sm": "0 4px 12px rgba(10, 28, 58, 0.04)",
+            "--shadow-md": "0 12px 28px rgba(10, 28, 58, 0.08)",
+            "--shadow-lg": "0 24px 48px rgba(10, 28, 58, 0.12)",
+            "--shadow-gold": "0 16px 40px rgba(201, 161, 59, 0.15)",
+            "--gradient-hero": "linear-gradient(135deg, #0a1c3a 0%, #1a3a6e 50%, #0a1c3a 100%)",
+            "--gradient-card": "linear-gradient(145deg, #ffffff 0%, #fafcff 100%)",
+            "--gradient-accent": "linear-gradient(135deg, #c9a13b 0%, #e8c56d 100%)"
+        },
+        "dark": {
+            "--primary": "#f4f7fc",
+            "--primary-light": "#e0e8f0",
+            "--primary-dark": "#b0c0d0",
+            "--accent": "#d4af37",
+            "--accent-glow": "#f3d779",
+            "--accent-secondary": "#52b788",
+            "--background": "#0a0f1a",
+            "--background-alt": "#0f1625",
+            "--surface": "#131c2e",
+            "--surface-elevated": "#182438",
+            "--text-main": "#f4f7fc",
+            "--text-muted": "#b0c0d0",
+            "--text-light": "#708090",
+            "--text-inverse": "#0a1c3a",
+            "--border-light": "#1e2a40",
+            "--border-accent": "#d4af37",
+            "--shadow-sm": "0 4px 12px rgba(0, 0, 0, 0.3)",
+            "--shadow-md": "0 12px 28px rgba(0, 0, 0, 0.4)",
+            "--shadow-lg": "0 24px 48px rgba(0, 0, 0, 0.5)",
+            "--shadow-gold": "0 16px 40px rgba(212, 175, 55, 0.2)",
+            "--gradient-hero": "linear-gradient(135deg, #0a0f1a 0%, #131c2e 50%, #0a0f1a 100%)",
+            "--gradient-card": "linear-gradient(145deg, #131c2e 0%, #182438 100%)",
+            "--gradient-accent": "linear-gradient(135deg, #d4af37 0%, #f3d779 100%)"
+        }
+    },
+    "sections": {
+        "Header": {
+            "styles": {
+                "HeaderWrapper": {
+                    "__html": "header",
+                    "base": {
+                        "position": "fixed",
+                        "top": "0",
+                        "left": "0",
+                        "right": "0",
+                        "z-index": "100",
+                        "background": "var(--surface)",
+                        "border-bottom": "2px solid var(--border-accent)",
+                        "font-family": "var(--font-main)",
+                        "box-shadow": "var(--shadow-sm)"
+                    },
+                    "mobile": {
+                        "background": "rgba(255, 255, 255, 0.98)",
+                        "backdrop-filter": "blur(8px)"
+                    }
+                },
+                "HeaderContainer": {
+                    "__html": "div",
+                    "base": {
+                        "max-width": "var(--container-width)",
+                        "margin": "0 auto",
+                        "padding": "1rem 2rem",
+                        "display": "flex",
+                        "align-items": "center",
+                        "justify-content": "space-between"
+                    },
+                    "mobile": {
+                        "padding": "0.75rem 1rem",
+                        "flex-wrap": "wrap"
+                    }
+                },
+                "LogoContainer": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "align-items": "center",
+                        "gap": "0.5rem"
+                    },
+                    "mobile": {}
+                },
+                "LogoIcon": {
+                    "__html": "span",
+                    "base": {
+                        "font-size": "2rem",
+                        "line-height": "1"
+                    },
+                    "mobile": {
+                        "font-size": "1.75rem"
+                    }
+                },
+                "LogoText": {
+                    "__html": "span",
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "1.5rem",
+                        "font-weight": "700",
+                        "color": "var(--text-main)",
+                        "letter-spacing": "-0.02em"
+                    },
+                    "mobile": {
+                        "font-size": "1.2rem"
+                    }
+                },
+                "LogoAccent": {
+                    "__html": "span",
+                    "base": {
+                        "color": "var(--accent)"
+                    },
+                    "mobile": {}
+                },
+                "NavContainer": {
+                    "__html": "nav",
+                    "base": {
+                        "display": "flex",
+                        "align-items": "center",
+                        "gap": "2rem"
+                    },
+                    "mobile": {
+                        "display": "none"
+                    }
+                },
+                "NavItemOne": {
+                    "__html": "a",
+                    "base": {
+                        "color": "var(--text-main)",
+                        "font-weight": "600",
+                        "font-size": "0.95rem",
+                        "cursor": "pointer",
+                        "transition": "color var(--transition-smooth)",
+                        "padding": "0.5rem 0",
+                        "border-bottom": "2px solid transparent"
+                    },
+                    "mobile": {}
+                },
+                "NavItemTwo": {
+                    "__html": "a",
+                    "base": {
+                        "color": "var(--text-main)",
+                        "font-weight": "600",
+                        "font-size": "0.95rem",
+                        "cursor": "pointer",
+                        "transition": "color var(--transition-smooth)",
+                        "padding": "0.5rem 0",
+                        "border-bottom": "2px solid transparent"
+                    },
+                    "mobile": {}
+                },
+                "NavItemThree": {
+                    "__html": "a",
+                    "base": {
+                        "color": "var(--text-main)",
+                        "font-weight": "600",
+                        "font-size": "0.95rem",
+                        "cursor": "pointer",
+                        "transition": "color var(--transition-smooth)",
+                        "padding": "0.5rem 0",
+                        "border-bottom": "2px solid transparent"
+                    },
+                    "mobile": {}
+                },
+                "NavItemFour": {
+                    "__html": "a",
+                    "base": {
+                        "color": "var(--text-main)",
+                        "font-weight": "600",
+                        "font-size": "0.95rem",
+                        "cursor": "pointer",
+                        "transition": "color var(--transition-smooth)",
+                        "padding": "0.5rem 0",
+                        "border-bottom": "2px solid transparent"
+                    },
+                    "mobile": {}
+                },
+                "HeaderActions": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "align-items": "center",
+                        "gap": "1.5rem"
+                    },
+                    "mobile": {
+                        "gap": "0.75rem"
+                    }
+                },
+                "PhoneContainer": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "flex-direction": "column",
+                        "align-items": "flex-end"
+                    },
+                    "mobile": {
+                        "display": "none"
+                    }
+                },
+                "PhoneNumber": {
+                    "__html": "span",
+                    "base": {
+                        "color": "var(--text-main)",
+                        "font-weight": "700",
+                        "font-size": "1rem"
+                    },
+                    "mobile": {}
+                },
+                "PhoneLabel": {
+                    "__html": "span",
+                    "base": {
+                        "color": "var(--text-light)",
+                        "font-size": "0.7rem",
+                        "text-transform": "uppercase",
+                        "letter-spacing": "1px"
+                    },
+                    "mobile": {}
+                },
+                "HeaderCta": {
+                    "__html": "button",
+                    "base": {
+                        "background": "var(--gradient-accent)",
+                        "color": "var(--text-inverse)",
+                        "border": "none",
+                        "border-radius": "var(--border-radius-full)",
+                        "padding": "0.75rem 1.75rem",
+                        "font-weight": "700",
+                        "font-size": "0.9rem",
+                        "cursor": "pointer",
+                        "transition": "all var(--transition-smooth)",
+                        "text-transform": "uppercase",
+                        "letter-spacing": "1px",
+                        "box-shadow": "var(--shadow-gold)"
+                    },
+                    "mobile": {
+                        "padding": "0.5rem 1rem",
+                        "font-size": "0.8rem"
+                    }
+                },
+                "MobileMenuButton": {
+                    "__html": "button",
+                    "base": {
+                        "display": "none",
+                        "background": "transparent",
+                        "border": "2px solid var(--border-accent)",
+                        "border-radius": "var(--border-radius-sm)",
+                        "padding": "0.5rem 0.75rem",
+                        "cursor": "pointer",
+                        "color": "var(--text-main)",
+                        "font-weight": "700"
+                    },
+                    "mobile": {
+                        "display": "block"
+                    }
+                }
+            },
+            "mainContent": {
+                "HeaderWrapper": {
+                    "HeaderContainer": {
+                        "LogoContainer": {
+                            "LogoIcon": {
+                                "content": "✈️"
+                            },
+                            "LogoText": {
+                                "content": "Sky",
+                                "LogoAccent": {
+                                    "content": "Vista"
+                                }
+                            }
+                        },
+                        "NavContainer": {
+                            "NavItemOne": {
+                                "content": "Рейсы"
+                            },
+                            "NavItemTwo": {
+                                "content": "О нас"
+                            },
+                            "NavItemThree": {
+                                "content": "Бизнес-класс"
+                            },
+                            "NavItemFour": {
+                                "content": "Контакты"
+                            }
+                        },
+                        "HeaderActions": {
+                            "PhoneContainer": {
+                                "PhoneNumber": {
+                                    "content": "8 (800) 555-35-35"
+                                },
+                                "PhoneLabel": {
+                                    "content": "Круглосуточно"
+                                }
+                            },
+                            "HeaderCta": {
+                                "content": "Билеты"
+                            },
+                            "MobileMenuButton": {
+                                "content": "☰ МЕНЮ"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "Hero": {
+            "styles": {
+                "HeroSection": {
+                    "__html": "section",
+                    "base": {
+                        "width": "100%",
+                        "min-height": "100vh",
+                        "display": "flex",
+                        "align-items": "center",
+                        "padding": "8rem 2rem 4rem",
+                        "background": "var(--gradient-hero)",
+                        "position": "relative",
+                        "overflow": "hidden",
+                        "font-family": "var(--font-main)"
+                    },
+                    "mobile": {
+                        "min-height": "auto",
+                        "padding": "6rem 1rem 3rem"
+                    }
+                },
+                "HeroContainer": {
+                    "__html": "div",
+                    "base": {
+                        "max-width": "var(--container-width)",
+                        "margin": "0 auto",
+                        "width": "100%",
+                        "position": "relative",
+                        "z-index": "2"
+                    },
+                    "mobile": {}
+                },
+                "HeroGrid": {
+                    "__html": "div",
+                    "base": {
+                        "display": "grid",
+                        "grid-template-columns": "1fr 1.2fr",
+                        "gap": "4rem",
+                        "align-items": "center"
+                    },
+                    "mobile": {
+                        "grid-template-columns": "1fr",
+                        "gap": "2rem"
+                    }
+                },
+                "HeroContent": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "flex-direction": "column",
+                        "gap": "1.5rem"
+                    },
+                    "mobile": {
+                        "text-align": "center",
+                        "align-items": "center"
+                    }
+                },
+                "HeroBadge": {
+                    "__html": "div",
+                    "base": {
+                        "display": "inline-flex",
+                        "align-items": "center",
+                        "gap": "0.75rem",
+                        "background": "rgba(255,255,255,0.1)",
+                        "backdrop-filter": "blur(8px)",
+                        "border": "1px solid rgba(255,255,255,0.2)",
+                        "border-radius": "var(--border-radius-full)",
+                        "padding": "0.5rem 1.5rem",
+                        "width": "fit-content"
+                    },
+                    "mobile": {
+                        "margin": "0 auto"
+                    }
+                },
+                "BadgeText": {
+                    "__html": "span",
+                    "base": {
+                        "color": "white",
+                        "font-weight": "500",
+                        "letter-spacing": "1px"
+                    },
+                    "mobile": {
+                        "font-size": "0.85rem"
+                    }
+                },
+                "HeroTitle": {
+                    "__html": "h1",
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "clamp(3rem, 6vw, 5rem)",
+                        "font-weight": "700",
+                        "line-height": "1.1",
+                        "color": "white",
+                        "margin": "0",
+                        "text-transform": "uppercase"
+                    },
+                    "mobile": {
+                        "font-size": "clamp(2.5rem, 10vw, 3.5rem)"
+                    }
+                },
+                "HeroTitleAccent": {
+                    "__html": "span",
+                    "base": {
+                        "color": "var(--accent-glow)",
+                        "display": "block"
+                    },
+                    "mobile": {}
+                },
+                "HeroDescription": {
+                    "__html": "p",
+                    "base": {
+                        "font-size": "1.25rem",
+                        "line-height": "1.7",
+                        "color": "rgba(255,255,255,0.85)",
+                        "margin": "0",
+                        "max-width": "90%"
+                    },
+                    "mobile": {
+                        "font-size": "1rem",
+                        "max-width": "100%"
+                    }
+                },
+                "HeroCta": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "gap": "1.5rem",
+                        "margin-top": "1.5rem"
+                    },
+                    "mobile": {
+                        "flex-direction": "column",
+                        "width": "100%",
+                        "max-width": "300px"
+                    }
+                },
+                "PrimaryButton": {
+                    "__html": "button",
+                    "base": {
+                        "background": "var(--gradient-accent)",
+                        "color": "var(--text-inverse)",
+                        "border": "none",
+                        "border-radius": "var(--border-radius-full)",
+                        "padding": "1.25rem 2.5rem",
+                        "font-weight": "700",
+                        "font-size": "1.1rem",
+                        "cursor": "pointer",
+                        "transition": "all var(--transition-smooth)",
+                        "box-shadow": "var(--shadow-gold)",
+                        "text-transform": "uppercase"
+                    },
+                    "mobile": {
+                        "padding": "1rem",
+                        "font-size": "1rem",
+                        "width": "100%"
+                    }
+                },
+                "SecondaryButton": {
+                    "__html": "button",
+                    "base": {
+                        "background": "transparent",
+                        "color": "white",
+                        "border": "1px solid rgba(255,255,255,0.4)",
+                        "border-radius": "var(--border-radius-full)",
+                        "padding": "1.25rem 2.5rem",
+                        "font-weight": "600",
+                        "font-size": "1.1rem",
+                        "cursor": "pointer",
+                        "transition": "all var(--transition-smooth)",
+                        "text-transform": "uppercase"
+                    },
+                    "mobile": {
+                        "padding": "1rem",
+                        "font-size": "1rem",
+                        "width": "100%"
+                    }
+                },
+                "HeroVisual": {
+                    "__html": "div",
+                    "base": {
+                        "position": "relative",
+                        "border-radius": "var(--border-radius-lg)",
+                        "overflow": "hidden",
+                        "box-shadow": "var(--shadow-lg)",
+                        "border": "2px solid var(--border-accent)"
+                    },
+                    "mobile": {
+                        "order": "-1"
+                    }
+                },
+                "HeroImage": {
+                    "__html": "img",
+                    "base": {
+                        "width": "100%",
+                        "height": "auto",
+                        "display": "block"
+                    },
+                    "mobile": {}
+                }
+            },
+            "mainContent": {
+                "HeroSection": {
+                    "HeroContainer": {
+                        "HeroGrid": {
+                            "HeroContent": {
+                                "HeroBadge": {
+                                    "BadgeText": {
+                                        "content": "✈️ Откройте мир с комфортом"
+                                    }
+                                },
+                                "HeroTitle": {
+                                    "content": "Ваше небо.",
+                                    "HeroTitleAccent": {
+                                        "content": "Ваши правила."
+                                    }
+                                },
+                                "HeroDescription": {
+                                    "content": "SkyVista — авиакомпания нового поколения. Прямые рейсы, премиальный сервис и забота о каждой детали вашего путешествия."
+                                },
+                                "HeroCta": {
+                                    "PrimaryButton": {
+                                        "content": "Найти билет"
+                                    },
+                                    "SecondaryButton": {
+                                        "content": "О компании"
+                                    }
+                                }
+                            },
+                            "HeroVisual": {
+                                "HeroImage": {
+                                    "props": {
+                                        "src": "https://cdni-vm.servicecdn.ru/2024.07/original/1200_66a78e3782682c6ff05a5ab4.jpg",
+                                        "alt": "Самолет SkyVista на фоне заката"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "Advantages": {
+            "styles": {
+                "AdvantagesSection": {
+                    "__html": "section",
+                    "base": {
+                        "padding": "5rem 2rem",
+                        "background": "var(--background)",
+                        "font-family": "var(--font-main)"
+                    },
+                    "mobile": {
+                        "padding": "3rem 1rem"
+                    }
+                },
+                "AdvantagesContainer": {
+                    "__html": "div",
+                    "base": {
+                        "max-width": "var(--container-width)",
+                        "margin": "0 auto"
+                    },
+                    "mobile": {}
+                },
+                "SectionHeader": {
+                    "__html": "div",
+                    "base": {
+                        "text-align": "center",
+                        "margin-bottom": "4rem"
+                    },
+                    "mobile": {
+                        "margin-bottom": "2rem"
+                    }
+                },
+                "SectionTitle": {
+                    "__html": "h2",
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "clamp(2rem, 4vw, 3rem)",
+                        "color": "var(--text-main)",
+                        "font-weight": "700",
+                        "text-transform": "uppercase",
+                        "margin-bottom": "1rem"
+                    },
+                    "mobile": {
+                        "font-size": "1.8rem"
+                    }
+                },
+                "SectionSubtitle": {
+                    "__html": "p",
+                    "base": {
+                        "color": "var(--text-muted)",
+                        "font-size": "1.2rem"
+                    },
+                    "mobile": {
+                        "font-size": "1rem"
+                    }
+                },
+                "AdvantagesGrid": {
+                    "__html": "div",
+                    "base": {
+                        "display": "grid",
+                        "grid-template-columns": "repeat(4, 1fr)",
+                        "gap": "2rem"
+                    },
+                    "mobile": {
+                        "grid-template-columns": "1fr",
+                        "gap": "1.5rem"
+                    }
+                },
+                "AdvantageCardOne": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--surface-elevated)",
+                        "border-radius": "var(--border-radius-lg)",
+                        "padding": "2rem 1.5rem",
+                        "border": "1px solid var(--border-light)",
+                        "text-align": "center",
+                        "box-shadow": "var(--shadow-sm)",
+                        "transition": "transform var(--transition-smooth)"
+                    },
+                    "mobile": {
+                        "padding": "1.5rem"
+                    }
+                },
+                "AdvantageCardTwo": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--surface-elevated)",
+                        "border-radius": "var(--border-radius-lg)",
+                        "padding": "2rem 1.5rem",
+                        "border": "1px solid var(--border-light)",
+                        "text-align": "center",
+                        "box-shadow": "var(--shadow-sm)"
+                    },
+                    "mobile": {
+                        "padding": "1.5rem"
+                    }
+                },
+                "AdvantageCardThree": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--surface-elevated)",
+                        "border-radius": "var(--border-radius-lg)",
+                        "padding": "2rem 1.5rem",
+                        "border": "1px solid var(--border-light)",
+                        "text-align": "center",
+                        "box-shadow": "var(--shadow-sm)"
+                    },
+                    "mobile": {
+                        "padding": "1.5rem"
+                    }
+                },
+                "AdvantageCardFour": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--surface-elevated)",
+                        "border-radius": "var(--border-radius-lg)",
+                        "padding": "2rem 1.5rem",
+                        "border": "1px solid var(--border-light)",
+                        "text-align": "center",
+                        "box-shadow": "var(--shadow-sm)"
+                    },
+                    "mobile": {
+                        "padding": "1.5rem"
+                    }
+                },
+                "AdvantageIcon": {
+                    "__html": "div",
+                    "base": {
+                        "font-size": "2.5rem",
+                        "margin-bottom": "1.5rem"
+                    },
+                    "mobile": {
+                        "font-size": "2rem",
+                        "margin-bottom": "1rem"
+                    }
+                },
+                "AdvantageTitle": {
+                    "__html": "h3",
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "1.3rem",
+                        "font-weight": "600",
+                        "color": "var(--text-main)",
+                        "margin-bottom": "0.75rem"
+                    },
+                    "mobile": {
+                        "font-size": "1.2rem"
+                    }
+                },
+                "AdvantageDesc": {
+                    "__html": "p",
+                    "base": {
+                        "color": "var(--text-muted)",
+                        "line-height": "1.6",
+                        "font-size": "0.95rem"
+                    },
+                    "mobile": {
+                        "font-size": "0.9rem"
+                    }
+                }
+            },
+            "mainContent": {
+                "AdvantagesSection": {
+                    "AdvantagesContainer": {
+                        "SectionHeader": {
+                            "SectionTitle": {
+                                "content": "Почему выбирают нас"
+                            },
+                            "SectionSubtitle": {
+                                "content": "Мы делаем полет незабываемым"
+                            }
+                        },
+                        "AdvantagesGrid": {
+                            "AdvantageCardOne": {
+                                "AdvantageIcon": {
+                                    "content": "🛫"
+                                },
+                                "AdvantageTitle": {
+                                    "content": "Пунктуальность"
+                                },
+                                "AdvantageDesc": {
+                                    "content": "98% рейсов прибывают точно по расписанию"
+                                }
+                            },
+                            "AdvantageCardTwo": {
+                                "AdvantageIcon": {
+                                    "content": "💺"
+                                },
+                                "AdvantageTitle": {
+                                    "content": "Комфорт"
+                                },
+                                "AdvantageDesc": {
+                                    "content": "Эргономичные кресла и пространство для ног"
+                                }
+                            },
+                            "AdvantageCardThree": {
+                                "AdvantageIcon": {
+                                    "content": "🍽️"
+                                },
+                                "AdvantageTitle": {
+                                    "content": "Питание"
+                                },
+                                "AdvantageDesc": {
+                                    "content": "Меню от шеф-повара и напитки на выбор"
+                                }
+                            },
+                            "AdvantageCardFour": {
+                                "AdvantageIcon": {
+                                    "content": "🌍"
+                                },
+                                "AdvantageTitle": {
+                                    "content": "Маршруты"
+                                },
+                                "AdvantageDesc": {
+                                    "content": "Более 150 направлений по всему миру"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "BusinessClass": {
+            "styles": {
+                "BusinessSection": {
+                    "__html": "section",
+                    "base": {
+                        "padding": "6rem 2rem",
+                        "background": "var(--background-alt)",
+                        "font-family": "var(--font-main)"
+                    },
+                    "mobile": {
+                        "padding": "3rem 1rem"
+                    }
+                },
+                "BusinessContainer": {
+                    "__html": "div",
+                    "base": {
+                        "max-width": "var(--container-width)",
+                        "margin": "0 auto"
+                    },
+                    "mobile": {}
+                },
+                "BusinessGrid": {
+                    "__html": "div",
+                    "base": {
+                        "display": "grid",
+                        "grid-template-columns": "1fr 1fr",
+                        "gap": "4rem",
+                        "align-items": "center"
+                    },
+                    "mobile": {
+                        "grid-template-columns": "1fr",
+                        "gap": "2rem"
+                    }
+                },
+                "BusinessVisual": {
+                    "__html": "div",
+                    "base": {
+                        "border-radius": "var(--border-radius-lg)",
+                        "overflow": "hidden",
+                        "box-shadow": "var(--shadow-lg)",
+                        "border": "2px solid var(--border-accent)"
+                    },
+                    "mobile": {
+                        "order": "-1"
+                    }
+                },
+                "BusinessImage": {
+                    "__html": "img",
+                    "base": {
+                        "width": "100%",
+                        "height": "auto",
+                        "display": "block"
+                    },
+                    "mobile": {}
+                },
+                "BusinessContent": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "flex-direction": "column",
+                        "gap": "1.5rem"
+                    },
+                    "mobile": {
+                        "text-align": "center"
+                    }
+                },
+                "SectionHeader": {
+                    "__html": "div",
+                    "base": {},
+                    "mobile": {}
+                },
+                "SectionTitle": {
+                    "__html": "h2",
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "clamp(2rem, 4vw, 3rem)",
+                        "color": "var(--text-main)",
+                        "font-weight": "700",
+                        "text-transform": "uppercase"
+                    },
+                    "mobile": {
+                        "font-size": "1.8rem"
+                    }
+                },
+                "BusinessDesc": {
+                    "__html": "p",
+                    "base": {
+                        "color": "var(--text-muted)",
+                        "line-height": "1.8",
+                        "font-size": "1.1rem"
+                    },
+                    "mobile": {
+                        "font-size": "1rem"
+                    }
+                },
+                "BusinessFeatures": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "flex-direction": "column",
+                        "gap": "1rem",
+                        "margin-top": "1rem"
+                    },
+                    "mobile": {}
+                },
+                "FeatureItemOne": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "align-items": "center",
+                        "gap": "1rem"
+                    },
+                    "mobile": {
+                        "justify-content": "center"
+                    }
+                },
+                "FeatureItemTwo": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "align-items": "center",
+                        "gap": "1rem"
+                    },
+                    "mobile": {
+                        "justify-content": "center"
+                    }
+                },
+                "FeatureItemThree": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "align-items": "center",
+                        "gap": "1rem"
+                    },
+                    "mobile": {
+                        "justify-content": "center"
+                    }
+                },
+                "FeatureIcon": {
+                    "__html": "span",
+                    "base": {
+                        "color": "var(--accent)",
+                        "font-size": "1.5rem"
+                    },
+                    "mobile": {}
+                },
+                "FeatureText": {
+                    "__html": "span",
+                    "base": {
+                        "color": "var(--text-main)",
+                        "font-weight": "500"
+                    },
+                    "mobile": {}
+                },
+                "BusinessCta": {
+                    "__html": "button",
+                    "base": {
+                        "background": "var(--gradient-accent)",
+                        "color": "var(--text-inverse)",
+                        "border": "none",
+                        "border-radius": "var(--border-radius-full)",
+                        "padding": "1rem 2rem",
+                        "font-weight": "700",
+                        "font-size": "1rem",
+                        "cursor": "pointer",
+                        "transition": "all var(--transition-smooth)",
+                        "box-shadow": "var(--shadow-gold)",
+                        "text-transform": "uppercase",
+                        "width": "fit-content",
+                        "margin-top": "1rem"
+                    },
+                    "mobile": {
+                        "width": "100%"
+                    }
+                }
+            },
+            "mainContent": {
+                "BusinessSection": {
+                    "BusinessContainer": {
+                        "BusinessGrid": {
+                            "BusinessVisual": {
+                                "BusinessImage": {
+                                    "props": {
+                                        "src": "https://uniticket.ru/wp-content/uploads/2020/02/a-poroy-mesta-pervogo-klassa-napominayut-otdelnye-komnaty.jpg",
+                                        "alt": "Довольный клиент в бизнес-классе SkyVista"
+                                    }
+                                }
+                            },
+                            "BusinessContent": {
+                                "SectionHeader": {
+                                    "SectionTitle": {
+                                        "content": "Бизнес-класс SkyVista"
+                                    }
+                                },
+                                "BusinessDesc": {
+                                    "content": "Почувствуйте себя особенным с первой минуты. Отдельная стойка регистрации, доступ в лаунджи премиум-класса и кресла, раскладывающиеся в полноценную кровать."
+                                },
+                                "BusinessFeatures": {
+                                    "FeatureItemOne": {
+                                        "FeatureIcon": {
+                                            "content": "✓"
+                                        },
+                                        "FeatureText": {
+                                            "content": "Кресла-трансформеры 180°"
+                                        }
+                                    },
+                                    "FeatureItemTwo": {
+                                        "FeatureIcon": {
+                                            "content": "✓"
+                                        },
+                                        "FeatureText": {
+                                            "content": "Меню a la carte и премиальный бар"
+                                        }
+                                    },
+                                    "FeatureItemThree": {
+                                        "FeatureIcon": {
+                                            "content": "✓"
+                                        },
+                                        "FeatureText": {
+                                            "content": "Дорожный набор люкс-брендов"
+                                        }
+                                    }
+                                },
+                                "BusinessCta": {
+                                    "content": "Узнать стоимость"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "Crew": {
+            "styles": {
+                "CrewSection": {
+                    "__html": "section",
+                    "base": {
+                        "padding": "6rem 2rem",
+                        "background": "var(--background)",
+                        "font-family": "var(--font-main)"
+                    },
+                    "mobile": {
+                        "padding": "3rem 1rem"
+                    }
+                },
+                "CrewContainer": {
+                    "__html": "div",
+                    "base": {
+                        "max-width": "var(--container-width)",
+                        "margin": "0 auto"
+                    },
+                    "mobile": {}
+                },
+                "CrewGrid": {
+                    "__html": "div",
+                    "base": {
+                        "display": "grid",
+                        "grid-template-columns": "1.2fr 1fr",
+                        "gap": "4rem",
+                        "align-items": "center"
+                    },
+                    "mobile": {
+                        "grid-template-columns": "1fr",
+                        "gap": "2rem"
+                    }
+                },
+                "CrewContent": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "flex-direction": "column",
+                        "gap": "1.5rem"
+                    },
+                    "mobile": {
+                        "text-align": "center"
+                    }
+                },
+                "SectionTitle": {
+                    "__html": "h2",
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "clamp(2rem, 4vw, 3rem)",
+                        "color": "var(--text-main)",
+                        "font-weight": "700",
+                        "text-transform": "uppercase"
+                    },
+                    "mobile": {
+                        "font-size": "1.8rem"
+                    }
+                },
+                "CrewDesc": {
+                    "__html": "p",
+                    "base": {
+                        "color": "var(--text-muted)",
+                        "line-height": "1.8",
+                        "font-size": "1.1rem"
+                    },
+                    "mobile": {
+                        "font-size": "1rem"
+                    }
+                },
+                "CrewQuote": {
+                    "__html": "blockquote",
+                    "base": {
+                        "font-family": "var(--font-decor)",
+                        "font-size": "1.5rem",
+                        "line-height": "1.4",
+                        "color": "var(--accent)",
+                        "margin": "1rem 0 0",
+                        "padding-left": "1.5rem",
+                        "border-left": "4px solid var(--accent)",
+                        "font-style": "italic"
+                    },
+                    "mobile": {
+                        "font-size": "1.2rem"
+                    }
+                },
+                "CrewVisual": {
+                    "__html": "div",
+                    "base": {
+                        "border-radius": "var(--border-radius-lg)",
+                        "overflow": "hidden",
+                        "box-shadow": "var(--shadow-lg)",
+                        "border": "2px solid var(--border-accent)"
+                    },
+                    "mobile": {
+                        "order": "-1"
+                    }
+                },
+                "CrewImage": {
+                    "__html": "img",
+                    "base": {
+                        "width": "100%",
+                        "height": "auto",
+                        "display": "block"
+                    },
+                    "mobile": {}
+                }
+            },
+            "mainContent": {
+                "CrewSection": {
+                    "CrewContainer": {
+                        "CrewGrid": {
+                            "CrewContent": {
+                                "SectionTitle": {
+                                    "content": "Экипаж профессионалов"
+                                },
+                                "CrewDesc": {
+                                    "content": "Наши пилоты проходят строжайший отбор и регулярное обучение на современных тренажерах. Безопасность и спокойствие пассажиров — наш главный приоритет."
+                                },
+                                "CrewQuote": {
+                                    "content": "«Каждый рейс для меня — это возможность подарить людям уверенность в небе.»"
+                                }
+                            },
+                            "CrewVisual": {
+                                "CrewImage": {
+                                    "props": {
+                                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTheh9CtBZFoyOGJg2RKumHRcvi6F9BRhRCnA&s",
+                                        "alt": "Уверенный пилот SkyVista в кабине самолета"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "Destinations": {
+            "styles": {
+                "DestinationsSection": {
+                    "__html": "section",
+                    "base": {
+                        "padding": "6rem 2rem",
+                        "background": "var(--background-alt)",
+                        "font-family": "var(--font-main)"
+                    },
+                    "mobile": {
+                        "padding": "3rem 1rem"
+                    }
+                },
+                "DestinationsContainer": {
+                    "__html": "div",
+                    "base": {
+                        "max-width": "var(--container-width)",
+                        "margin": "0 auto"
+                    },
+                    "mobile": {}
+                },
+                "SectionHeader": {
+                    "__html": "div",
+                    "base": {
+                        "text-align": "center",
+                        "margin-bottom": "4rem"
+                    },
+                    "mobile": {
+                        "margin-bottom": "2rem"
+                    }
+                },
+                "SectionTitle": {
+                    "__html": "h2",
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "clamp(2rem, 4vw, 3rem)",
+                        "color": "var(--text-main)",
+                        "font-weight": "700",
+                        "text-transform": "uppercase",
+                        "margin-bottom": "1rem"
+                    },
+                    "mobile": {
+                        "font-size": "1.8rem"
+                    }
+                },
+                "SectionSubtitle": {
+                    "__html": "p",
+                    "base": {
+                        "color": "var(--text-muted)",
+                        "font-size": "1.2rem"
+                    },
+                    "mobile": {
+                        "font-size": "1rem"
+                    }
+                },
+                "DestinationsGrid": {
+                    "__html": "div",
+                    "base": {
+                        "display": "grid",
+                        "grid-template-columns": "repeat(3, 1fr)",
+                        "gap": "2rem"
+                    },
+                    "mobile": {
+                        "grid-template-columns": "1fr",
+                        "gap": "1.5rem"
+                    }
+                },
+                "DestinationCardOne": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--surface)",
+                        "border-radius": "var(--border-radius-lg)",
+                        "padding": "2rem",
+                        "border": "1px solid var(--border-light)",
+                        "box-shadow": "var(--shadow-sm)",
+                        "text-align": "center",
+                        "transition": "all var(--transition-smooth)"
+                    },
+                    "mobile": {
+                        "padding": "1.5rem"
+                    }
+                },
+                "DestinationCardTwo": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--surface)",
+                        "border-radius": "var(--border-radius-lg)",
+                        "padding": "2rem",
+                        "border": "1px solid var(--border-light)",
+                        "box-shadow": "var(--shadow-sm)",
+                        "text-align": "center"
+                    },
+                    "mobile": {
+                        "padding": "1.5rem"
+                    }
+                },
+                "DestinationCardThree": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--surface)",
+                        "border-radius": "var(--border-radius-lg)",
+                        "padding": "2rem",
+                        "border": "1px solid var(--border-light)",
+                        "box-shadow": "var(--shadow-sm)",
+                        "text-align": "center"
+                    },
+                    "mobile": {
+                        "padding": "1.5rem"
+                    }
+                },
+                "DestinationEmoji": {
+                    "__html": "div",
+                    "base": {
+                        "font-size": "3rem",
+                        "margin-bottom": "1rem"
+                    },
+                    "mobile": {
+                        "font-size": "2.5rem"
+                    }
+                },
+                "DestinationCity": {
+                    "__html": "h3",
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "1.5rem",
+                        "font-weight": "600",
+                        "color": "var(--text-main)",
+                        "margin-bottom": "0.5rem"
+                    },
+                    "mobile": {
+                        "font-size": "1.3rem"
+                    }
+                },
+                "DestinationPrice": {
+                    "__html": "p",
+                    "base": {
+                        "color": "var(--accent)",
+                        "font-weight": "700",
+                        "font-size": "1.2rem"
+                    },
+                    "mobile": {}
+                },
+                "DestinationLink": {
+                    "__html": "a",
+                    "base": {
+                        "display": "inline-block",
+                        "margin-top": "1rem",
+                        "color": "var(--text-main)",
+                        "font-weight": "600",
+                        "cursor": "pointer",
+                        "text-decoration": "none",
+                        "border-bottom": "2px solid var(--accent)"
+                    },
+                    "mobile": {}
+                }
+            },
+            "mainContent": {
+                "DestinationsSection": {
+                    "DestinationsContainer": {
+                        "SectionHeader": {
+                            "SectionTitle": {
+                                "content": "Популярные направления"
+                            },
+                            "SectionSubtitle": {
+                                "content": "Откройте мир вместе с нами"
+                            }
+                        },
+                        "DestinationsGrid": {
+                            "DestinationCardOne": {
+                                "DestinationEmoji": {
+                                    "content": "🗽"
+                                },
+                                "DestinationCity": {
+                                    "content": "Нью-Йорк"
+                                },
+                                "DestinationPrice": {
+                                    "content": "от 45 000 ₽"
+                                },
+                                "DestinationLink": {
+                                    "props": {
+                                        "href": "#"
+                                    },
+                                    "content": "Выбрать даты →"
+                                }
+                            },
+                            "DestinationCardTwo": {
+                                "DestinationEmoji": {
+                                    "content": "🗼"
+                                },
+                                "DestinationCity": {
+                                    "content": "Токио"
+                                },
+                                "DestinationPrice": {
+                                    "content": "от 62 000 ₽"
+                                },
+                                "DestinationLink": {
+                                    "props": {
+                                        "href": "#"
+                                    },
+                                    "content": "Выбрать даты →"
+                                }
+                            },
+                            "DestinationCardThree": {
+                                "DestinationEmoji": {
+                                    "content": "🏛️"
+                                },
+                                "DestinationCity": {
+                                    "content": "Рим"
+                                },
+                                "DestinationPrice": {
+                                    "content": "от 38 000 ₽"
+                                },
+                                "DestinationLink": {
+                                    "props": {
+                                        "href": "#"
+                                    },
+                                    "content": "Выбрать даты →"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "Reviews": {
+            "styles": {
+                "ReviewsSection": {
+                    "__html": "section",
+                    "base": {
+                        "padding": "6rem 2rem",
+                        "background": "var(--background)",
+                        "font-family": "var(--font-main)"
+                    },
+                    "mobile": {
+                        "padding": "3rem 1rem"
+                    }
+                },
+                "ReviewsContainer": {
+                    "__html": "div",
+                    "base": {
+                        "max-width": "var(--container-width)",
+                        "margin": "0 auto"
+                    },
+                    "mobile": {}
+                },
+                "SectionHeader": {
+                    "__html": "div",
+                    "base": {
+                        "text-align": "center",
+                        "margin-bottom": "4rem"
+                    },
+                    "mobile": {
+                        "margin-bottom": "2rem"
+                    }
+                },
+                "SectionTitle": {
+                    "__html": "h2",
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "clamp(2rem, 4vw, 3rem)",
+                        "color": "var(--text-main)",
+                        "font-weight": "700",
+                        "text-transform": "uppercase"
+                    },
+                    "mobile": {
+                        "font-size": "1.8rem"
+                    }
+                },
+                "ReviewsGrid": {
+                    "__html": "div",
+                    "base": {
+                        "display": "grid",
+                        "grid-template-columns": "repeat(2, 1fr)",
+                        "gap": "2rem"
+                    },
+                    "mobile": {
+                        "grid-template-columns": "1fr",
+                        "gap": "1.5rem"
+                    }
+                },
+                "ReviewCardOne": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--surface-elevated)",
+                        "border-radius": "var(--border-radius-lg)",
+                        "padding": "2.5rem",
+                        "border": "1px solid var(--border-light)",
+                        "box-shadow": "var(--shadow-md)"
+                    },
+                    "mobile": {
+                        "padding": "1.5rem"
+                    }
+                },
+                "ReviewCardTwo": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--surface-elevated)",
+                        "border-radius": "var(--border-radius-lg)",
+                        "padding": "2.5rem",
+                        "border": "1px solid var(--border-light)",
+                        "box-shadow": "var(--shadow-md)"
+                    },
+                    "mobile": {
+                        "padding": "1.5rem"
+                    }
+                },
+                "ReviewStars": {
+                    "__html": "div",
+                    "base": {
+                        "color": "var(--accent)",
+                        "font-size": "1.5rem",
+                        "margin-bottom": "1rem"
+                    },
+                    "mobile": {}
+                },
+                "ReviewText": {
+                    "__html": "p",
+                    "base": {
+                        "color": "var(--text-main)",
+                        "line-height": "1.7",
+                        "font-size": "1.1rem",
+                        "margin-bottom": "1.5rem"
+                    },
+                    "mobile": {
+                        "font-size": "1rem"
+                    }
+                },
+                "ReviewAuthor": {
+                    "__html": "p",
+                    "base": {
+                        "color": "var(--text-muted)",
+                        "font-weight": "600"
+                    },
+                    "mobile": {}
+                },
+                "ReviewRoute": {
+                    "__html": "p",
+                    "base": {
+                        "color": "var(--text-light)",
+                        "font-size": "0.9rem"
+                    },
+                    "mobile": {}
+                }
+            },
+            "mainContent": {
+                "ReviewsSection": {
+                    "ReviewsContainer": {
+                        "SectionHeader": {
+                            "SectionTitle": {
+                                "content": "Отзывы пассажиров"
+                            }
+                        },
+                        "ReviewsGrid": {
+                            "ReviewCardOne": {
+                                "ReviewStars": {
+                                    "content": "★★★★★"
+                                },
+                                "ReviewText": {
+                                    "content": "Летал бизнес-классом в Дубай. Сервис на высоте, кресло раскладывается полностью, еда как в ресторане. Однозначно выберу SkyVista снова!"
+                                },
+                                "ReviewAuthor": {
+                                    "content": "Алексей М."
+                                },
+                                "ReviewRoute": {
+                                    "content": "Москва — Дубай"
+                                }
+                            },
+                            "ReviewCardTwo": {
+                                "ReviewStars": {
+                                    "content": "★★★★★"
+                                },
+                                "ReviewText": {
+                                    "content": "Очень пунктуальная авиакомпания. Вылетели минута в минуту, прилетели даже раньше. Багаж выдали быстро. Персонал улыбчивый и внимательный."
+                                },
+                                "ReviewAuthor": {
+                                    "content": "Елена В."
+                                },
+                                "ReviewRoute": {
+                                    "content": "Санкт-Петербург — Сочи"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "BookingForm": {
+            "styles": {
+                "BookingSection": {
+                    "__html": "section",
+                    "base": {
+                        "padding": "6rem 2rem",
+                        "background": "var(--gradient-hero)",
+                        "font-family": "var(--font-main)",
+                        "position": "relative"
+                    },
+                    "mobile": {
+                        "padding": "3rem 1rem"
+                    }
+                },
+                "BookingContainer": {
+                    "__html": "div",
+                    "base": {
+                        "max-width": "900px",
+                        "margin": "0 auto",
+                        "position": "relative",
+                        "z-index": "2"
+                    },
+                    "mobile": {}
+                },
+                "BookingCard": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--surface)",
+                        "border-radius": "var(--border-radius-xl)",
+                        "padding": "3rem",
+                        "box-shadow": "var(--shadow-lg)",
+                        "border": "1px solid var(--border-accent)"
+                    },
+                    "mobile": {
+                        "padding": "1.5rem"
+                    }
+                },
+                "BookingTitle": {
+                    "__html": "h2",
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "2rem",
+                        "font-weight": "700",
+                        "color": "var(--text-main)",
+                        "text-align": "center",
+                        "margin-bottom": "1rem",
+                        "text-transform": "uppercase"
+                    },
+                    "mobile": {
+                        "font-size": "1.5rem"
+                    }
+                },
+                "BookingSubtitle": {
+                    "__html": "p",
+                    "base": {
+                        "text-align": "center",
+                        "color": "var(--text-muted)",
+                        "margin-bottom": "2.5rem"
+                    },
+                    "mobile": {
+                        "font-size": "0.9rem",
+                        "margin-bottom": "1.5rem"
+                    }
+                },
+                "FormRowOne": {
+                    "__html": "div",
+                    "base": {
+                        "display": "grid",
+                        "grid-template-columns": "1fr 1fr",
+                        "gap": "1.5rem",
+                        "margin-bottom": "1.5rem"
+                    },
+                    "mobile": {
+                        "grid-template-columns": "1fr",
+                        "gap": "1rem"
+                    }
+                },
+                "FormRowTwo": {
+                    "__html": "div",
+                    "base": {
+                        "display": "grid",
+                        "grid-template-columns": "1fr 1fr",
+                        "gap": "1.5rem",
+                        "margin-bottom": "1.5rem"
+                    },
+                    "mobile": {
+                        "grid-template-columns": "1fr",
+                        "gap": "1rem"
+                    }
+                },
+                "FormGroupOne": {
+                    "__html": "div",
+                    "base": {},
+                    "mobile": {}
+                },
+                "FormGroupTwo": {
+                    "__html": "div",
+                    "base": {},
+                    "mobile": {}
+                },
+                "FormGroupThree": {
+                    "__html": "div",
+                    "base": {
+                        "margin-bottom": "2rem"
+                    },
+                    "mobile": {}
+                },
+                "FormLabel": {
+                    "__html": "div",
+                    "base": {
+                        "color": "var(--text-main)",
+                        "font-weight": "600",
+                        "margin-bottom": "0.5rem",
+                        "text-transform": "uppercase",
+                        "letter-spacing": "1px",
+                        "font-size": "0.85rem"
+                    },
+                    "mobile": {}
+                },
+                "FormInputOne": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--background-alt)",
+                        "border": "1px solid var(--border-light)",
+                        "border-radius": "var(--border-radius-md)",
+                        "padding": "1rem 1.25rem",
+                        "color": "var(--text-main)",
+                        "cursor": "text"
+                    },
+                    "mobile": {
+                        "padding": "0.85rem 1rem"
+                    }
+                },
+                "FormInputTwo": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--background-alt)",
+                        "border": "1px solid var(--border-light)",
+                        "border-radius": "var(--border-radius-md)",
+                        "padding": "1rem 1.25rem",
+                        "color": "var(--text-main)",
+                        "cursor": "text"
+                    },
+                    "mobile": {
+                        "padding": "0.85rem 1rem"
+                    }
+                },
+                "FormSelect": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--background-alt)",
+                        "border": "1px solid var(--border-light)",
+                        "border-radius": "var(--border-radius-md)",
+                        "padding": "1rem 1.25rem",
+                        "color": "var(--text-main)",
+                        "display": "flex",
+                        "justify-content": "space-between",
+                        "cursor": "pointer"
+                    },
+                    "mobile": {
+                        "padding": "0.85rem 1rem"
+                    }
+                },
+                "SelectArrow": {
+                    "__html": "span",
+                    "base": {
+                        "color": "var(--accent)"
+                    },
+                    "mobile": {}
+                },
+                "FormPlaceholder": {
+                    "__html": "span",
+                    "base": {
+                        "color": "var(--text-light)"
+                    },
+                    "mobile": {}
+                },
+                "FormSubmit": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--gradient-accent)",
+                        "color": "var(--text-inverse)",
+                        "border": "none",
+                        "border-radius": "var(--border-radius-full)",
+                        "padding": "1.25rem",
+                        "text-align": "center",
+                        "font-weight": "700",
+                        "font-size": "1.1rem",
+                        "cursor": "pointer",
+                        "box-shadow": "var(--shadow-gold)",
+                        "text-transform": "uppercase",
+                        "letter-spacing": "1px"
+                    },
+                    "mobile": {
+                        "padding": "1rem",
+                        "font-size": "1rem"
+                    }
+                }
+            },
+            "mainContent": {
+                "BookingSection": {
+                    "BookingContainer": {
+                        "BookingCard": {
+                            "BookingTitle": {
+                                "content": "Найти билет"
+                            },
+                            "BookingSubtitle": {
+                                "content": "Заполните форму для поиска лучших предложений"
+                            },
+                            "FormRowOne": {
+                                "FormGroupOne": {
+                                    "FormLabel": {
+                                        "content": "Откуда"
+                                    },
+                                    "FormInputOne": {
+                                        "FormPlaceholder": {
+                                            "content": "Москва"
+                                        }
+                                    }
+                                },
+                                "FormGroupTwo": {
+                                    "FormLabel": {
+                                        "content": "Куда"
+                                    },
+                                    "FormInputTwo": {
+                                        "FormPlaceholder": {
+                                            "content": "Стамбул"
+                                        }
+                                    }
+                                }
+                            },
+                            "FormRowTwo": {
+                                "FormGroupOne": {
+                                    "FormLabel": {
+                                        "content": "Туда"
+                                    },
+                                    "FormInputOne": {
+                                        "FormPlaceholder": {
+                                            "content": "15.11.2026"
+                                        }
+                                    }
+                                },
+                                "FormGroupTwo": {
+                                    "FormLabel": {
+                                        "content": "Обратно"
+                                    },
+                                    "FormInputTwo": {
+                                        "FormPlaceholder": {
+                                            "content": "22.11.2026"
+                                        }
+                                    }
+                                }
+                            },
+                            "FormGroupThree": {
+                                "FormLabel": {
+                                    "content": "Класс"
+                                },
+                                "FormSelect": {
+                                    "content": "Эконом",
+                                    "SelectArrow": {
+                                        "content": "▼"
+                                    }
+                                }
+                            },
+                            "FormSubmit": {
+                                "content": "Найти билеты"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "Footer": {
+            "styles": {
+                "FooterWrapper": {
+                    "__html": "footer",
+                    "base": {
+                        "background": "var(--primary-dark)",
+                        "padding": "3rem 2rem",
+                        "font-family": "var(--font-main)",
+                        "color": "white"
+                    },
+                    "mobile": {
+                        "padding": "2rem 1rem"
+                    }
+                },
+                "FooterContainer": {
+                    "__html": "div",
+                    "base": {
+                        "max-width": "var(--container-width)",
+                        "margin": "0 auto",
+                        "display": "flex",
+                        "justify-content": "space-between",
+                        "align-items": "center"
+                    },
+                    "mobile": {
+                        "flex-direction": "column",
+                        "gap": "1.5rem",
+                        "text-align": "center"
+                    }
+                },
+                "FooterCopy": {
+                    "__html": "p",
+                    "base": {
+                        "color": "rgba(255,255,255,0.6)",
+                        "font-size": "0.9rem",
+                        "margin": "0"
+                    },
+                    "mobile": {}
+                },
+                "FooterLinks": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "gap": "2rem"
+                    },
+                    "mobile": {}
+                },
+                "FooterLinkOne": {
+                    "__html": "span",
+                    "base": {
+                        "color": "rgba(255,255,255,0.7)",
+                        "cursor": "pointer",
+                        "font-size": "0.9rem",
+                        "transition": "color var(--transition-smooth)"
+                    },
+                    "mobile": {}
+                },
+                "FooterLinkTwo": {
+                    "__html": "span",
+                    "base": {
+                        "color": "rgba(255,255,255,0.7)",
+                        "cursor": "pointer",
+                        "font-size": "0.9rem",
+                        "transition": "color var(--transition-smooth)"
+                    },
+                    "mobile": {}
+                },
+                "FooterSocial": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "gap": "1.5rem"
+                    },
+                    "mobile": {}
+                },
+                "SocialLinkOne": {
+                    "__html": "span",
+                    "base": {
+                        "color": "rgba(255,255,255,0.7)",
+                        "cursor": "pointer",
+                        "font-weight": "600"
+                    },
+                    "mobile": {}
+                },
+                "SocialLinkTwo": {
+                    "__html": "span",
+                    "base": {
+                        "color": "rgba(255,255,255,0.7)",
+                        "cursor": "pointer",
+                        "font-weight": "600"
+                    },
+                    "mobile": {}
+                }
+            },
+            "mainContent": {
+                "FooterWrapper": {
+                    "FooterContainer": {
+                        "FooterCopy": {
+                            "content": "© 2026 SkyVista Airlines"
+                        },
+                        "FooterLinks": {
+                            "FooterLinkOne": {
+                                "content": "Политика"
+                            },
+                            "FooterLinkTwo": {
+                                "content": "Контакты"
+                            }
+                        },
+                        "FooterSocial": {
+                            "SocialLinkOne": {
+                                "content": "Telegram"
+                            },
+                            "SocialLinkTwo": {
+                                "content": "Instagram"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -89,21 +89,38 @@ function generateStyledFile(styles) {
     return content;
 }
 
+function parseInlineHtmlProps(htmlProps) {
+    if (htmlProps && Object.keys(htmlProps).length !== 0) {
+        let inlineProps = ``
+
+        for (const [key, value] of Object.entries(htmlProps)) {
+            inlineProps += `${key}='${value}' `
+        }
+
+        return inlineProps
+    } else {
+        return ""
+    }
+}
+
 // Функция для парсинга дерева контента и генерации JSX
 function parseContentTree(tree, level = 0, imports = new Set()) {
     let jsx = '';
     const indent = '    '.repeat(level);
 
     for (const [key, value] of Object.entries(tree)) {
-        imports.add(key);
+        if (key !== "props") {
+            imports.add(key);
+        }
 
-        if (typeof value === 'object' && value !== null) {
+        if (typeof value === 'object' && value !== null && key !== "props") {
+            const valueProps = parseInlineHtmlProps(value.props)
             if (value.content !== undefined) {
                 // Это листовой узел с контентом
-                jsx += `${indent}<${key}>${value.content}</${key}>\n`;
+                jsx += `${indent}<${key} ${valueProps}>${value.content}</${key}>\n`;
             } else {
                 // Это узел с дочерними элементами
-                jsx += `${indent}<${key}>\n`;
+                jsx += `${indent}<${key} ${valueProps}>\n`;
                 jsx += parseContentTree(value, level + 1, imports);
                 jsx += `${indent}</${key}>\n`;
             }
