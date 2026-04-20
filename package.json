@@ -10,12 +10,15 @@
     "lint:fix": "next lint --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "section:create": "node scripts/generate-section.js"
+    "aigenerate:start": "node scripts/generate.js",
+    "aigenerate:clear": "node scripts/clear.js",
+    "aigenerate:reload": "yarn aigenerate:clear && yarn aigenerate:start"
   },
   "dependencies": {
     "next": "^16.2.3",
     "react": "^19.2.5",
-    "react-dom": "^19.2.5"
+    "react-dom": "^19.2.5",
+    "styled-components": "^6.4.0"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^16.2.3",
