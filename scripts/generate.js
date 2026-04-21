@@ -55,10 +55,38 @@ function generateGlobalCSS(globalCssTokens) {
 
 // Функция для генерации styled.tsx
 function generateStyledFile(styles) {
-    let content = 'import styled from "styled-components";\n\n';
+    const keyframesKey = "__keyframes"
+    let content = 'import styled, { keyframes } from "styled-components";\n\n';
+
+    // Если есть - добавляем keyframes для файла
+    if (styles[keyframesKey] && Object.entries(styles[keyframesKey]).length !== 0) {
+        // Сначала пробегаемся по всем названиям keyframe-ов и инициализируем их
+        for (const [keyframeName, keyframeStyles] of Object.entries(styles[keyframesKey])) {
+            content += `const ${keyframeName} = keyframes\`\n`
+
+            // Далее, пробегаемся по всем точкам keyframes (это могут быть проценты или from/to)
+            for (const [checkpoint, checkpointStyles] of Object.entries(keyframeStyles)) {
+                content += `  ${checkpoint} {\n`;
+
+                // И, наконец, парсим его стили и добавляем для каждой точки
+                for (const [prop, value] of Object.entries(checkpointStyles)) {
+                    const cssProp = camelToKebab(prop);
+                    content += `    ${cssProp}: ${value};\n`;
+                }
+                content += `  }\n`;
+            }
+            content += `}\`\n\n`
+        }
+    }
 
     for (const [componentName, styleProps] of Object.entries(styles)) {
+        // Исключаем служебное поле из обработки
+        if (componentName === keyframesKey) {
+            continue;
+        }
+
         const tagName = styleProps.__html || 'div';
+
         content += `export const ${componentName} = styled.${tagName}\`\n`;
 
         // Добавляем все базовые CSS свойства 

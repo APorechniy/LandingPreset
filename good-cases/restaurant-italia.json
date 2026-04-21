@@ -1,0 +1,2200 @@
+{
+    "globalCssTokens": {
+        "base": {
+            "--transition-smooth": "0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+            "--transition-slow": "0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+            "--border-radius-sm": "0.5rem",
+            "--border-radius-md": "1rem",
+            "--border-radius-lg": "2rem",
+            "--border-radius-xl": "3rem",
+            "--border-radius-full": "9999px",
+            "--font-main": "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
+            "--font-display": "'Playfair Display', 'Times New Roman', serif",
+            "--font-decor": "'Cormorant Garamond', serif",
+            "--container-width": "1280px"
+        },
+        "light": {
+            "--primary": "#1a0e06",
+            "--primary-light": "#3d2618",
+            "--accent": "#c44536",
+            "--accent-glow": "#e07a6e",
+            "--accent-soft": "#fdf0ee",
+            "--secondary": "#2a9d8f",
+            "--secondary-soft": "#e8f5e9",
+            "--terracotta": "#d4a373",
+            "--terracotta-light": "#faedcd",
+            "--background": "#fdfbf9",
+            "--background-alt": "#f5ede1",
+            "--surface": "#ffffff",
+            "--surface-warm": "#faf6f0",
+            "--text-main": "#1a0e06",
+            "--text-muted": "#5c3d2e",
+            "--text-light": "#8b6c5c",
+            "--border-light": "#e8dcd0",
+            "--border-accent": "#c44536",
+            "--shadow-sm": "0 4px 12px rgba(26, 14, 6, 0.04)",
+            "--shadow-md": "0 12px 28px rgba(26, 14, 6, 0.08)",
+            "--shadow-lg": "0 24px 48px rgba(26, 14, 6, 0.12)",
+            "--shadow-terracotta": "0 16px 40px rgba(196, 69, 54, 0.12)",
+            "--gradient-hero": "linear-gradient(135deg, #fdfbf9 0%, #f5ede1 100%)",
+            "--gradient-card": "linear-gradient(145deg, #ffffff 0%, #faf6f0 100%)",
+            "--gradient-accent": "linear-gradient(135deg, #c44536 0%, #e07a6e 100%)",
+            "--pattern-pasta": "repeating-linear-gradient(45deg, rgba(212, 163, 115, 0.05) 0px, rgba(212, 163, 115, 0.05) 2px, transparent 2px, transparent 8px)"
+        },
+        "dark": {
+            "--primary": "#f5e6d3",
+            "--primary-light": "#ffe8cc",
+            "--accent": "#e84a6e",
+            "--accent-glow": "#ff6b8a",
+            "--accent-soft": "#3d1a24",
+            "--secondary": "#52b788",
+            "--secondary-soft": "#1a3329",
+            "--terracotta": "#e8a87c",
+            "--terracotta-light": "#4a2e1c",
+            "--background": "#1a0e06",
+            "--background-alt": "#24160c",
+            "--surface": "#2d1b0e",
+            "--surface-warm": "#362012",
+            "--text-main": "#f5e6d3",
+            "--text-muted": "#d4b89c",
+            "--text-light": "#a8846a",
+            "--border-light": "#3d2618",
+            "--border-accent": "#e84a6e",
+            "--shadow-sm": "0 4px 12px rgba(0, 0, 0, 0.3)",
+            "--shadow-md": "0 12px 28px rgba(0, 0, 0, 0.4)",
+            "--shadow-lg": "0 24px 48px rgba(0, 0, 0, 0.5)",
+            "--shadow-terracotta": "0 16px 40px rgba(232, 74, 110, 0.2)",
+            "--gradient-hero": "linear-gradient(135deg, #24160c 0%, #1a0e06 100%)",
+            "--gradient-card": "linear-gradient(145deg, #2d1b0e 0%, #362012 100%)",
+            "--gradient-accent": "linear-gradient(135deg, #c44536 0%, #e84a6e 100%)",
+            "--pattern-pasta": "repeating-linear-gradient(45deg, rgba(232, 168, 124, 0.08) 0px, rgba(232, 168, 124, 0.08) 2px, transparent 2px, transparent 8px)"
+        }
+    },
+    "sections": {
+        "Header": {
+            "styles": {
+                "HeaderWrapper": {
+                    "__html": "header",
+                    "base": {
+                        "position": "fixed",
+                        "top": "0",
+                        "left": "0",
+                        "right": "0",
+                        "z-index": "100",
+                        "background": "var(--surface)",
+                        "border-bottom": "2px solid var(--border-accent)",
+                        "font-family": "var(--font-main)",
+                        "box-shadow": "var(--shadow-sm)",
+                        "animation": "${slideDown} 0.5s ease-out"
+                    },
+                    "mobile": {
+                        "background": "rgba(253, 251, 249, 0.98)",
+                        "backdrop-filter": "blur(8px)"
+                    },
+                    "keyframes": {
+                        "slideDown": {
+                            "from": {
+                                "opacity": 0,
+                                "transform": "translateY(-100%)"
+                            },
+                            "to": {
+                                "opacity": 1,
+                                "transform": "translateY(0)"
+                            }
+                        }
+                    }
+                },
+                "HeaderContainer": {
+                    "__html": "div",
+                    "base": {
+                        "max-width": "var(--container-width)",
+                        "margin": "0 auto",
+                        "padding": "1rem 2rem",
+                        "display": "flex",
+                        "align-items": "center",
+                        "justify-content": "space-between"
+                    },
+                    "mobile": {
+                        "padding": "0.75rem 1rem"
+                    }
+                },
+                "LogoContainer": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "align-items": "center",
+                        "gap": "0.5rem"
+                    },
+                    "mobile": {}
+                },
+                "LogoIcon": {
+                    "__html": "span",
+                    "base": {
+                        "font-size": "2rem",
+                        "line-height": "1"
+                    },
+                    "mobile": {
+                        "font-size": "1.75rem"
+                    }
+                },
+                "LogoText": {
+                    "__html": "span",
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "1.75rem",
+                        "font-weight": "700",
+                        "color": "var(--text-main)",
+                        "letter-spacing": "-0.01em"
+                    },
+                    "mobile": {
+                        "font-size": "1.25rem"
+                    }
+                },
+                "LogoAccent": {
+                    "__html": "span",
+                    "base": {
+                        "color": "var(--accent)",
+                        "font-family": "var(--font-decor)",
+                        "font-style": "italic"
+                    },
+                    "mobile": {}
+                },
+                "NavContainer": {
+                    "__html": "nav",
+                    "base": {
+                        "display": "flex",
+                        "align-items": "center",
+                        "gap": "2.5rem"
+                    },
+                    "mobile": {
+                        "display": "none"
+                    }
+                },
+                "NavItemOne": {
+                    "__html": "a",
+                    "base": {
+                        "color": "var(--text-main)",
+                        "font-weight": "500",
+                        "font-size": "1rem",
+                        "cursor": "pointer",
+                        "transition": "color var(--transition-smooth)",
+                        "padding": "0.5rem 0"
+                    },
+                    "mobile": {}
+                },
+                "NavItemTwo": {
+                    "__html": "a",
+                    "base": {
+                        "color": "var(--text-main)",
+                        "font-weight": "500",
+                        "font-size": "1rem",
+                        "cursor": "pointer",
+                        "transition": "color var(--transition-smooth)",
+                        "padding": "0.5rem 0"
+                    },
+                    "mobile": {}
+                },
+                "NavItemThree": {
+                    "__html": "a",
+                    "base": {
+                        "color": "var(--text-main)",
+                        "font-weight": "500",
+                        "font-size": "1rem",
+                        "cursor": "pointer",
+                        "transition": "color var(--transition-smooth)",
+                        "padding": "0.5rem 0"
+                    },
+                    "mobile": {}
+                },
+                "NavItemFour": {
+                    "__html": "a",
+                    "base": {
+                        "color": "var(--text-main)",
+                        "font-weight": "500",
+                        "font-size": "1rem",
+                        "cursor": "pointer",
+                        "transition": "color var(--transition-smooth)",
+                        "padding": "0.5rem 0"
+                    },
+                    "mobile": {}
+                },
+                "NavItemFive": {
+                    "__html": "a",
+                    "base": {
+                        "color": "var(--text-main)",
+                        "font-weight": "500",
+                        "font-size": "1rem",
+                        "cursor": "pointer",
+                        "transition": "color var(--transition-smooth)",
+                        "padding": "0.5rem 0"
+                    },
+                    "mobile": {}
+                },
+                "HeaderActions": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "align-items": "center",
+                        "gap": "1.5rem"
+                    },
+                    "mobile": {
+                        "gap": "0.75rem"
+                    }
+                },
+                "PhoneContainer": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "flex-direction": "column",
+                        "align-items": "flex-end"
+                    },
+                    "mobile": {
+                        "display": "none"
+                    }
+                },
+                "PhoneNumber": {
+                    "__html": "span",
+                    "base": {
+                        "color": "var(--text-main)",
+                        "font-weight": "600",
+                        "font-size": "1rem"
+                    },
+                    "mobile": {}
+                },
+                "PhoneLabel": {
+                    "__html": "span",
+                    "base": {
+                        "color": "var(--text-light)",
+                        "font-size": "0.7rem",
+                        "text-transform": "uppercase",
+                        "letter-spacing": "1px"
+                    },
+                    "mobile": {}
+                },
+                "HeaderCta": {
+                    "__html": "button",
+                    "base": {
+                        "background": "var(--gradient-accent)",
+                        "color": "white",
+                        "border": "none",
+                        "border-radius": "var(--border-radius-full)",
+                        "padding": "0.75rem 1.75rem",
+                        "font-weight": "600",
+                        "font-size": "0.9rem",
+                        "cursor": "pointer",
+                        "transition": "all var(--transition-smooth)",
+                        "box-shadow": "var(--shadow-terracotta)"
+                    },
+                    "mobile": {
+                        "padding": "0.5rem 1rem",
+                        "font-size": "0.8rem"
+                    }
+                },
+                "MobileMenuButton": {
+                    "__html": "button",
+                    "base": {
+                        "display": "none",
+                        "background": "transparent",
+                        "border": "2px solid var(--border-accent)",
+                        "border-radius": "var(--border-radius-sm)",
+                        "padding": "0.5rem 0.75rem",
+                        "cursor": "pointer",
+                        "color": "var(--text-main)",
+                        "font-weight": "700"
+                    },
+                    "mobile": {
+                        "display": "block"
+                    }
+                }
+            },
+            "mainContent": {
+                "HeaderWrapper": {
+                    "HeaderContainer": {
+                        "LogoContainer": {
+                            "LogoIcon": {
+                                "content": "🍝"
+                            },
+                            "LogoText": {
+                                "content": "La ",
+                                "LogoAccent": {
+                                    "content": "Pasta"
+                                }
+                            }
+                        },
+                        "NavContainer": {
+                            "NavItemOne": {
+                                "content": "Меню"
+                            },
+                            "NavItemTwo": {
+                                "content": "О нас"
+                            },
+                            "NavItemThree": {
+                                "content": "Шеф-повар"
+                            },
+                            "NavItemFour": {
+                                "content": "Интерьер"
+                            },
+                            "NavItemFive": {
+                                "content": "Контакты"
+                            }
+                        },
+                        "HeaderActions": {
+                            "PhoneContainer": {
+                                "PhoneNumber": {
+                                    "content": "+7 (495) 123-45-67"
+                                },
+                                "PhoneLabel": {
+                                    "content": "Ежедневно 12:00–00:00"
+                                }
+                            },
+                            "HeaderCta": {
+                                "content": "Бронь"
+                            },
+                            "MobileMenuButton": {
+                                "content": "☰"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "Hero": {
+            "styles": {
+                "HeroSection": {
+                    "__html": "section",
+                    "base": {
+                        "width": "100%",
+                        "min-height": "100vh",
+                        "display": "flex",
+                        "align-items": "center",
+                        "padding": "8rem 2rem 4rem",
+                        "background": "var(--gradient-hero)",
+                        "position": "relative",
+                        "overflow": "hidden",
+                        "font-family": "var(--font-main)"
+                    },
+                    "mobile": {
+                        "min-height": "auto",
+                        "padding": "6rem 1rem 3rem"
+                    }
+                },
+                "HeroPattern": {
+                    "__html": "div",
+                    "base": {
+                        "position": "absolute",
+                        "top": "0",
+                        "left": "0",
+                        "right": "0",
+                        "bottom": "0",
+                        "background": "var(--pattern-pasta)",
+                        "opacity": "0.6",
+                        "pointer-events": "none"
+                    },
+                    "mobile": {}
+                },
+                "HeroContainer": {
+                    "__html": "div",
+                    "base": {
+                        "max-width": "var(--container-width)",
+                        "margin": "0 auto",
+                        "width": "100%",
+                        "position": "relative",
+                        "z-index": "2",
+                        "animation": "${fadeInUp} 0.8s ease-out"
+                    },
+                    "mobile": {},
+                    "keyframes": {
+                        "fadeInUp": {
+                            "from": {
+                                "opacity": 0,
+                                "transform": "translateY(30px)"
+                            },
+                            "to": {
+                                "opacity": 1,
+                                "transform": "translateY(0)"
+                            }
+                        }
+                    }
+                },
+                "HeroGrid": {
+                    "__html": "div",
+                    "base": {
+                        "display": "grid",
+                        "grid-template-columns": "1fr 1fr",
+                        "gap": "4rem",
+                        "align-items": "center"
+                    },
+                    "mobile": {
+                        "grid-template-columns": "1fr",
+                        "gap": "2rem"
+                    }
+                },
+                "HeroContent": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "flex-direction": "column",
+                        "gap": "1.5rem"
+                    },
+                    "mobile": {
+                        "text-align": "center",
+                        "align-items": "center"
+                    }
+                },
+                "HeroEyebrow": {
+                    "__html": "div",
+                    "base": {
+                        "font-family": "var(--font-decor)",
+                        "font-size": "1.5rem",
+                        "color": "var(--accent)",
+                        "font-style": "italic"
+                    },
+                    "mobile": {
+                        "font-size": "1.25rem"
+                    }
+                },
+                "HeroTitle": {
+                    "__html": "h1",
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "clamp(3rem, 6vw, 5rem)",
+                        "font-weight": "700",
+                        "line-height": "1.1",
+                        "color": "var(--text-main)",
+                        "margin": "0"
+                    },
+                    "mobile": {
+                        "font-size": "clamp(2.5rem, 10vw, 3.5rem)"
+                    }
+                },
+                "HeroTitleAccent": {
+                    "__html": "span",
+                    "base": {
+                        "color": "var(--accent)",
+                        "display": "block"
+                    },
+                    "mobile": {}
+                },
+                "HeroDescription": {
+                    "__html": "p",
+                    "base": {
+                        "font-size": "1.25rem",
+                        "line-height": "1.7",
+                        "color": "var(--text-muted)",
+                        "margin": "0",
+                        "max-width": "90%"
+                    },
+                    "mobile": {
+                        "font-size": "1rem",
+                        "max-width": "100%"
+                    }
+                },
+                "HeroCta": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "gap": "1.5rem",
+                        "margin-top": "1rem"
+                    },
+                    "mobile": {
+                        "flex-direction": "column",
+                        "width": "100%",
+                        "max-width": "300px"
+                    }
+                },
+                "PrimaryButton": {
+                    "__html": "button",
+                    "base": {
+                        "background": "var(--gradient-accent)",
+                        "color": "white",
+                        "border": "none",
+                        "border-radius": "var(--border-radius-full)",
+                        "padding": "1.25rem 2.5rem",
+                        "font-weight": "600",
+                        "font-size": "1.1rem",
+                        "cursor": "pointer",
+                        "transition": "all var(--transition-smooth)",
+                        "box-shadow": "var(--shadow-terracotta)"
+                    },
+                    "mobile": {
+                        "padding": "1rem",
+                        "font-size": "1rem",
+                        "width": "100%"
+                    }
+                },
+                "SecondaryButton": {
+                    "__html": "button",
+                    "base": {
+                        "background": "transparent",
+                        "color": "var(--text-main)",
+                        "border": "1px solid var(--border-accent)",
+                        "border-radius": "var(--border-radius-full)",
+                        "padding": "1.25rem 2.5rem",
+                        "font-weight": "600",
+                        "font-size": "1.1rem",
+                        "cursor": "pointer",
+                        "transition": "all var(--transition-smooth)"
+                    },
+                    "mobile": {
+                        "padding": "1rem",
+                        "font-size": "1rem",
+                        "width": "100%"
+                    }
+                },
+                "HeroVisual": {
+                    "__html": "div",
+                    "base": {
+                        "position": "relative"
+                    },
+                    "mobile": {
+                        "order": "-1"
+                    }
+                },
+                "HeroImageWrapper": {
+                    "__html": "div",
+                    "base": {
+                        "border-radius": "var(--border-radius-lg)",
+                        "overflow": "hidden",
+                        "box-shadow": "var(--shadow-lg)",
+                        "border": "3px solid var(--border-accent)",
+                        "transform": "rotate(2deg)"
+                    },
+                    "mobile": {}
+                },
+                "HeroImage": {
+                    "__html": "img",
+                    "base": {
+                        "width": "100%",
+                        "height": "auto",
+                        "display": "block"
+                    },
+                    "mobile": {}
+                },
+                "FloatingBadgeOne": {
+                    "__html": "div",
+                    "base": {
+                        "position": "absolute",
+                        "top": "-1rem",
+                        "left": "-1rem",
+                        "background": "var(--surface)",
+                        "border-radius": "var(--border-radius-md)",
+                        "padding": "1rem 1.5rem",
+                        "box-shadow": "var(--shadow-terracotta)",
+                        "border-left": "4px solid var(--accent)",
+                        "transform": "rotate(-3deg)",
+                        "animation": "${float} 3s ease-in-out infinite"
+                    },
+                    "mobile": {
+                        "top": "-0.5rem",
+                        "left": "-0.5rem",
+                        "padding": "0.75rem 1rem"
+                    },
+                    "keyframes": {
+                        "float": {
+                            "0%": {
+                                "transform": "translateY(0) rotate(-3deg)"
+                            },
+                            "50%": {
+                                "transform": "translateY(-8px) rotate(-2deg)"
+                            },
+                            "100%": {
+                                "transform": "translateY(0) rotate(-3deg)"
+                            }
+                        }
+                    }
+                },
+                "FloatingBadgeTwo": {
+                    "__html": "div",
+                    "base": {
+                        "position": "absolute",
+                        "bottom": "10%",
+                        "right": "-1rem",
+                        "background": "var(--terracotta-light)",
+                        "border-radius": "var(--border-radius-md)",
+                        "padding": "1rem 1.5rem",
+                        "box-shadow": "var(--shadow-md)",
+                        "transform": "rotate(4deg)",
+                        "animation": "${floatReverse} 3.5s ease-in-out infinite"
+                    },
+                    "mobile": {
+                        "bottom": "5%",
+                        "right": "-0.5rem",
+                        "padding": "0.75rem 1rem"
+                    },
+                    "keyframes": {
+                        "floatReverse": {
+                            "0%": {
+                                "transform": "translateY(0) rotate(4deg)"
+                            },
+                            "50%": {
+                                "transform": "translateY(-6px) rotate(5deg)"
+                            },
+                            "100%": {
+                                "transform": "translateY(0) rotate(4deg)"
+                            }
+                        }
+                    }
+                },
+                "BadgeText": {
+                    "__html": "p",
+                    "base": {
+                        "color": "var(--text-main)",
+                        "font-weight": "600",
+                        "margin": "0"
+                    },
+                    "mobile": {
+                        "font-size": "0.85rem"
+                    }
+                },
+                "BadgeSub": {
+                    "__html": "p",
+                    "base": {
+                        "color": "var(--accent)",
+                        "font-size": "0.85rem",
+                        "margin": "0.25rem 0 0"
+                    },
+                    "mobile": {
+                        "font-size": "0.75rem"
+                    }
+                }
+            },
+            "mainContent": {
+                "HeroSection": {
+                    "HeroPattern": {
+                        "content": ""
+                    },
+                    "HeroContainer": {
+                        "HeroGrid": {
+                            "HeroContent": {
+                                "HeroEyebrow": {
+                                    "content": "Benvenuti a La Pasta"
+                                },
+                                "HeroTitle": {
+                                    "content": "Вкус Италии ",
+                                    "HeroTitleAccent": {
+                                        "content": "в центре Москвы"
+                                    }
+                                },
+                                "HeroDescription": {
+                                    "content": "Аутентичная итальянская кухня, свежайшая паста ручной работы и атмосфера dolce vita каждый день."
+                                },
+                                "HeroCta": {
+                                    "PrimaryButton": {
+                                        "content": "Забронировать стол"
+                                    },
+                                    "SecondaryButton": {
+                                        "content": "Смотреть меню"
+                                    }
+                                }
+                            },
+                            "HeroVisual": {
+                                "HeroImageWrapper": {
+                                    "HeroImage": {
+                                        "props": {
+                                            "src": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=800",
+                                            "alt": "Итальянский ресторан La Pasta"
+                                        }
+                                    }
+                                },
+                                "FloatingBadgeOne": {
+                                    "BadgeText": {
+                                        "content": "⭐ 4.9 на Яндекс.Картах"
+                                    },
+                                    "BadgeSub": {
+                                        "content": "Более 2000 отзывов"
+                                    }
+                                },
+                                "FloatingBadgeTwo": {
+                                    "BadgeText": {
+                                        "content": "🍷 Счастливые часы"
+                                    },
+                                    "BadgeSub": {
+                                        "content": "16:00–19:00 скидка 20%"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "MenuHighlights": {
+            "styles": {
+                "MenuSection": {
+                    "__html": "section",
+                    "base": {
+                        "padding": "6rem 2rem",
+                        "background": "var(--background)",
+                        "font-family": "var(--font-main)"
+                    },
+                    "mobile": {
+                        "padding": "3rem 1rem"
+                    }
+                },
+                "MenuContainer": {
+                    "__html": "div",
+                    "base": {
+                        "max-width": "var(--container-width)",
+                        "margin": "0 auto"
+                    },
+                    "mobile": {}
+                },
+                "SectionHeader": {
+                    "__html": "div",
+                    "base": {
+                        "text-align": "center",
+                        "margin-bottom": "4rem",
+                        "animation": "${fadeIn} 0.6s ease-out"
+                    },
+                    "mobile": {
+                        "margin-bottom": "2rem"
+                    },
+                    "keyframes": {
+                        "fadeIn": {
+                            "from": {
+                                "opacity": 0
+                            },
+                            "to": {
+                                "opacity": 1
+                            }
+                        }
+                    }
+                },
+                "SectionEyebrow": {
+                    "__html": "span",
+                    "base": {
+                        "font-family": "var(--font-decor)",
+                        "font-size": "1.5rem",
+                        "color": "var(--accent)",
+                        "font-style": "italic"
+                    },
+                    "mobile": {
+                        "font-size": "1.25rem"
+                    }
+                },
+                "SectionTitle": {
+                    "__html": "h2",
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "clamp(2.5rem, 4vw, 3.5rem)",
+                        "color": "var(--text-main)",
+                        "font-weight": "700",
+                        "margin": "1rem 0"
+                    },
+                    "mobile": {
+                        "font-size": "2rem"
+                    }
+                },
+                "SectionSubtitle": {
+                    "__html": "p",
+                    "base": {
+                        "color": "var(--text-muted)",
+                        "font-size": "1.2rem"
+                    },
+                    "mobile": {
+                        "font-size": "1rem"
+                    }
+                },
+                "MenuGrid": {
+                    "__html": "div",
+                    "base": {
+                        "display": "grid",
+                        "grid-template-columns": "repeat(3, 1fr)",
+                        "gap": "2.5rem"
+                    },
+                    "mobile": {
+                        "grid-template-columns": "1fr",
+                        "gap": "2rem"
+                    }
+                },
+                "MenuItemOne": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--gradient-card)",
+                        "border-radius": "var(--border-radius-lg)",
+                        "overflow": "hidden",
+                        "border": "1px solid var(--border-light)",
+                        "box-shadow": "var(--shadow-md)",
+                        "transition": "transform var(--transition-smooth)",
+                        "animation": "${slideUp} 0.5s ease-out 0.1s both"
+                    },
+                    "mobile": {},
+                    "keyframes": {
+                        "slideUp": {
+                            "from": {
+                                "opacity": 0,
+                                "transform": "translateY(20px)"
+                            },
+                            "to": {
+                                "opacity": 1,
+                                "transform": "translateY(0)"
+                            }
+                        }
+                    }
+                },
+                "MenuItemTwo": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--gradient-card)",
+                        "border-radius": "var(--border-radius-lg)",
+                        "overflow": "hidden",
+                        "border": "1px solid var(--border-light)",
+                        "box-shadow": "var(--shadow-md)",
+                        "transition": "transform var(--transition-smooth)",
+                        "animation": "${slideUp} 0.5s ease-out 0.25s both"
+                    },
+                    "mobile": {},
+                    "keyframes": {
+                        "slideUp": {
+                            "from": {
+                                "opacity": 0,
+                                "transform": "translateY(20px)"
+                            },
+                            "to": {
+                                "opacity": 1,
+                                "transform": "translateY(0)"
+                            }
+                        }
+                    }
+                },
+                "MenuItemThree": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--gradient-card)",
+                        "border-radius": "var(--border-radius-lg)",
+                        "overflow": "hidden",
+                        "border": "1px solid var(--border-light)",
+                        "box-shadow": "var(--shadow-md)",
+                        "transition": "transform var(--transition-smooth)",
+                        "animation": "${slideUp} 0.5s ease-out 0.4s both"
+                    },
+                    "mobile": {},
+                    "keyframes": {
+                        "slideUp": {
+                            "from": {
+                                "opacity": 0,
+                                "transform": "translateY(20px)"
+                            },
+                            "to": {
+                                "opacity": 1,
+                                "transform": "translateY(0)"
+                            }
+                        }
+                    }
+                },
+                "ItemImage": {
+                    "__html": "div",
+                    "base": {
+                        "height": "240px",
+                        "overflow": "hidden"
+                    },
+                    "mobile": {
+                        "height": "200px"
+                    }
+                },
+                "ItemImg": {
+                    "__html": "img",
+                    "base": {
+                        "width": "100%",
+                        "height": "100%",
+                        "object-fit": "cover"
+                    },
+                    "mobile": {}
+                },
+                "ItemContent": {
+                    "__html": "div",
+                    "base": {
+                        "padding": "2rem 1.5rem"
+                    },
+                    "mobile": {
+                        "padding": "1.5rem"
+                    }
+                },
+                "ItemName": {
+                    "__html": "h3",
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "1.6rem",
+                        "font-weight": "600",
+                        "color": "var(--text-main)",
+                        "margin-bottom": "0.5rem"
+                    },
+                    "mobile": {
+                        "font-size": "1.4rem"
+                    }
+                },
+                "ItemDesc": {
+                    "__html": "p",
+                    "base": {
+                        "color": "var(--text-muted)",
+                        "line-height": "1.6",
+                        "margin-bottom": "1.5rem"
+                    },
+                    "mobile": {}
+                },
+                "ItemPrice": {
+                    "__html": "p",
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "1.4rem",
+                        "font-weight": "700",
+                        "color": "var(--accent)"
+                    },
+                    "mobile": {
+                        "font-size": "1.2rem"
+                    }
+                }
+            },
+            "mainContent": {
+                "MenuSection": {
+                    "MenuContainer": {
+                        "SectionHeader": {
+                            "SectionEyebrow": {
+                                "content": "I Nostri Piatti"
+                            },
+                            "SectionTitle": {
+                                "content": "Хиты меню"
+                            },
+                            "SectionSubtitle": {
+                                "content": "То, ради чего возвращаются"
+                            }
+                        },
+                        "MenuGrid": {
+                            "MenuItemOne": {
+                                "ItemImage": {
+                                    "ItemImg": {
+                                        "props": {
+                                            "src": "https://img.pravda.ru/image/preview/article/6/9/6/2332696_amp.jpeg",
+                                            "alt": "Лазанья"
+                                        }
+                                    }
+                                },
+                                "ItemContent": {
+                                    "ItemName": {
+                                        "content": "Лазанья Болоньезе"
+                                    },
+                                    "ItemDesc": {
+                                        "content": "Классический рецепт из Эмилии-Романьи с мясным соусом и бешамель"
+                                    },
+                                    "ItemPrice": {
+                                        "content": "890 ₽"
+                                    }
+                                }
+                            },
+                            "MenuItemTwo": {
+                                "ItemImage": {
+                                    "ItemImg": {
+                                        "props": {
+                                            "src": "https://images.news.ru/2025/12/21/VsmS0Vwselg6q1BdCZL68kMCNnghVi18efFHoU8d_780.png",
+                                            "alt": "Фетучини с креветками"
+                                        }
+                                    }
+                                },
+                                "ItemContent": {
+                                    "ItemName": {
+                                        "content": "Фетучини с креветками"
+                                    },
+                                    "ItemDesc": {
+                                        "content": "Нежная паста в сливочном соусе с тигровыми креветками и лимоном"
+                                    },
+                                    "ItemPrice": {
+                                        "content": "1250 ₽"
+                                    }
+                                }
+                            },
+                            "MenuItemThree": {
+                                "ItemImage": {
+                                    "ItemImg": {
+                                        "props": {
+                                            "src": "https://images.unsplash.com/photo-1645112411346-3e380dc1c826?w=800",
+                                            "alt": "Карбонара"
+                                        }
+                                    }
+                                },
+                                "ItemContent": {
+                                    "ItemName": {
+                                        "content": "Спагетти Карбонара"
+                                    },
+                                    "ItemDesc": {
+                                        "content": "По оригинальному рецепту с гуанчиале, пекорино романо и желтком"
+                                    },
+                                    "ItemPrice": {
+                                        "content": "950 ₽"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "Chef": {
+            "styles": {
+                "ChefSection": {
+                    "__html": "section",
+                    "base": {
+                        "padding": "6rem 2rem",
+                        "background": "var(--background-alt)",
+                        "font-family": "var(--font-main)"
+                    },
+                    "mobile": {
+                        "padding": "3rem 1rem"
+                    }
+                },
+                "ChefContainer": {
+                    "__html": "div",
+                    "base": {
+                        "max-width": "var(--container-width)",
+                        "margin": "0 auto"
+                    },
+                    "mobile": {}
+                },
+                "ChefGrid": {
+                    "__html": "div",
+                    "base": {
+                        "display": "grid",
+                        "grid-template-columns": "1fr 1.2fr",
+                        "gap": "4rem",
+                        "align-items": "center"
+                    },
+                    "mobile": {
+                        "grid-template-columns": "1fr",
+                        "gap": "2rem"
+                    }
+                },
+                "ChefVisual": {
+                    "__html": "div",
+                    "base": {
+                        "position": "relative"
+                    },
+                    "mobile": {
+                        "order": "-1"
+                    }
+                },
+                "ChefImageWrapper": {
+                    "__html": "div",
+                    "base": {
+                        "border-radius": "var(--border-radius-lg)",
+                        "overflow": "hidden",
+                        "box-shadow": "var(--shadow-lg)",
+                        "border": "3px solid var(--terracotta)"
+                    },
+                    "mobile": {}
+                },
+                "ChefImage": {
+                    "__html": "img",
+                    "base": {
+                        "width": "100%",
+                        "height": "auto",
+                        "display": "block"
+                    },
+                    "mobile": {}
+                },
+                "ChefContent": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "flex-direction": "column",
+                        "gap": "1.5rem",
+                        "animation": "${fadeInRight} 0.8s ease-out"
+                    },
+                    "mobile": {
+                        "text-align": "center"
+                    },
+                    "keyframes": {
+                        "fadeInRight": {
+                            "from": {
+                                "opacity": 0,
+                                "transform": "translateX(30px)"
+                            },
+                            "to": {
+                                "opacity": 1,
+                                "transform": "translateX(0)"
+                            }
+                        }
+                    }
+                },
+                "ChefEyebrow": {
+                    "__html": "span",
+                    "base": {
+                        "font-family": "var(--font-decor)",
+                        "font-size": "1.5rem",
+                        "color": "var(--accent)",
+                        "font-style": "italic"
+                    },
+                    "mobile": {}
+                },
+                "ChefTitle": {
+                    "__html": "h2",
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "clamp(2rem, 4vw, 3rem)",
+                        "color": "var(--text-main)",
+                        "font-weight": "700"
+                    },
+                    "mobile": {
+                        "font-size": "1.8rem"
+                    }
+                },
+                "ChefName": {
+                    "__html": "p",
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "1.8rem",
+                        "font-weight": "600",
+                        "color": "var(--accent)"
+                    },
+                    "mobile": {
+                        "font-size": "1.5rem"
+                    }
+                },
+                "ChefDesc": {
+                    "__html": "p",
+                    "base": {
+                        "color": "var(--text-muted)",
+                        "line-height": "1.8",
+                        "font-size": "1.1rem"
+                    },
+                    "mobile": {
+                        "font-size": "1rem"
+                    }
+                },
+                "ChefQuote": {
+                    "__html": "blockquote",
+                    "base": {
+                        "font-family": "var(--font-decor)",
+                        "font-size": "1.4rem",
+                        "line-height": "1.5",
+                        "color": "var(--text-main)",
+                        "margin": "1rem 0 0",
+                        "padding-left": "1.5rem",
+                        "border-left": "4px solid var(--accent)",
+                        "font-style": "italic"
+                    },
+                    "mobile": {
+                        "font-size": "1.2rem"
+                    }
+                }
+            },
+            "mainContent": {
+                "ChefSection": {
+                    "ChefContainer": {
+                        "ChefGrid": {
+                            "ChefVisual": {
+                                "ChefImageWrapper": {
+                                    "ChefImage": {
+                                        "props": {
+                                            "src": "https://images.pexels.com/photos/3814446/pexels-photo-3814446.jpeg?w=800",
+                                            "alt": "Шеф-повар Марко Росси"
+                                        }
+                                    }
+                                }
+                            },
+                            "ChefContent": {
+                                "ChefEyebrow": {
+                                    "content": "Il Nostro Maestro"
+                                },
+                                "ChefTitle": {
+                                    "content": "Шеф-повар"
+                                },
+                                "ChefName": {
+                                    "content": "Марко Росси"
+                                },
+                                "ChefDesc": {
+                                    "content": "20 лет опыта в ресторанах, отмеченных звездами Мишлен. Марко приехал из Болоньи, чтобы поделиться семейными рецептами и страстью к итальянской кухне."
+                                },
+                                "ChefQuote": {
+                                    "content": "«Паста — это душа Италии. Я готовлю её так, как научила моя нонна.»"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "Interior": {
+            "styles": {
+                "InteriorSection": {
+                    "__html": "section",
+                    "base": {
+                        "padding": "6rem 2rem",
+                        "background": "var(--background)",
+                        "font-family": "var(--font-main)"
+                    },
+                    "mobile": {
+                        "padding": "3rem 1rem"
+                    }
+                },
+                "InteriorContainer": {
+                    "__html": "div",
+                    "base": {
+                        "max-width": "var(--container-width)",
+                        "margin": "0 auto"
+                    },
+                    "mobile": {}
+                },
+                "SectionHeader": {
+                    "__html": "div",
+                    "base": {
+                        "text-align": "center",
+                        "margin-bottom": "4rem"
+                    },
+                    "mobile": {
+                        "margin-bottom": "2rem"
+                    }
+                },
+                "SectionEyebrow": {
+                    "__html": "span",
+                    "base": {
+                        "font-family": "var(--font-decor)",
+                        "font-size": "1.5rem",
+                        "color": "var(--accent)",
+                        "font-style": "italic"
+                    },
+                    "mobile": {}
+                },
+                "SectionTitle": {
+                    "__html": "h2",
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "clamp(2.5rem, 4vw, 3.5rem)",
+                        "color": "var(--text-main)",
+                        "font-weight": "700"
+                    },
+                    "mobile": {
+                        "font-size": "2rem"
+                    }
+                },
+                "InteriorGrid": {
+                    "__html": "div",
+                    "base": {
+                        "display": "grid",
+                        "grid-template-columns": "1.2fr 0.8fr",
+                        "gap": "2rem"
+                    },
+                    "mobile": {
+                        "grid-template-columns": "1fr",
+                        "gap": "1.5rem"
+                    }
+                },
+                "InteriorMain": {
+                    "__html": "div",
+                    "base": {
+                        "border-radius": "var(--border-radius-lg)",
+                        "overflow": "hidden",
+                        "box-shadow": "var(--shadow-lg)",
+                        "border": "2px solid var(--border-accent)"
+                    },
+                    "mobile": {}
+                },
+                "InteriorMainImg": {
+                    "__html": "img",
+                    "base": {
+                        "width": "100%",
+                        "height": "100%",
+                        "object-fit": "cover",
+                        "display": "block"
+                    },
+                    "mobile": {}
+                },
+                "InteriorSide": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "flex-direction": "column",
+                        "gap": "2rem"
+                    },
+                    "mobile": {
+                        "gap": "1.5rem"
+                    }
+                },
+                "InteriorSideTop": {
+                    "__html": "div",
+                    "base": {
+                        "border-radius": "var(--border-radius-lg)",
+                        "overflow": "hidden",
+                        "box-shadow": "var(--shadow-md)",
+                        "border": "2px solid var(--terracotta)"
+                    },
+                    "mobile": {}
+                },
+                "InteriorSideImg": {
+                    "__html": "img",
+                    "base": {
+                        "width": "100%",
+                        "height": "auto",
+                        "display": "block"
+                    },
+                    "mobile": {}
+                },
+                "InteriorSideBottom": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--surface-warm)",
+                        "border-radius": "var(--border-radius-lg)",
+                        "padding": "2rem",
+                        "border": "1px solid var(--border-light)",
+                        "text-align": "center"
+                    },
+                    "mobile": {
+                        "padding": "1.5rem"
+                    }
+                },
+                "InteriorText": {
+                    "__html": "p",
+                    "base": {
+                        "font-family": "var(--font-decor)",
+                        "font-size": "1.4rem",
+                        "color": "var(--text-main)",
+                        "font-style": "italic",
+                        "margin-bottom": "1rem"
+                    },
+                    "mobile": {
+                        "font-size": "1.2rem"
+                    }
+                },
+                "InteriorSub": {
+                    "__html": "p",
+                    "base": {
+                        "color": "var(--text-muted)"
+                    },
+                    "mobile": {}
+                }
+            },
+            "mainContent": {
+                "InteriorSection": {
+                    "InteriorContainer": {
+                        "SectionHeader": {
+                            "SectionEyebrow": {
+                                "content": "La Nostra Casa"
+                            },
+                            "SectionTitle": {
+                                "content": "Атмосфера La Pasta"
+                            }
+                        },
+                        "InteriorGrid": {
+                            "InteriorMain": {
+                                "InteriorMainImg": {
+                                    "props": {
+                                        "src": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800",
+                                        "alt": "Интерьер ресторана La Pasta"
+                                    }
+                                }
+                            },
+                            "InteriorSide": {
+                                "InteriorSideTop": {
+                                    "InteriorSideImg": {
+                                        "props": {
+                                            "src": "https://i2021.otzovik.com/2021/05/24/11967031/img/1195261_89384004.jpeg",
+                                            "alt": "Вход в ресторан La Pasta"
+                                        }
+                                    }
+                                },
+                                "InteriorSideBottom": {
+                                    "InteriorText": {
+                                        "content": "«Уютный уголок Италии в центре Москвы»"
+                                    },
+                                    "InteriorSub": {
+                                        "content": "— The Village"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "Reviews": {
+            "styles": {
+                "ReviewsSection": {
+                    "__html": "section",
+                    "base": {
+                        "padding": "6rem 2rem",
+                        "background": "var(--background-alt)",
+                        "font-family": "var(--font-main)"
+                    },
+                    "mobile": {
+                        "padding": "3rem 1rem"
+                    }
+                },
+                "ReviewsContainer": {
+                    "__html": "div",
+                    "base": {
+                        "max-width": "var(--container-width)",
+                        "margin": "0 auto"
+                    },
+                    "mobile": {}
+                },
+                "SectionHeader": {
+                    "__html": "div",
+                    "base": {
+                        "text-align": "center",
+                        "margin-bottom": "4rem"
+                    },
+                    "mobile": {
+                        "margin-bottom": "2rem"
+                    }
+                },
+                "SectionTitle": {
+                    "__html": "h2",
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "clamp(2.5rem, 4vw, 3.5rem)",
+                        "color": "var(--text-main)",
+                        "font-weight": "700"
+                    },
+                    "mobile": {
+                        "font-size": "2rem"
+                    }
+                },
+                "ReviewsGrid": {
+                    "__html": "div",
+                    "base": {
+                        "display": "grid",
+                        "grid-template-columns": "repeat(2, 1fr)",
+                        "gap": "2rem"
+                    },
+                    "mobile": {
+                        "grid-template-columns": "1fr",
+                        "gap": "1.5rem"
+                    }
+                },
+                "ReviewCardOne": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--gradient-card)",
+                        "border-radius": "var(--border-radius-lg)",
+                        "padding": "2.5rem",
+                        "border": "1px solid var(--border-light)",
+                        "box-shadow": "var(--shadow-md)",
+                        "animation": "${fadeInScale} 0.5s ease-out 0.1s both"
+                    },
+                    "mobile": {
+                        "padding": "1.5rem"
+                    },
+                    "keyframes": {
+                        "fadeInScale": {
+                            "from": {
+                                "opacity": 0,
+                                "transform": "scale(0.95)"
+                            },
+                            "to": {
+                                "opacity": 1,
+                                "transform": "scale(1)"
+                            }
+                        }
+                    }
+                },
+                "ReviewCardTwo": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--gradient-card)",
+                        "border-radius": "var(--border-radius-lg)",
+                        "padding": "2.5rem",
+                        "border": "1px solid var(--border-light)",
+                        "box-shadow": "var(--shadow-md)",
+                        "animation": "${fadeInScale} 0.5s ease-out 0.3s both"
+                    },
+                    "mobile": {
+                        "padding": "1.5rem"
+                    },
+                    "keyframes": {
+                        "fadeInScale": {
+                            "from": {
+                                "opacity": 0,
+                                "transform": "scale(0.95)"
+                            },
+                            "to": {
+                                "opacity": 1,
+                                "transform": "scale(1)"
+                            }
+                        }
+                    }
+                },
+                "ReviewStars": {
+                    "__html": "div",
+                    "base": {
+                        "color": "var(--accent)",
+                        "font-size": "1.5rem",
+                        "margin-bottom": "1.5rem"
+                    },
+                    "mobile": {}
+                },
+                "ReviewText": {
+                    "__html": "p",
+                    "base": {
+                        "color": "var(--text-main)",
+                        "line-height": "1.8",
+                        "font-size": "1.1rem",
+                        "margin-bottom": "1.5rem"
+                    },
+                    "mobile": {
+                        "font-size": "1rem"
+                    }
+                },
+                "ReviewAuthor": {
+                    "__html": "p",
+                    "base": {
+                        "color": "var(--text-muted)",
+                        "font-weight": "600"
+                    },
+                    "mobile": {}
+                }
+            },
+            "mainContent": {
+                "ReviewsSection": {
+                    "ReviewsContainer": {
+                        "SectionHeader": {
+                            "SectionTitle": {
+                                "content": "Гости о нас"
+                            }
+                        },
+                        "ReviewsGrid": {
+                            "ReviewCardOne": {
+                                "ReviewStars": {
+                                    "content": "★★★★★"
+                                },
+                                "ReviewText": {
+                                    "content": "Лучшая паста в Москве! Карбонара просто божественна, а тирамису тает во рту. Обслуживание на высшем уровне, чувствуется итальянское гостеприимство."
+                                },
+                                "ReviewAuthor": {
+                                    "content": "Анна М."
+                                }
+                            },
+                            "ReviewCardTwo": {
+                                "ReviewStars": {
+                                    "content": "★★★★★"
+                                },
+                                "ReviewText": {
+                                    "content": "Отмечали здесь юбилей. Отдельное спасибо шеф-повару Марко за комплимент! Интерьер шикарный, чувствуешь себя как в Милане. Обязательно вернемся!"
+                                },
+                                "ReviewAuthor": {
+                                    "content": "Сергей и Елена"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "BookingForm": {
+            "styles": {
+                "BookingSection": {
+                    "__html": "section",
+                    "base": {
+                        "padding": "6rem 2rem",
+                        "background": "var(--gradient-hero)",
+                        "font-family": "var(--font-main)",
+                        "position": "relative"
+                    },
+                    "mobile": {
+                        "padding": "3rem 1rem"
+                    }
+                },
+                "BookingContainer": {
+                    "__html": "div",
+                    "base": {
+                        "max-width": "800px",
+                        "margin": "0 auto",
+                        "position": "relative",
+                        "z-index": "2"
+                    },
+                    "mobile": {}
+                },
+                "BookingCard": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--surface)",
+                        "border-radius": "var(--border-radius-xl)",
+                        "padding": "3rem",
+                        "box-shadow": "var(--shadow-terracotta)",
+                        "border": "2px solid var(--border-accent)",
+                        "animation": "${fadeInUp} 0.6s ease-out"
+                    },
+                    "mobile": {
+                        "padding": "1.5rem"
+                    },
+                    "keyframes": {
+                        "fadeInUp": {
+                            "from": {
+                                "opacity": 0,
+                                "transform": "translateY(20px)"
+                            },
+                            "to": {
+                                "opacity": 1,
+                                "transform": "translateY(0)"
+                            }
+                        }
+                    }
+                },
+                "BookingTitle": {
+                    "__html": "h2",
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "2.5rem",
+                        "font-weight": "700",
+                        "color": "var(--text-main)",
+                        "text-align": "center",
+                        "margin-bottom": "0.5rem"
+                    },
+                    "mobile": {
+                        "font-size": "1.8rem"
+                    }
+                },
+                "BookingSubtitle": {
+                    "__html": "p",
+                    "base": {
+                        "text-align": "center",
+                        "color": "var(--text-muted)",
+                        "margin-bottom": "2.5rem",
+                        "font-family": "var(--font-decor)",
+                        "font-size": "1.2rem"
+                    },
+                    "mobile": {
+                        "font-size": "1rem",
+                        "margin-bottom": "1.5rem"
+                    }
+                },
+                "FormRowOne": {
+                    "__html": "div",
+                    "base": {
+                        "display": "grid",
+                        "grid-template-columns": "1fr 1fr",
+                        "gap": "1.5rem",
+                        "margin-bottom": "1.5rem"
+                    },
+                    "mobile": {
+                        "grid-template-columns": "1fr",
+                        "gap": "1rem"
+                    }
+                },
+                "FormRowTwo": {
+                    "__html": "div",
+                    "base": {
+                        "display": "grid",
+                        "grid-template-columns": "1fr 1fr",
+                        "gap": "1.5rem",
+                        "margin-bottom": "1.5rem"
+                    },
+                    "mobile": {
+                        "grid-template-columns": "1fr",
+                        "gap": "1rem"
+                    }
+                },
+                "FormGroupOne": {
+                    "__html": "div",
+                    "base": {},
+                    "mobile": {}
+                },
+                "FormGroupTwo": {
+                    "__html": "div",
+                    "base": {},
+                    "mobile": {}
+                },
+                "FormGroupThree": {
+                    "__html": "div",
+                    "base": {},
+                    "mobile": {}
+                },
+                "FormGroupFour": {
+                    "__html": "div",
+                    "base": {
+                        "margin-bottom": "2rem"
+                    },
+                    "mobile": {}
+                },
+                "FormLabel": {
+                    "__html": "label",
+                    "base": {
+                        "display": "block",
+                        "color": "var(--text-main)",
+                        "font-weight": "600",
+                        "margin-bottom": "0.5rem",
+                        "font-size": "0.9rem",
+                        "text-transform": "uppercase",
+                        "letter-spacing": "1px"
+                    },
+                    "mobile": {}
+                },
+                "FormInputOne": {
+                    "__html": "input",
+                    "base": {
+                        "width": "100%",
+                        "background": "var(--background-alt)",
+                        "border": "1px solid var(--border-light)",
+                        "border-radius": "var(--border-radius-md)",
+                        "padding": "1rem 1.25rem",
+                        "color": "var(--text-main)",
+                        "font-size": "1rem",
+                        "font-family": "var(--font-main)",
+                        "outline": "none",
+                        "transition": "border-color var(--transition-smooth)"
+                    },
+                    "mobile": {
+                        "padding": "0.85rem 1rem"
+                    }
+                },
+                "FormInputTwo": {
+                    "__html": "input",
+                    "base": {
+                        "width": "100%",
+                        "background": "var(--background-alt)",
+                        "border": "1px solid var(--border-light)",
+                        "border-radius": "var(--border-radius-md)",
+                        "padding": "1rem 1.25rem",
+                        "color": "var(--text-main)",
+                        "font-size": "1rem",
+                        "font-family": "var(--font-main)",
+                        "outline": "none",
+                        "transition": "border-color var(--transition-smooth)"
+                    },
+                    "mobile": {
+                        "padding": "0.85rem 1rem"
+                    }
+                },
+                "FormInputThree": {
+                    "__html": "input",
+                    "base": {
+                        "width": "100%",
+                        "background": "var(--background-alt)",
+                        "border": "1px solid var(--border-light)",
+                        "border-radius": "var(--border-radius-md)",
+                        "padding": "1rem 1.25rem",
+                        "color": "var(--text-main)",
+                        "font-size": "1rem",
+                        "font-family": "var(--font-main)",
+                        "outline": "none",
+                        "transition": "border-color var(--transition-smooth)"
+                    },
+                    "mobile": {
+                        "padding": "0.85rem 1rem"
+                    }
+                },
+                "FormSelect": {
+                    "__html": "select",
+                    "base": {
+                        "width": "100%",
+                        "background": "var(--background-alt)",
+                        "border": "1px solid var(--border-light)",
+                        "border-radius": "var(--border-radius-md)",
+                        "padding": "1rem 1.25rem",
+                        "color": "var(--text-main)",
+                        "font-size": "1rem",
+                        "font-family": "var(--font-main)",
+                        "outline": "none",
+                        "cursor": "pointer"
+                    },
+                    "mobile": {
+                        "padding": "0.85rem 1rem"
+                    }
+                },
+                "FormSubmit": {
+                    "__html": "button",
+                    "base": {
+                        "width": "100%",
+                        "background": "var(--gradient-accent)",
+                        "color": "white",
+                        "border": "none",
+                        "border-radius": "var(--border-radius-full)",
+                        "padding": "1.25rem",
+                        "font-weight": "700",
+                        "font-size": "1.1rem",
+                        "cursor": "pointer",
+                        "transition": "all var(--transition-smooth)",
+                        "box-shadow": "var(--shadow-terracotta)",
+                        "text-transform": "uppercase",
+                        "letter-spacing": "1px"
+                    },
+                    "mobile": {
+                        "padding": "1rem",
+                        "font-size": "1rem"
+                    }
+                }
+            },
+            "mainContent": {
+                "BookingSection": {
+                    "BookingContainer": {
+                        "BookingCard": {
+                            "BookingTitle": {
+                                "content": "Забронировать стол"
+                            },
+                            "BookingSubtitle": {
+                                "content": "Оставьте заявку — мы перезвоним для подтверждения"
+                            },
+                            "FormRowOne": {
+                                "FormGroupOne": {
+                                    "FormLabel": {
+                                        "props": {
+                                            "htmlFor": "name"
+                                        },
+                                        "content": "Ваше имя"
+                                    },
+                                    "FormInputOne": {
+                                        "props": {
+                                            "type": "text",
+                                            "id": "name",
+                                            "name": "name",
+                                            "placeholder": "Иван Петров",
+                                            "required": true
+                                        }
+                                    }
+                                },
+                                "FormGroupTwo": {
+                                    "FormLabel": {
+                                        "props": {
+                                            "htmlFor": "phone"
+                                        },
+                                        "content": "Телефон"
+                                    },
+                                    "FormInputTwo": {
+                                        "props": {
+                                            "type": "tel",
+                                            "id": "phone",
+                                            "name": "phone",
+                                            "placeholder": "+7 (___) ___-__-__",
+                                            "required": true
+                                        }
+                                    }
+                                }
+                            },
+                            "FormRowTwo": {
+                                "FormGroupOne": {
+                                    "FormLabel": {
+                                        "props": {
+                                            "htmlFor": "date"
+                                        },
+                                        "content": "Дата"
+                                    },
+                                    "FormInputOne": {
+                                        "props": {
+                                            "type": "date",
+                                            "id": "date",
+                                            "name": "date",
+                                            "required": true
+                                        }
+                                    }
+                                },
+                                "FormGroupTwo": {
+                                    "FormLabel": {
+                                        "props": {
+                                            "htmlFor": "time"
+                                        },
+                                        "content": "Время"
+                                    },
+                                    "FormInputTwo": {
+                                        "props": {
+                                            "type": "time",
+                                            "id": "time",
+                                            "name": "time",
+                                            "required": true
+                                        }
+                                    }
+                                }
+                            },
+                            "FormGroupThree": {
+                                "FormLabel": {
+                                    "props": {
+                                        "htmlFor": "guests"
+                                    },
+                                    "content": "Количество гостей"
+                                },
+                                "FormSelect": {
+                                    "props": {
+                                        "id": "guests",
+                                        "name": "guests"
+                                    }
+                                }
+                            },
+                            "FormGroupFour": {
+                                "FormLabel": {
+                                    "props": {
+                                        "htmlFor": "comment"
+                                    },
+                                    "content": "Особые пожелания"
+                                },
+                                "FormInputThree": {
+                                    "props": {
+                                        "type": "text",
+                                        "id": "comment",
+                                        "name": "comment",
+                                        "placeholder": "Аллергии, повод, предпочтения по столу"
+                                    }
+                                }
+                            },
+                            "FormSubmit": {
+                                "props": {
+                                    "type": "submit"
+                                },
+                                "content": "Забронировать"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "Footer": {
+            "styles": {
+                "FooterWrapper": {
+                    "__html": "footer",
+                    "base": {
+                        "background": "var(--primary)",
+                        "padding": "4rem 2rem 2rem",
+                        "font-family": "var(--font-main)",
+                        "color": "white"
+                    },
+                    "mobile": {
+                        "padding": "2.5rem 1rem 1.5rem"
+                    }
+                },
+                "FooterContainer": {
+                    "__html": "div",
+                    "base": {
+                        "max-width": "var(--container-width)",
+                        "margin": "0 auto"
+                    },
+                    "mobile": {}
+                },
+                "FooterTop": {
+                    "__html": "div",
+                    "base": {
+                        "display": "grid",
+                        "grid-template-columns": "repeat(3, 1fr)",
+                        "gap": "3rem",
+                        "padding-bottom": "3rem",
+                        "border-bottom": "1px solid rgba(255,255,255,0.1)"
+                    },
+                    "mobile": {
+                        "grid-template-columns": "1fr",
+                        "gap": "2rem",
+                        "text-align": "center"
+                    }
+                },
+                "FooterColumnOne": {
+                    "__html": "div",
+                    "base": {},
+                    "mobile": {}
+                },
+                "FooterColumnTwo": {
+                    "__html": "div",
+                    "base": {},
+                    "mobile": {}
+                },
+                "FooterColumnThree": {
+                    "__html": "div",
+                    "base": {},
+                    "mobile": {}
+                },
+                "FooterLogo": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "align-items": "center",
+                        "gap": "0.5rem",
+                        "margin-bottom": "1rem"
+                    },
+                    "mobile": {
+                        "justify-content": "center"
+                    }
+                },
+                "FooterLogoText": {
+                    "__html": "span",
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "1.5rem",
+                        "font-weight": "700",
+                        "color": "white"
+                    },
+                    "mobile": {}
+                },
+                "FooterDesc": {
+                    "__html": "p",
+                    "base": {
+                        "color": "rgba(255,255,255,0.7)",
+                        "line-height": "1.6",
+                        "font-size": "0.95rem"
+                    },
+                    "mobile": {}
+                },
+                "FooterTitle": {
+                    "__html": "h4",
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "1.2rem",
+                        "font-weight": "600",
+                        "color": "white",
+                        "margin-bottom": "1.5rem"
+                    },
+                    "mobile": {}
+                },
+                "FooterLinkOne": {
+                    "__html": "p",
+                    "base": {
+                        "color": "rgba(255,255,255,0.7)",
+                        "margin-bottom": "0.75rem",
+                        "cursor": "pointer",
+                        "transition": "color var(--transition-smooth)",
+                        "font-size": "0.95rem"
+                    },
+                    "mobile": {}
+                },
+                "FooterLinkTwo": {
+                    "__html": "p",
+                    "base": {
+                        "color": "rgba(255,255,255,0.7)",
+                        "margin-bottom": "0.75rem",
+                        "cursor": "pointer",
+                        "transition": "color var(--transition-smooth)",
+                        "font-size": "0.95rem"
+                    },
+                    "mobile": {}
+                },
+                "FooterLinkThree": {
+                    "__html": "p",
+                    "base": {
+                        "color": "rgba(255,255,255,0.7)",
+                        "margin-bottom": "0.75rem",
+                        "cursor": "pointer",
+                        "transition": "color var(--transition-smooth)",
+                        "font-size": "0.95rem"
+                    },
+                    "mobile": {}
+                },
+                "FooterContactOne": {
+                    "__html": "p",
+                    "base": {
+                        "color": "rgba(255,255,255,0.8)",
+                        "margin-bottom": "0.5rem",
+                        "font-size": "0.95rem"
+                    },
+                    "mobile": {}
+                },
+                "FooterContactTwo": {
+                    "__html": "p",
+                    "base": {
+                        "color": "rgba(255,255,255,0.8)",
+                        "margin-bottom": "0.5rem",
+                        "font-size": "0.95rem"
+                    },
+                    "mobile": {}
+                },
+                "FooterContactThree": {
+                    "__html": "p",
+                    "base": {
+                        "color": "rgba(255,255,255,0.8)",
+                        "margin-bottom": "0.5rem",
+                        "font-size": "0.95rem"
+                    },
+                    "mobile": {}
+                },
+                "FooterBottom": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "justify-content": "space-between",
+                        "align-items": "center",
+                        "padding-top": "2rem"
+                    },
+                    "mobile": {
+                        "flex-direction": "column",
+                        "gap": "1rem"
+                    }
+                },
+                "FooterCopy": {
+                    "__html": "p",
+                    "base": {
+                        "color": "rgba(255,255,255,0.5)",
+                        "font-size": "0.9rem"
+                    },
+                    "mobile": {}
+                },
+                "FooterSocial": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "gap": "1.5rem"
+                    },
+                    "mobile": {}
+                },
+                "SocialLinkOne": {
+                    "__html": "span",
+                    "base": {
+                        "color": "rgba(255,255,255,0.6)",
+                        "cursor": "pointer",
+                        "transition": "color var(--transition-smooth)",
+                        "font-size": "0.9rem"
+                    },
+                    "mobile": {}
+                },
+                "SocialLinkTwo": {
+                    "__html": "span",
+                    "base": {
+                        "color": "rgba(255,255,255,0.6)",
+                        "cursor": "pointer",
+                        "transition": "color var(--transition-smooth)",
+                        "font-size": "0.9rem"
+                    },
+                    "mobile": {}
+                }
+            },
+            "mainContent": {
+                "FooterWrapper": {
+                    "FooterContainer": {
+                        "FooterTop": {
+                            "FooterColumnOne": {
+                                "FooterLogo": {
+                                    "FooterLogoText": {
+                                        "content": "🍝 La Pasta"
+                                    }
+                                },
+                                "FooterDesc": {
+                                    "content": "Аутентичная итальянская кухня в самом сердце Москвы. Свежая паста, уютная атмосфера и dolce vita каждый день."
+                                }
+                            },
+                            "FooterColumnTwo": {
+                                "FooterTitle": {
+                                    "content": "Меню"
+                                },
+                                "FooterLinkOne": {
+                                    "content": "Паста"
+                                },
+                                "FooterLinkTwo": {
+                                    "content": "Пицца"
+                                },
+                                "FooterLinkThree": {
+                                    "content": "Десерты"
+                                }
+                            },
+                            "FooterColumnThree": {
+                                "FooterTitle": {
+                                    "content": "Контакты"
+                                },
+                                "FooterContactOne": {
+                                    "content": "ул. Тверская, 15, Москва"
+                                },
+                                "FooterContactTwo": {
+                                    "content": "+7 (495) 123-45-67"
+                                },
+                                "FooterContactThree": {
+                                    "content": "info@lapasta.ru"
+                                }
+                            }
+                        },
+                        "FooterBottom": {
+                            "FooterCopy": {
+                                "content": "© 2026 La Pasta. Tutti i diritti riservati."
+                            },
+                            "FooterSocial": {
+                                "SocialLinkOne": {
+                                    "content": "Instagram"
+                                },
+                                "SocialLinkTwo": {
+                                    "content": "Telegram"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
