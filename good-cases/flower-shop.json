@@ -1,0 +1,1412 @@
+{
+    "globalCssTokens": {
+        "base": {
+            "--transition-smooth": "0.35s cubic-bezier(0.4, 0, 0.2, 1)",
+            "--transition-bounce": "0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55)",
+            "--border-radius-sm": "0.5rem",
+            "--border-radius-md": "1rem",
+            "--border-radius-lg": "2rem",
+            "--border-radius-xl": "3rem",
+            "--border-radius-full": "9999px",
+            "--font-main": "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
+            "--font-display": "'Cormorant Garamond', 'Times New Roman', serif",
+            "--font-decor": "'Dancing Script', cursive",
+            "--container-width": "1280px"
+        },
+        "light": {
+            "--primary": "#2d1b0e",
+            "--primary-light": "#4a2e1c",
+            "--accent": "#a12336",
+            "--accent-glow": "#c41e3a",
+            "--accent-soft": "#fdf0f3",
+            "--secondary": "#2a9d8f",
+            "--secondary-soft": "#e8f5e9",
+            "--background": "#fdfbf9",
+            "--background-alt": "#f5ede1",
+            "--surface": "#ffffff",
+            "--surface-warm": "#faf6f0",
+            "--text-main": "#1a0e06",
+            "--text-muted": "#5c3d2e",
+            "--text-light": "#8b6c5c",
+            "--border-light": "#e8dcd0",
+            "--border-accent": "#a12336",
+            "--shadow-sm": "0 4px 12px rgba(45, 27, 14, 0.04)",
+            "--shadow-md": "0 12px 28px rgba(45, 27, 14, 0.08)",
+            "--shadow-lg": "0 24px 48px rgba(45, 27, 14, 0.12)",
+            "--shadow-rose": "0 16px 40px rgba(161, 35, 54, 0.1)",
+            "--gradient-hero": "linear-gradient(135deg, #fdf0f3 0%, #f5ede1 100%)",
+            "--gradient-card": "linear-gradient(145deg, #ffffff 0%, #faf6f0 100%)",
+            "--gradient-accent": "linear-gradient(135deg, #a12336 0%, #c41e3a 100%)"
+        },
+        "dark": {
+            "--primary": "#f5e6d3",
+            "--primary-light": "#ffe8cc",
+            "--accent": "#e84a6e",
+            "--accent-glow": "#ff6b8a",
+            "--accent-soft": "#3d1a24",
+            "--secondary": "#52b788",
+            "--secondary-soft": "#1a3329",
+            "--background": "#1a0e06",
+            "--background-alt": "#24160c",
+            "--surface": "#2d1b0e",
+            "--surface-warm": "#362012",
+            "--text-main": "#f5e6d3",
+            "--text-muted": "#d4b89c",
+            "--text-light": "#a8846a",
+            "--border-light": "#3d2618",
+            "--border-accent": "#e84a6e",
+            "--shadow-sm": "0 4px 12px rgba(0, 0, 0, 0.3)",
+            "--shadow-md": "0 12px 28px rgba(0, 0, 0, 0.4)",
+            "--shadow-lg": "0 24px 48px rgba(0, 0, 0, 0.5)",
+            "--shadow-rose": "0 16px 40px rgba(232, 74, 110, 0.2)",
+            "--gradient-hero": "linear-gradient(135deg, #24160c 0%, #1a0e06 100%)",
+            "--gradient-card": "linear-gradient(145deg, #2d1b0e 0%, #362012 100%)",
+            "--gradient-accent": "linear-gradient(135deg, #a12336 0%, #e84a6e 100%)"
+        }
+    },
+    "sections": {
+        "Header": {
+            "styles": {
+                "HeaderWrapper": {
+                    "__html": "header",
+                    "base": {
+                        "position": "fixed",
+                        "top": "0",
+                        "left": "0",
+                        "right": "0",
+                        "z-index": "100",
+                        "background": "var(--surface)",
+                        "border-bottom": "2px solid var(--border-accent)",
+                        "font-family": "var(--font-main)",
+                        "box-shadow": "var(--shadow-sm)"
+                    },
+                    "mobile": {
+                        "background": "rgba(253, 251, 249, 0.98)",
+                        "backdrop-filter": "blur(8px)"
+                    }
+                },
+                "HeaderContainer": {
+                    "__html": "div",
+                    "base": {
+                        "max-width": "var(--container-width)",
+                        "margin": "0 auto",
+                        "padding": "1rem 2rem",
+                        "display": "flex",
+                        "align-items": "center",
+                        "justify-content": "space-between"
+                    },
+                    "mobile": {
+                        "padding": "0.75rem 1rem"
+                    }
+                },
+                "LogoContainer": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "align-items": "center",
+                        "gap": "0.5rem"
+                    },
+                    "mobile": {}
+                },
+                "LogoIcon": {
+                    "__html": "span",
+                    "base": {
+                        "font-size": "2rem",
+                        "line-height": "1"
+                    },
+                    "mobile": {
+                        "font-size": "1.75rem"
+                    }
+                },
+                "LogoText": {
+                    "__html": "span",
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "1.75rem",
+                        "font-weight": "700",
+                        "color": "var(--text-main)",
+                        "letter-spacing": "-0.01em"
+                    },
+                    "mobile": {
+                        "font-size": "1.25rem"
+                    }
+                },
+                "LogoAccent": {
+                    "__html": "span",
+                    "base": {
+                        "color": "var(--accent)",
+                        "font-family": "var(--font-decor)"
+                    },
+                    "mobile": {}
+                },
+                "NavContainer": {
+                    "__html": "nav",
+                    "base": {
+                        "display": "flex",
+                        "align-items": "center",
+                        "gap": "2rem"
+                    },
+                    "mobile": {
+                        "display": "none"
+                    }
+                },
+                "NavItemOne": {
+                    "__html": "a",
+                    "base": {
+                        "color": "var(--text-main)",
+                        "font-weight": "500",
+                        "font-size": "1rem",
+                        "cursor": "pointer",
+                        "transition": "color var(--transition-smooth)",
+                        "padding": "0.5rem 0"
+                    },
+                    "mobile": {}
+                },
+                "NavItemTwo": {
+                    "__html": "a",
+                    "base": {
+                        "color": "var(--text-main)",
+                        "font-weight": "500",
+                        "font-size": "1rem",
+                        "cursor": "pointer",
+                        "transition": "color var(--transition-smooth)",
+                        "padding": "0.5rem 0"
+                    },
+                    "mobile": {}
+                },
+                "NavItemThree": {
+                    "__html": "a",
+                    "base": {
+                        "color": "var(--text-main)",
+                        "font-weight": "500",
+                        "font-size": "1rem",
+                        "cursor": "pointer",
+                        "transition": "color var(--transition-smooth)",
+                        "padding": "0.5rem 0"
+                    },
+                    "mobile": {}
+                },
+                "NavItemFour": {
+                    "__html": "a",
+                    "base": {
+                        "color": "var(--text-main)",
+                        "font-weight": "500",
+                        "font-size": "1rem",
+                        "cursor": "pointer",
+                        "transition": "color var(--transition-smooth)",
+                        "padding": "0.5rem 0"
+                    },
+                    "mobile": {}
+                },
+                "HeaderActions": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "align-items": "center",
+                        "gap": "1.5rem"
+                    },
+                    "mobile": {
+                        "gap": "0.75rem"
+                    }
+                },
+                "PhoneContainer": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "flex-direction": "column",
+                        "align-items": "flex-end"
+                    },
+                    "mobile": {
+                        "display": "none"
+                    }
+                },
+                "PhoneNumber": {
+                    "__html": "span",
+                    "base": {
+                        "color": "var(--text-main)",
+                        "font-weight": "600",
+                        "font-size": "1rem"
+                    },
+                    "mobile": {}
+                },
+                "PhoneLabel": {
+                    "__html": "span",
+                    "base": {
+                        "color": "var(--text-light)",
+                        "font-size": "0.7rem",
+                        "text-transform": "uppercase",
+                        "letter-spacing": "1px"
+                    },
+                    "mobile": {}
+                },
+                "HeaderCta": {
+                    "__html": "button",
+                    "base": {
+                        "background": "var(--gradient-accent)",
+                        "color": "white",
+                        "border": "none",
+                        "border-radius": "var(--border-radius-full)",
+                        "padding": "0.75rem 1.75rem",
+                        "font-weight": "600",
+                        "font-size": "0.9rem",
+                        "cursor": "pointer",
+                        "transition": "all var(--transition-smooth)",
+                        "box-shadow": "var(--shadow-rose)"
+                    },
+                    "mobile": {
+                        "padding": "0.5rem 1rem",
+                        "font-size": "0.8rem"
+                    }
+                },
+                "MobileMenuButton": {
+                    "__html": "button",
+                    "base": {
+                        "display": "none",
+                        "background": "transparent",
+                        "border": "2px solid var(--border-accent)",
+                        "border-radius": "var(--border-radius-sm)",
+                        "padding": "0.5rem 0.75rem",
+                        "cursor": "pointer",
+                        "color": "var(--text-main)"
+                    },
+                    "mobile": {
+                        "display": "block"
+                    }
+                }
+            },
+            "mainContent": {
+                "HeaderWrapper": {
+                    "HeaderContainer": {
+                        "LogoContainer": {
+                            "LogoIcon": {
+                                "content": "🌹"
+                            },
+                            "LogoText": {
+                                "content": "La ",
+                                "LogoAccent": {
+                                    "content": "Rose"
+                                }
+                            }
+                        },
+                        "NavContainer": {
+                            "NavItemOne": {
+                                "content": "Каталог"
+                            },
+                            "NavItemTwo": {
+                                "content": "Букеты"
+                            },
+                            "NavItemThree": {
+                                "content": "Доставка"
+                            },
+                            "NavItemFour": {
+                                "content": "Контакты"
+                            }
+                        },
+                        "HeaderActions": {
+                            "PhoneContainer": {
+                                "PhoneNumber": {
+                                    "content": "+7 (999) 123-45-67"
+                                },
+                                "PhoneLabel": {
+                                    "content": "Круглосуточно"
+                                }
+                            },
+                            "HeaderCta": {
+                                "content": "Заказать"
+                            },
+                            "MobileMenuButton": {
+                                "content": "☰"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "Hero": {
+            "styles": {
+                "HeroSection": {
+                    "__html": "section",
+                    "base": {
+                        "width": "100%",
+                        "min-height": "100vh",
+                        "display": "flex",
+                        "align-items": "center",
+                        "padding": "8rem 2rem 4rem",
+                        "background": "var(--gradient-hero)",
+                        "position": "relative",
+                        "overflow": "hidden",
+                        "font-family": "var(--font-main)"
+                    },
+                    "mobile": {
+                        "min-height": "auto",
+                        "padding": "6rem 1rem 3rem"
+                    }
+                },
+                "HeroContainer": {
+                    "__html": "div",
+                    "base": {
+                        "max-width": "var(--container-width)",
+                        "margin": "0 auto",
+                        "width": "100%",
+                        "position": "relative",
+                        "z-index": "2"
+                    },
+                    "mobile": {}
+                },
+                "HeroGrid": {
+                    "__html": "div",
+                    "base": {
+                        "display": "grid",
+                        "grid-template-columns": "1fr 1fr",
+                        "gap": "4rem",
+                        "align-items": "center"
+                    },
+                    "mobile": {
+                        "grid-template-columns": "1fr",
+                        "gap": "2rem"
+                    }
+                },
+                "HeroContent": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "flex-direction": "column",
+                        "gap": "1.5rem"
+                    },
+                    "mobile": {
+                        "text-align": "center",
+                        "align-items": "center"
+                    }
+                },
+                "HeroEyebrow": {
+                    "__html": "div",
+                    "base": {
+                        "font-family": "var(--font-decor)",
+                        "font-size": "1.5rem",
+                        "color": "var(--accent)"
+                    },
+                    "mobile": {
+                        "font-size": "1.25rem"
+                    }
+                },
+                "HeroTitle": {
+                    "__html": "h1",
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "clamp(3rem, 6vw, 4.5rem)",
+                        "font-weight": "600",
+                        "line-height": "1.15",
+                        "color": "var(--text-main)",
+                        "margin": "0"
+                    },
+                    "mobile": {
+                        "font-size": "clamp(2.5rem, 10vw, 3.5rem)"
+                    }
+                },
+                "HeroTitleAccent": {
+                    "__html": "span",
+                    "base": {
+                        "color": "var(--accent)",
+                        "display": "block"
+                    },
+                    "mobile": {}
+                },
+                "HeroDescription": {
+                    "__html": "p",
+                    "base": {
+                        "font-size": "1.25rem",
+                        "line-height": "1.7",
+                        "color": "var(--text-muted)",
+                        "margin": "0",
+                        "max-width": "90%"
+                    },
+                    "mobile": {
+                        "font-size": "1rem",
+                        "max-width": "100%"
+                    }
+                },
+                "HeroCta": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "gap": "1.5rem",
+                        "margin-top": "1rem"
+                    },
+                    "mobile": {
+                        "flex-direction": "column",
+                        "width": "100%",
+                        "max-width": "300px"
+                    }
+                },
+                "PrimaryButton": {
+                    "__html": "button",
+                    "base": {
+                        "background": "var(--gradient-accent)",
+                        "color": "white",
+                        "border": "none",
+                        "border-radius": "var(--border-radius-full)",
+                        "padding": "1.25rem 2.5rem",
+                        "font-weight": "600",
+                        "font-size": "1.1rem",
+                        "cursor": "pointer",
+                        "transition": "all var(--transition-smooth)",
+                        "box-shadow": "var(--shadow-rose)"
+                    },
+                    "mobile": {
+                        "padding": "1rem",
+                        "font-size": "1rem",
+                        "width": "100%"
+                    }
+                },
+                "SecondaryButton": {
+                    "__html": "button",
+                    "base": {
+                        "background": "transparent",
+                        "color": "var(--text-main)",
+                        "border": "1px solid var(--border-accent)",
+                        "border-radius": "var(--border-radius-full)",
+                        "padding": "1.25rem 2.5rem",
+                        "font-weight": "600",
+                        "font-size": "1.1rem",
+                        "cursor": "pointer",
+                        "transition": "all var(--transition-smooth)"
+                    },
+                    "mobile": {
+                        "padding": "1rem",
+                        "font-size": "1rem",
+                        "width": "100%"
+                    }
+                },
+                "HeroVisual": {
+                    "__html": "div",
+                    "base": {
+                        "border-radius": "var(--border-radius-lg)",
+                        "overflow": "hidden",
+                        "box-shadow": "var(--shadow-lg)",
+                        "border": "2px solid var(--border-accent)"
+                    },
+                    "mobile": {
+                        "order": "-1"
+                    }
+                },
+                "HeroImage": {
+                    "__html": "img",
+                    "base": {
+                        "width": "100%",
+                        "height": "auto",
+                        "display": "block"
+                    },
+                    "mobile": {}
+                }
+            },
+            "mainContent": {
+                "HeroSection": {
+                    "HeroContainer": {
+                        "HeroGrid": {
+                            "HeroContent": {
+                                "HeroEyebrow": {
+                                    "content": "Добро пожаловать в La Rose"
+                                },
+                                "HeroTitle": {
+                                    "content": "Цветы, которые ",
+                                    "HeroTitleAccent": {
+                                        "content": "говорят за вас"
+                                    }
+                                },
+                                "HeroDescription": {
+                                    "content": "Создаем уникальные букеты и композиции для особенных моментов. Доставка по Москве и области от 2 часов."
+                                },
+                                "HeroCta": {
+                                    "PrimaryButton": {
+                                        "content": "В каталог"
+                                    },
+                                    "SecondaryButton": {
+                                        "content": "О нас"
+                                    }
+                                }
+                            },
+                            "HeroVisual": {
+                                "HeroImage": {
+                                    "props": {
+                                        "src": "https://la-rose.ru/upload/medialibrary/43a/43ad41ef05e35026b23f8765fcc9074c.jpg",
+                                        "alt": "Магазин цветов La Rose"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "Advantages": {
+            "styles": {
+                "AdvantagesSection": {
+                    "__html": "section",
+                    "base": {
+                        "padding": "5rem 2rem",
+                        "background": "var(--background)",
+                        "font-family": "var(--font-main)"
+                    },
+                    "mobile": {
+                        "padding": "3rem 1rem"
+                    }
+                },
+                "AdvantagesContainer": {
+                    "__html": "div",
+                    "base": {
+                        "max-width": "var(--container-width)",
+                        "margin": "0 auto"
+                    },
+                    "mobile": {}
+                },
+                "AdvantagesGrid": {
+                    "__html": "div",
+                    "base": {
+                        "display": "grid",
+                        "grid-template-columns": "repeat(4, 1fr)",
+                        "gap": "2rem"
+                    },
+                    "mobile": {
+                        "grid-template-columns": "1fr",
+                        "gap": "1.5rem"
+                    }
+                },
+                "AdvantageCardOne": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--surface-warm)",
+                        "border-radius": "var(--border-radius-lg)",
+                        "padding": "2rem 1.5rem",
+                        "border": "1px solid var(--border-light)",
+                        "text-align": "center"
+                    },
+                    "mobile": {
+                        "padding": "1.5rem"
+                    }
+                },
+                "AdvantageCardTwo": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--surface-warm)",
+                        "border-radius": "var(--border-radius-lg)",
+                        "padding": "2rem 1.5rem",
+                        "border": "1px solid var(--border-light)",
+                        "text-align": "center"
+                    },
+                    "mobile": {
+                        "padding": "1.5rem"
+                    }
+                },
+                "AdvantageCardThree": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--surface-warm)",
+                        "border-radius": "var(--border-radius-lg)",
+                        "padding": "2rem 1.5rem",
+                        "border": "1px solid var(--border-light)",
+                        "text-align": "center"
+                    },
+                    "mobile": {
+                        "padding": "1.5rem"
+                    }
+                },
+                "AdvantageCardFour": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--surface-warm)",
+                        "border-radius": "var(--border-radius-lg)",
+                        "padding": "2rem 1.5rem",
+                        "border": "1px solid var(--border-light)",
+                        "text-align": "center"
+                    },
+                    "mobile": {
+                        "padding": "1.5rem"
+                    }
+                },
+                "AdvantageIcon": {
+                    "__html": "div",
+                    "base": {
+                        "font-size": "2.5rem",
+                        "margin-bottom": "1.5rem"
+                    },
+                    "mobile": {
+                        "font-size": "2rem"
+                    }
+                },
+                "AdvantageTitle": {
+                    "__html": "h3",
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "1.3rem",
+                        "font-weight": "600",
+                        "color": "var(--text-main)",
+                        "margin-bottom": "0.75rem"
+                    },
+                    "mobile": {
+                        "font-size": "1.2rem"
+                    }
+                },
+                "AdvantageDesc": {
+                    "__html": "p",
+                    "base": {
+                        "color": "var(--text-muted)",
+                        "line-height": "1.6",
+                        "font-size": "0.95rem"
+                    },
+                    "mobile": {
+                        "font-size": "0.9rem"
+                    }
+                }
+            },
+            "mainContent": {
+                "AdvantagesSection": {
+                    "AdvantagesContainer": {
+                        "AdvantagesGrid": {
+                            "AdvantageCardOne": {
+                                "AdvantageIcon": {
+                                    "content": "🌿"
+                                },
+                                "AdvantageTitle": {
+                                    "content": "Свежесть"
+                                },
+                                "AdvantageDesc": {
+                                    "content": "Цветы поставляются каждое утро с лучших плантаций"
+                                }
+                            },
+                            "AdvantageCardTwo": {
+                                "AdvantageIcon": {
+                                    "content": "🎀"
+                                },
+                                "AdvantageTitle": {
+                                    "content": "Дизайн"
+                                },
+                                "AdvantageDesc": {
+                                    "content": "Флористы с многолетним опытом создадут шедевр"
+                                }
+                            },
+                            "AdvantageCardThree": {
+                                "AdvantageIcon": {
+                                    "content": "🚚"
+                                },
+                                "AdvantageTitle": {
+                                    "content": "Доставка"
+                                },
+                                "AdvantageDesc": {
+                                    "content": "Бесплатно по Москве при заказе от 3000 ₽"
+                                }
+                            },
+                            "AdvantageCardFour": {
+                                "AdvantageIcon": {
+                                    "content": "💝"
+                                },
+                                "AdvantageTitle": {
+                                    "content": "Гарантия"
+                                },
+                                "AdvantageDesc": {
+                                    "content": "Если букет не понравится — вернем деньги"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "Catalog": {
+            "styles": {
+                "CatalogSection": {
+                    "__html": "section",
+                    "base": {
+                        "padding": "6rem 2rem",
+                        "background": "var(--background-alt)",
+                        "font-family": "var(--font-main)"
+                    },
+                    "mobile": {
+                        "padding": "3rem 1rem"
+                    }
+                },
+                "CatalogContainer": {
+                    "__html": "div",
+                    "base": {
+                        "max-width": "var(--container-width)",
+                        "margin": "0 auto"
+                    },
+                    "mobile": {}
+                },
+                "SectionHeader": {
+                    "__html": "div",
+                    "base": {
+                        "text-align": "center",
+                        "margin-bottom": "4rem"
+                    },
+                    "mobile": {
+                        "margin-bottom": "2rem"
+                    }
+                },
+                "SectionTitle": {
+                    "__html": "h2",
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "clamp(2.5rem, 4vw, 3.5rem)",
+                        "color": "var(--text-main)",
+                        "font-weight": "600",
+                        "margin-bottom": "1rem"
+                    },
+                    "mobile": {
+                        "font-size": "2rem"
+                    }
+                },
+                "SectionSubtitle": {
+                    "__html": "p",
+                    "base": {
+                        "color": "var(--text-muted)",
+                        "font-size": "1.2rem"
+                    },
+                    "mobile": {
+                        "font-size": "1rem"
+                    }
+                },
+                "CatalogGrid": {
+                    "__html": "div",
+                    "base": {
+                        "display": "grid",
+                        "grid-template-columns": "repeat(3, 1fr)",
+                        "gap": "2rem"
+                    },
+                    "mobile": {
+                        "grid-template-columns": "1fr",
+                        "gap": "1.5rem"
+                    }
+                },
+                "ProductCardOne": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--gradient-card)",
+                        "border-radius": "var(--border-radius-lg)",
+                        "overflow": "hidden",
+                        "border": "1px solid var(--border-light)",
+                        "box-shadow": "var(--shadow-sm)",
+                        "transition": "transform var(--transition-smooth)"
+                    },
+                    "mobile": {}
+                },
+                "ProductCardTwo": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--gradient-card)",
+                        "border-radius": "var(--border-radius-lg)",
+                        "overflow": "hidden",
+                        "border": "1px solid var(--border-light)",
+                        "box-shadow": "var(--shadow-sm)"
+                    },
+                    "mobile": {}
+                },
+                "ProductCardThree": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--gradient-card)",
+                        "border-radius": "var(--border-radius-lg)",
+                        "overflow": "hidden",
+                        "border": "1px solid var(--border-light)",
+                        "box-shadow": "var(--shadow-sm)"
+                    },
+                    "mobile": {}
+                },
+                "ProductImage": {
+                    "__html": "div",
+                    "base": {
+                        "height": "280px",
+                        "overflow": "hidden"
+                    },
+                    "mobile": {
+                        "height": "220px"
+                    }
+                },
+                "ProductImg": {
+                    "__html": "img",
+                    "base": {
+                        "width": "100%",
+                        "height": "100%",
+                        "object-fit": "cover"
+                    },
+                    "mobile": {}
+                },
+                "ProductContent": {
+                    "__html": "div",
+                    "base": {
+                        "padding": "1.5rem"
+                    },
+                    "mobile": {
+                        "padding": "1.25rem"
+                    }
+                },
+                "ProductName": {
+                    "__html": "h3",
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "1.5rem",
+                        "font-weight": "600",
+                        "color": "var(--text-main)",
+                        "margin-bottom": "0.5rem"
+                    },
+                    "mobile": {
+                        "font-size": "1.3rem"
+                    }
+                },
+                "ProductPrice": {
+                    "__html": "p",
+                    "base": {
+                        "color": "var(--accent)",
+                        "font-weight": "700",
+                        "font-size": "1.3rem",
+                        "margin-bottom": "1rem"
+                    },
+                    "mobile": {
+                        "font-size": "1.2rem"
+                    }
+                },
+                "ProductButton": {
+                    "__html": "button",
+                    "base": {
+                        "width": "100%",
+                        "background": "var(--accent-soft)",
+                        "color": "var(--accent)",
+                        "border": "none",
+                        "border-radius": "var(--border-radius-full)",
+                        "padding": "0.75rem",
+                        "font-weight": "600",
+                        "cursor": "pointer",
+                        "transition": "all var(--transition-smooth)"
+                    },
+                    "mobile": {}
+                }
+            },
+            "mainContent": {
+                "CatalogSection": {
+                    "CatalogContainer": {
+                        "SectionHeader": {
+                            "SectionTitle": {
+                                "content": "Популярные цветы"
+                            },
+                            "SectionSubtitle": {
+                                "content": "Выберите то, что по душе"
+                            }
+                        },
+                        "CatalogGrid": {
+                            "ProductCardOne": {
+                                "ProductImage": {
+                                    "ProductImg": {
+                                        "props": {
+                                            "src": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=600",
+                                            "alt": "Красные розы"
+                                        }
+                                    }
+                                },
+                                "ProductContent": {
+                                    "ProductName": {
+                                        "content": "Красные розы"
+                                    },
+                                    "ProductPrice": {
+                                        "content": "от 2 500 ₽"
+                                    },
+                                    "ProductButton": {
+                                        "content": "Выбрать букет"
+                                    }
+                                }
+                            },
+                            "ProductCardTwo": {
+                                "ProductImage": {
+                                    "ProductImg": {
+                                        "props": {
+                                            "src": "https://images.unsplash.com/photo-1562690868-60bbe7293e94?w=600",
+                                            "alt": "Розовые пионы"
+                                        }
+                                    }
+                                },
+                                "ProductContent": {
+                                    "ProductName": {
+                                        "content": "Пионы"
+                                    },
+                                    "ProductPrice": {
+                                        "content": "от 3 200 ₽"
+                                    },
+                                    "ProductButton": {
+                                        "content": "Выбрать букет"
+                                    }
+                                }
+                            },
+                            "ProductCardThree": {
+                                "ProductImage": {
+                                    "ProductImg": {
+                                        "props": {
+                                            "src": "https://images.unsplash.com/photo-1589828346591-39533e432173?w=600",
+                                            "alt": "Белые тюльпаны"
+                                        }
+                                    }
+                                },
+                                "ProductContent": {
+                                    "ProductName": {
+                                        "content": "Тюльпаны"
+                                    },
+                                    "ProductPrice": {
+                                        "content": "от 1 800 ₽"
+                                    },
+                                    "ProductButton": {
+                                        "content": "Выбрать букет"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "Reviews": {
+            "styles": {
+                "ReviewsSection": {
+                    "__html": "section",
+                    "base": {
+                        "padding": "6rem 2rem",
+                        "background": "var(--background)",
+                        "font-family": "var(--font-main)"
+                    },
+                    "mobile": {
+                        "padding": "3rem 1rem"
+                    }
+                },
+                "ReviewsContainer": {
+                    "__html": "div",
+                    "base": {
+                        "max-width": "var(--container-width)",
+                        "margin": "0 auto"
+                    },
+                    "mobile": {}
+                },
+                "SectionHeader": {
+                    "__html": "div",
+                    "base": {
+                        "text-align": "center",
+                        "margin-bottom": "4rem"
+                    },
+                    "mobile": {
+                        "margin-bottom": "2rem"
+                    }
+                },
+                "SectionTitle": {
+                    "__html": "h2",
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "clamp(2.5rem, 4vw, 3.5rem)",
+                        "color": "var(--text-main)",
+                        "font-weight": "600"
+                    },
+                    "mobile": {
+                        "font-size": "2rem"
+                    }
+                },
+                "ReviewsGrid": {
+                    "__html": "div",
+                    "base": {
+                        "display": "grid",
+                        "grid-template-columns": "repeat(2, 1fr)",
+                        "gap": "2rem"
+                    },
+                    "mobile": {
+                        "grid-template-columns": "1fr",
+                        "gap": "1.5rem"
+                    }
+                },
+                "ReviewCardOne": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--surface-warm)",
+                        "border-radius": "var(--border-radius-lg)",
+                        "padding": "2.5rem",
+                        "border": "1px solid var(--border-light)",
+                        "box-shadow": "var(--shadow-md)"
+                    },
+                    "mobile": {
+                        "padding": "1.5rem"
+                    }
+                },
+                "ReviewCardTwo": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--surface-warm)",
+                        "border-radius": "var(--border-radius-lg)",
+                        "padding": "2.5rem",
+                        "border": "1px solid var(--border-light)",
+                        "box-shadow": "var(--shadow-md)"
+                    },
+                    "mobile": {
+                        "padding": "1.5rem"
+                    }
+                },
+                "ReviewStars": {
+                    "__html": "div",
+                    "base": {
+                        "color": "var(--accent)",
+                        "font-size": "1.5rem",
+                        "margin-bottom": "1rem"
+                    },
+                    "mobile": {}
+                },
+                "ReviewText": {
+                    "__html": "p",
+                    "base": {
+                        "color": "var(--text-main)",
+                        "line-height": "1.7",
+                        "font-size": "1.1rem",
+                        "margin-bottom": "1.5rem"
+                    },
+                    "mobile": {
+                        "font-size": "1rem"
+                    }
+                },
+                "ReviewAuthor": {
+                    "__html": "p",
+                    "base": {
+                        "color": "var(--text-muted)",
+                        "font-weight": "600"
+                    },
+                    "mobile": {}
+                }
+            },
+            "mainContent": {
+                "ReviewsSection": {
+                    "ReviewsContainer": {
+                        "SectionHeader": {
+                            "SectionTitle": {
+                                "content": "Отзывы наших клиентов"
+                            }
+                        },
+                        "ReviewsGrid": {
+                            "ReviewCardOne": {
+                                "ReviewStars": {
+                                    "content": "★★★★★"
+                                },
+                                "ReviewText": {
+                                    "content": "Заказывала букет на день рождения подруги. Цветы свежайшие, композиция просто волшебная! Доставили минута в минуту. Спасибо огромное!"
+                                },
+                                "ReviewAuthor": {
+                                    "content": "Анна К."
+                                }
+                            },
+                            "ReviewCardTwo": {
+                                "ReviewStars": {
+                                    "content": "★★★★★"
+                                },
+                                "ReviewText": {
+                                    "content": "Лучший цветочный магазин в городе! Флористы — настоящие художники. Всегда угадывают настроение и создают нечто особенное."
+                                },
+                                "ReviewAuthor": {
+                                    "content": "Мария Л."
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "OrderForm": {
+            "styles": {
+                "OrderSection": {
+                    "__html": "section",
+                    "base": {
+                        "padding": "6rem 2rem",
+                        "background": "var(--gradient-hero)",
+                        "font-family": "var(--font-main)"
+                    },
+                    "mobile": {
+                        "padding": "3rem 1rem"
+                    }
+                },
+                "OrderContainer": {
+                    "__html": "div",
+                    "base": {
+                        "max-width": "700px",
+                        "margin": "0 auto"
+                    },
+                    "mobile": {}
+                },
+                "OrderCard": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--surface)",
+                        "border-radius": "var(--border-radius-xl)",
+                        "padding": "3rem",
+                        "box-shadow": "var(--shadow-rose)",
+                        "border": "1px solid var(--border-accent)"
+                    },
+                    "mobile": {
+                        "padding": "1.5rem"
+                    }
+                },
+                "OrderTitle": {
+                    "__html": "h2",
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "2.5rem",
+                        "font-weight": "600",
+                        "color": "var(--text-main)",
+                        "text-align": "center",
+                        "margin-bottom": "1rem"
+                    },
+                    "mobile": {
+                        "font-size": "1.8rem"
+                    }
+                },
+                "OrderSubtitle": {
+                    "__html": "p",
+                    "base": {
+                        "text-align": "center",
+                        "color": "var(--text-muted)",
+                        "margin-bottom": "2.5rem"
+                    },
+                    "mobile": {
+                        "font-size": "0.9rem"
+                    }
+                },
+                "FormGroupOne": {
+                    "__html": "div",
+                    "base": {
+                        "margin-bottom": "1.5rem"
+                    },
+                    "mobile": {}
+                },
+                "FormGroupTwo": {
+                    "__html": "div",
+                    "base": {
+                        "margin-bottom": "1.5rem"
+                    },
+                    "mobile": {}
+                },
+                "FormGroupThree": {
+                    "__html": "div",
+                    "base": {
+                        "margin-bottom": "2rem"
+                    },
+                    "mobile": {}
+                },
+                "FormLabel": {
+                    "__html": "div",
+                    "base": {
+                        "color": "var(--text-main)",
+                        "font-weight": "600",
+                        "margin-bottom": "0.5rem"
+                    },
+                    "mobile": {}
+                },
+                "FormInputOne": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--background-alt)",
+                        "border": "1px solid var(--border-light)",
+                        "border-radius": "var(--border-radius-full)",
+                        "padding": "1rem 1.5rem",
+                        "color": "var(--text-main)",
+                        "cursor": "text"
+                    },
+                    "mobile": {
+                        "padding": "0.85rem 1.25rem"
+                    }
+                },
+                "FormInputTwo": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--background-alt)",
+                        "border": "1px solid var(--border-light)",
+                        "border-radius": "var(--border-radius-full)",
+                        "padding": "1rem 1.5rem",
+                        "color": "var(--text-main)",
+                        "cursor": "text"
+                    },
+                    "mobile": {
+                        "padding": "0.85rem 1.25rem"
+                    }
+                },
+                "FormTextarea": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--background-alt)",
+                        "border": "1px solid var(--border-light)",
+                        "border-radius": "var(--border-radius-md)",
+                        "padding": "1rem 1.5rem",
+                        "color": "var(--text-main)",
+                        "min-height": "100px",
+                        "cursor": "text"
+                    },
+                    "mobile": {
+                        "min-height": "80px"
+                    }
+                },
+                "FormPlaceholder": {
+                    "__html": "span",
+                    "base": {
+                        "color": "var(--text-light)"
+                    },
+                    "mobile": {}
+                },
+                "FormSubmit": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--gradient-accent)",
+                        "color": "white",
+                        "border": "none",
+                        "border-radius": "var(--border-radius-full)",
+                        "padding": "1.25rem",
+                        "text-align": "center",
+                        "font-weight": "600",
+                        "font-size": "1.1rem",
+                        "cursor": "pointer",
+                        "box-shadow": "var(--shadow-rose)"
+                    },
+                    "mobile": {
+                        "padding": "1rem",
+                        "font-size": "1rem"
+                    }
+                }
+            },
+            "mainContent": {
+                "OrderSection": {
+                    "OrderContainer": {
+                        "OrderCard": {
+                            "OrderTitle": {
+                                "content": "Заказать букет"
+                            },
+                            "OrderSubtitle": {
+                                "content": "Оставьте заявку, и мы свяжемся с вами для уточнения деталей"
+                            },
+                            "FormGroupOne": {
+                                "FormLabel": {
+                                    "content": "Ваше имя"
+                                },
+                                "FormInputOne": {
+                                    "FormPlaceholder": {
+                                        "content": "Екатерина"
+                                    }
+                                }
+                            },
+                            "FormGroupTwo": {
+                                "FormLabel": {
+                                    "content": "Телефон"
+                                },
+                                "FormInputTwo": {
+                                    "FormPlaceholder": {
+                                        "content": "+7 (___) ___-__-__"
+                                    }
+                                }
+                            },
+                            "FormGroupThree": {
+                                "FormLabel": {
+                                    "content": "Пожелания к букету"
+                                },
+                                "FormTextarea": {
+                                    "FormPlaceholder": {
+                                        "content": "Какие цветы предпочитаете? Повод?"
+                                    }
+                                }
+                            },
+                            "FormSubmit": {
+                                "content": "Отправить заявку"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "Footer": {
+            "styles": {
+                "FooterWrapper": {
+                    "__html": "footer",
+                    "base": {
+                        "background": "var(--primary)",
+                        "padding": "3rem 2rem",
+                        "font-family": "var(--font-main)",
+                        "color": "white"
+                    },
+                    "mobile": {
+                        "padding": "2rem 1rem"
+                    }
+                },
+                "FooterContainer": {
+                    "__html": "div",
+                    "base": {
+                        "max-width": "var(--container-width)",
+                        "margin": "0 auto",
+                        "display": "flex",
+                        "justify-content": "space-between",
+                        "align-items": "center"
+                    },
+                    "mobile": {
+                        "flex-direction": "column",
+                        "gap": "1.5rem",
+                        "text-align": "center"
+                    }
+                },
+                "FooterLogo": {
+                    "__html": "span",
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "1.75rem",
+                        "font-weight": "600"
+                    },
+                    "mobile": {}
+                },
+                "FooterCopy": {
+                    "__html": "p",
+                    "base": {
+                        "color": "rgba(255,255,255,0.6)",
+                        "font-size": "0.9rem"
+                    },
+                    "mobile": {}
+                },
+                "FooterSocial": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "gap": "1.5rem"
+                    },
+                    "mobile": {}
+                },
+                "SocialLinkOne": {
+                    "__html": "span",
+                    "base": {
+                        "color": "rgba(255,255,255,0.7)",
+                        "cursor": "pointer",
+                        "transition": "color var(--transition-smooth)"
+                    },
+                    "mobile": {}
+                },
+                "SocialLinkTwo": {
+                    "__html": "span",
+                    "base": {
+                        "color": "rgba(255,255,255,0.7)",
+                        "cursor": "pointer",
+                        "transition": "color var(--transition-smooth)"
+                    },
+                    "mobile": {}
+                }
+            },
+            "mainContent": {
+                "FooterWrapper": {
+                    "FooterContainer": {
+                        "FooterLogo": {
+                            "content": "🌹 La Rose"
+                        },
+                        "FooterCopy": {
+                            "content": "© 2026 La Rose. Все права защищены."
+                        },
+                        "FooterSocial": {
+                            "SocialLinkOne": {
+                                "content": "Instagram"
+                            },
+                            "SocialLinkTwo": {
+                                "content": "Telegram"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
