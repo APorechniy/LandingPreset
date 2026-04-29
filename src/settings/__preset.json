@@ -1,156 +1,264 @@
 {
+    "meta": {
+        "title": "TeaFlow | Премиальный чай со всего мира",
+        "description": "Откройте вкус настоящего чая. Ручной сбор, доставка по России.",
+        "robots": {
+            "index": true,
+            "follow": true,
+            "googleBot": {
+                "index": true,
+                "follow": true,
+                "max-video-preview": -1,
+                "max-image-preview": "large",
+                "max-snippet": -1
+            }
+        },
+        "openGraph": {
+            "title": "TeaFlow | Премиальный чай со всего мира",
+            "description": "Откройте вкус настоящего чая. Ручной сбор, доставка по России.",
+            "url": "https://teaflow.ru",
+            "siteName": "TeaFlow",
+            "images": [
+                {
+                    "url": "https://teaflow.ru/images/og-image.jpg",
+                    "width": 1200,
+                    "height": 630,
+                    "alt": "TeaFlow - премиальный чай"
+                }
+            ],
+            "locale": "ru_RU",
+            "type": "website"
+        },
+        "icons": {
+            "icon": [
+                {
+                    "url": "https://teaflow.ru/favicon.ico",
+                    "sizes": "any"
+                },
+                {
+                    "url": "https://teaflow.ru/favicon-16x16.png",
+                    "sizes": "16x16",
+                    "type": "image/png"
+                },
+                {
+                    "url": "https://teaflow.ru/favicon-32x32.png",
+                    "sizes": "32x32",
+                    "type": "image/png"
+                }
+            ],
+            "apple": "https://teaflow.ru/apple-touch-icon.png"
+        },
+        "appleWebApp": {
+            "title": "TeaFlow",
+            "statusBarStyle": "black-translucent"
+        }
+    },
     "globalCssTokens": {
         "base": {
-            "--transition-smooth": "0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
-            "--transition-slow": "0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
-            "--border-radius-sm": "0.5rem",
-            "--border-radius-md": "1rem",
-            "--border-radius-lg": "2rem",
-            "--border-radius-xl": "4rem",
-            "--font-main": "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
-            "--font-display": "'Cinzel', 'Times New Roman', serif",
-            "--font-decor": "'Playfair Display', serif",
-            "--container-width": "1280px",
-            "--container-mobile-width": "768px"
+            "--transition-smooth": "0.4s ease",
+            "--border-radius-sm": "8px",
+            "--border-radius-md": "16px",
+            "--border-radius-lg": "24px",
+            "--font-main": "'Inter', sans-serif",
+            "--font-display": "'Cormorant Garamond', serif",
+            "--container-width": "1200px"
         },
         "light": {
-            "--primary": "#0a1c3a",
-            "--primary-light": "#1a3a6e",
+            "--primary": "#1a3320",
             "--accent": "#c9a13b",
-            "--accent-glow": "#e8c56d",
-            "--accent-secondary": "#2a9d8f",
-            "--background": "#f9f7f2",
-            "--background-alt": "#f0ece1",
+            "--accent-soft": "#fdf8ee",
+            "--background": "#fdfbf9",
             "--surface": "#ffffff",
-            "--surface-elevated": "#fcfaf5",
-            "--text-main": "#1a1a1a",
-            "--text-muted": "#4a4a4a",
-            "--text-dim": "#7a7a7a",
-            "--border-light": "#e0d8cc",
-            "--border-gold": "#c9a13b",
-            "--shadow-sm": "0 4px 12px rgba(10, 28, 58, 0.04)",
-            "--shadow-md": "0 12px 28px rgba(10, 28, 58, 0.08)",
-            "--shadow-lg": "0 24px 48px rgba(10, 28, 58, 0.12)",
-            "--shadow-gold": "0 16px 40px rgba(201, 161, 59, 0.15)",
-            "--gradient-hero": "linear-gradient(135deg, #0a1c3a 0%, #1a3a6e 50%, #0a1c3a 100%)",
-            "--gradient-card": "linear-gradient(145deg, #ffffff 0%, #fcfaf5 100%)",
-            "--pattern-islamic": "repeating-linear-gradient(45deg, rgba(201, 161, 59, 0.05) 0px, rgba(201, 161, 59, 0.05) 2px, transparent 2px, transparent 8px)"
+            "--text-main": "#1a3320",
+            "--text-muted": "#5a6a55",
+            "--border-light": "#e0e8dd",
+            "--shadow-md": "0 8px 30px rgba(26, 51, 32, 0.08)",
+            "--gradient-hero": "linear-gradient(135deg, #fdfbf9 0%, #f5ede1 100%)"
         },
         "dark": {
-            "--primary": "#050d1a",
-            "--primary-light": "#0a1c3a",
+            "--primary": "#e8f0e0",
             "--accent": "#d4af37",
-            "--accent-glow": "#f3d779",
-            "--accent-secondary": "#2a9d8f",
-            "--background": "#0d1117",
-            "--background-alt": "#131a24",
-            "--surface": "#182230",
-            "--surface-elevated": "#1e2a3a",
-            "--text-main": "#f0f0f0",
-            "--text-muted": "#b0b0b0",
-            "--text-dim": "#707070",
-            "--border-light": "#2a3a4a",
-            "--border-gold": "#d4af37",
-            "--shadow-sm": "0 4px 12px rgba(0, 0, 0, 0.3)",
-            "--shadow-md": "0 12px 28px rgba(0, 0, 0, 0.4)",
-            "--shadow-lg": "0 24px 48px rgba(0, 0, 0, 0.5)",
-            "--shadow-gold": "0 16px 40px rgba(212, 175, 55, 0.2)",
-            "--gradient-hero": "linear-gradient(135deg, #050d1a 0%, #0a1c3a 50%, #050d1a 100%)",
-            "--gradient-card": "linear-gradient(145deg, #182230 0%, #1e2a3a 100%)",
-            "--pattern-islamic": "repeating-linear-gradient(45deg, rgba(212, 175, 55, 0.08) 0px, rgba(212, 175, 55, 0.08) 2px, transparent 2px, transparent 8px)"
+            "--accent-soft": "#2d2410",
+            "--background": "#0f1a10",
+            "--surface": "#1a2a1a",
+            "--text-main": "#e8f0e0",
+            "--text-muted": "#a0b0a0",
+            "--border-light": "#2a3a2a",
+            "--shadow-md": "0 8px 30px rgba(0, 0, 0, 0.4)",
+            "--gradient-hero": "linear-gradient(135deg, #0f1a10 0%, #1a2a1a 100%)"
         }
     },
     "sections": {
         "Hero": {
             "styles": {
-                "HeroSection": {
-                    "__html": "section",
+                "heroSection": {
                     "base": {
                         "width": "100%",
                         "min-height": "100vh",
                         "display": "flex",
                         "align-items": "center",
-                        "padding": "8rem 2rem 4rem",
+                        "justify-content": "center",
+                        "padding": "4rem 2rem",
                         "background": "var(--gradient-hero)",
-                        "position": "relative",
-                        "overflow": "hidden",
-                        "font-family": "var(--font-main)"
+                        "font-family": "var(--font-main)",
+                        "text-align": "center",
+                        "animation": "fadeIn 0.6s ease-out"
                     },
                     "mobile": {
-                        "flex-direction": "column",
-                        "padding": "4rem 1rem 2rem"
+                        "padding": "3rem 1rem"
                     }
                 },
-                "HeroContainer": {
-                    "__html": "div",
+                "heroContainer": {
                     "base": {
-                        "max-width": "var(--container-width)",
+                        "max-width": "600px",
                         "margin": "0 auto",
-                        "width": "100%",
-                        "position": "relative",
-                        "z-index": "2"
-                    },
-                    "mobile": {
-                        "max-width": "var(--container-mobile-width)"
-                    }
-                },
-                "HeroContent": {
-                    "__html": "div",
-                    "base": {
                         "display": "flex",
                         "flex-direction": "column",
                         "align-items": "center",
-                        "text-align": "center"
+                        "gap": "1.5rem"
+                    },
+                    "mobile": {
+                        "gap": "1rem"
                     }
                 },
-                "HeroTitle": {
-                    "__html": "h1",
+                "heroIcon": {
+                    "base": {
+                        "font-size": "4rem",
+                        "animation": "float 3s ease-in-out infinite"
+                    },
+                    "mobile": {
+                        "font-size": "3rem"
+                    }
+                },
+                "heroTitle": {
                     "base": {
                         "font-family": "var(--font-display)",
-                        "font-size": "clamp(3.5rem, 8vw, 6rem)",
+                        "font-size": "clamp(2.5rem, 6vw, 4rem)",
                         "font-weight": "700",
-                        "line-height": "1.1",
                         "color": "var(--text-main)",
-                        "margin": "0 0 1.5rem",
-                        "text-transform": "uppercase",
-                        "letter-spacing": "4px",
-                        "max-width": "1100px"
+                        "line-height": "1.15",
+                        "margin": "0"
+                    },
+                    "mobile": {
+                        "font-size": "clamp(2rem, 10vw, 3rem)"
+                    }
+                },
+                "heroTitleAccent": {
+                    "base": {
+                        "display": "block",
+                        "color": "var(--accent)"
                     },
                     "mobile": {}
                 },
-                "HeroTitleGold": {
-                    "__html": "span",
+                "heroDescription": {
                     "base": {
-                        "color": "var(--accent)",
-                        "text-shadow": "0 0 20px rgba(201, 161, 59, 0.5)"
+                        "font-size": "1.15rem",
+                        "line-height": "1.7",
+                        "color": "var(--text-muted)",
+                        "max-width": "450px"
+                    },
+                    "mobile": {
+                        "font-size": "1rem"
                     }
                 },
-                "HeroImage": {
-                    "__html": "img",
+                "heroButton": {
                     "base": {
-                        "width": "300px",
-                        "height": "300px"
+                        "display": "inline-block",
+                        "background": "var(--accent)",
+                        "color": "white",
+                        "padding": "1rem 2.5rem",
+                        "border-radius": "var(--border-radius-sm)",
+                        "font-weight": "600",
+                        "font-size": "1rem",
+                        "cursor": "pointer",
+                        "border": "none",
+                        "text-decoration": "none",
+                        "transition": "opacity var(--transition-smooth)",
+                        "animation": "fadeInUp 0.6s ease-out 0.3s both"
+                    },
+                    "mobile": {
+                        "padding": "0.85rem 2rem"
+                    }
+                },
+                "__keyframes": {
+                    "fadeIn": {
+                        "from": {
+                            "opacity": 0
+                        },
+                        "to": {
+                            "opacity": 1
+                        }
+                    },
+                    "fadeInUp": {
+                        "from": {
+                            "opacity": 0,
+                            "transform": "translateY(20px)"
+                        },
+                        "to": {
+                            "opacity": 1,
+                            "transform": "translateY(0)"
+                        }
+                    },
+                    "float": {
+                        "0%": {
+                            "transform": "translateY(0)"
+                        },
+                        "50%": {
+                            "transform": "translateY(-10px)"
+                        },
+                        "100%": {
+                            "transform": "translateY(0)"
+                        }
                     }
                 }
             },
             "mainContent": {
-                "HeroSection": {
-                    "HeroContainer": {
-                        "HeroContent": {
-                            "HeroTitle": {
-                                "content": "Samarkand ",
-                                "HeroTitleGold": {
-                                    "content": "Chess Masters"
-                                }
+                "tag": "section",
+                "className": "heroSection",
+                "props": {
+                    "id": "hero"
+                },
+                "childrens": [
+                    {
+                        "tag": "div",
+                        "className": "heroContainer",
+                        "childrens": [
+                            {
+                                "tag": "div",
+                                "className": "heroIcon",
+                                "content": "🍃"
                             },
-                            "HeroImage": {
+                            {
+                                "tag": "h1",
+                                "className": "heroTitle",
+                                "childrens": [
+                                    {
+                                        "tag": "span",
+                                        "content": "Чай, который "
+                                    },
+                                    {
+                                        "tag": "span",
+                                        "className": "heroTitleAccent",
+                                        "content": "вдохновляет"
+                                    }
+                                ]
+                            },
+                            {
+                                "tag": "p",
+                                "className": "heroDescription",
+                                "content": "Премиальные сорта со всего мира. Ручной сбор, бережная ферментация, доставка до двери."
+                            },
+                            {
+                                "tag": "a",
+                                "className": "heroButton",
                                 "props": {
-                                    "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsEdt589p3IHkQjX4BFqxNxpfESnbeOJ6M2A&s"
-                                }
+                                    "href": "#catalog"
+                                },
+                                "content": "Смотреть каталог"
                             }
-                        }
+                        ]
                     }
-                }
+                ]
             }
         }
     }
