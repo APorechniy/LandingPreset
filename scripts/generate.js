@@ -20,6 +20,15 @@ function generateGlobalCSS(globalCssTokens) {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        html {
+            background: var(--primary);
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-main);
         }\n\n
     `;
 
@@ -53,68 +62,80 @@ function generateGlobalCSS(globalCssTokens) {
     return css;
 }
 
-// Функция для генерации styled.tsx
-function generateStyledFile(styles) {
+// Функция для генерации index.module.css
+function generateStylesFile(styles) {
     const keyframesKey = "__keyframes"
-    let content = 'import styled, { keyframes } from "styled-components";\n\n';
+    let mainStyles = ''
+    let mediaBlock = '@media(max-width: 768px) {\n'
 
-    // Если есть - добавляем keyframes для файла
     if (styles[keyframesKey] && Object.entries(styles[keyframesKey]).length !== 0) {
         // Сначала пробегаемся по всем названиям keyframe-ов и инициализируем их
         for (const [keyframeName, keyframeStyles] of Object.entries(styles[keyframesKey])) {
-            content += `const ${keyframeName} = keyframes\`\n`
+            mainStyles += `@keyframes ${keyframeName} {\n`
 
             // Далее, пробегаемся по всем точкам keyframes (это могут быть проценты или from/to)
             for (const [checkpoint, checkpointStyles] of Object.entries(keyframeStyles)) {
-                content += `  ${checkpoint} {\n`;
+                mainStyles += `  ${checkpoint} {\n`;
 
                 // И, наконец, парсим его стили и добавляем для каждой точки
                 for (const [prop, value] of Object.entries(checkpointStyles)) {
                     const cssProp = camelToKebab(prop);
-                    content += `    ${cssProp}: ${value};\n`;
+                    mainStyles += `    ${cssProp}: ${value};\n`;
                 }
-                content += `  }\n`;
+                mainStyles += `  }\n`;
             }
-            content += `}\`\n\n`
+            mainStyles += `}\n\n`
         }
     }
 
-    for (const [componentName, styleProps] of Object.entries(styles)) {
-        // Исключаем служебное поле из обработки
-        if (componentName === keyframesKey) {
+    for (const [className, styleProps] of Object.entries(styles)) {
+        if (className === keyframesKey) {
             continue;
         }
-
-        const tagName = styleProps.__html || 'div';
-
-        content += `export const ${componentName} = styled.${tagName}\`\n`;
+        mainStyles += `.${className} {\n`;
 
         // Добавляем все базовые CSS свойства 
         if (styleProps.base) {
             for (const [prop, value] of Object.entries(styleProps.base)) {
                 const cssProp = camelToKebab(prop);
-                content += `    ${cssProp}: ${value};\n`;
+                mainStyles += `  ${cssProp}: ${value};\n`;
             }
         } else {
             console.error('❌ Error generating files:', error.message);
             process.exit(1);
         }
 
+        mainStyles += `}\n\n`
+
         // Если есть - добавляем media-блок
         if (styleProps.mobile && Object.entries(styleProps.mobile).length !== 0) {
-            content += `    @media(max-width: 768px) {\n`
+            mediaBlock += `  .${className} {\n`
             for (const [prop, value] of Object.entries(styleProps.mobile)) {
                 const cssProp = camelToKebab(prop);
-                content += `      ${cssProp}: ${value};\n`;
+                mediaBlock += `    ${cssProp}: ${value};\n`;
             }
-            content += `    }\n`
+            mediaBlock += `  }\n`
         }
-
-
-        content += '\`;\n\n';
     }
 
-    return content;
+    mediaBlock += `}\n`
+
+    // Склеиваем базовые стили и медиа-запросы
+    const resultStyles = mainStyles + mediaBlock
+
+    return resultStyles;
+}
+
+function generateMeta(meta) {
+    if (Object.keys(meta).length === 0) {
+        return {}
+    } else {
+        const indent = '    '
+        let metaContent = `export const metadata: Metadata = `
+        metaContent += JSON.stringify(meta, null, 2);
+
+        return metaContent
+    }
 }
 
 function parseInlineHtmlProps(htmlProps) {
@@ -132,42 +153,34 @@ function parseInlineHtmlProps(htmlProps) {
 }
 
 // Функция для парсинга дерева контента и генерации JSX
-function parseContentTree(tree, level = 0, imports = new Set()) {
+function parseContentTree(tree, level = 0) {
     let jsx = '';
     const indent = '    '.repeat(level);
 
-    for (const [key, value] of Object.entries(tree)) {
-        if (key !== "props") {
-            imports.add(key);
-        }
+    const inlineHtmlProps = parseInlineHtmlProps(tree?.props);
+    const tagName = tree?.tag;
+    const classNameProp = tree.className ? `className={styles.${tree.className}}` : '';
 
-        if (typeof value === 'object' && value !== null && key !== "props") {
-            const valueProps = parseInlineHtmlProps(value.props)
-            if (value.content !== undefined) {
-                // Это листовой узел с контентом
-                jsx += `${indent}<${key} ${valueProps}>${value.content}</${key}>\n`;
-            } else {
-                // Это узел с дочерними элементами
-                jsx += `${indent}<${key} ${valueProps}>\n`;
-                jsx += parseContentTree(value, level + 1, imports);
-                jsx += `${indent}</${key}>\n`;
-            }
+    jsx += `${indent}<${tagName} ${classNameProp} ${inlineHtmlProps}>\n`;
+
+    if ("childrens" in tree) {
+        jsx += tree.childrens.reduce((acc, curr) => acc += parseContentTree(curr, level + 1), '');
+    } else {
+        if ("content" in tree) {
+            jsx += `${indent}    ${tree.content ?? ''}\n`
         }
     }
+
+    jsx += `${indent}</${tagName}>\n`;
 
     return jsx;
 }
 
 // Функция для генерации index.tsx
 function generateIndexFile(sectionName, mainContent, styles) {
-    const imports = new Set();
-    const jsxContent = parseContentTree(mainContent, 2, imports);
+    const jsxContent = parseContentTree(mainContent, 2);
 
-    // Сортируем импорты для консистентности
-    const sortedImports = Array.from(imports).sort();
-
-    let content = 'import React from "react";\n';
-    content += `import { ${sortedImports.join(', ')} } from "./styled";\n\n`;
+    let content = `import styles from "./index.module.css";\n\n`;
     content += `export const ${sectionName} = () => {\n`;
     content += `    return (\n`;
     content += jsxContent;
@@ -175,6 +188,28 @@ function generateIndexFile(sectionName, mainContent, styles) {
     content += `};\n`;
 
     return content;
+}
+
+function generateLayoutFile(meta) {
+    let content = `import type { Metadata, Viewport } from 'next';\n`
+    content += `import './global.css'\n\n`;
+    content += generateMeta(meta)
+    content += `\n\n`
+    content += `export default function RootLayout({\n`
+    content += `    children,\n`
+    content += `}: {\n`
+    content += `    children: React.ReactNode\n`
+    content += `}) {\n`
+    content += `    return (\n`
+    content += `        <html lang="ru" data-theme="dark">\n`
+    content += `            <body>\n`
+    content += `                {children}\n`
+    content += `            </body>\n`
+    content += `        </html>\n`
+    content += `    )\n`
+    content += `}\n`
+
+    return content
 }
 
 function buildSectionsImports(sections) {
@@ -197,9 +232,7 @@ function generatePageFile(importsContent, renderContent) {
     // Сортируем импорты для консистентности
     const sortedImports = Array.from(imports).sort();
 
-    let content = `import type { Metadata } from 'next'\n`;
-    content += importsContent;
-    content += `import './global.css'\n\n`;
+    let content = `${importsContent}\n`;
     content += `export default function Page() {\n`;
     content += `    return (\n`;
     content += `      <main>\n`;
@@ -227,16 +260,25 @@ function generateFromConfig(configPath) {
             console.log(`✅ Generated: ${globalCssPath}`);
         }
 
-        // 2. Генерация секций
+        // 2. Генерация Layout и метатегов
+        if (config.meta) {
+            const layoutPath = './src/app/layout.tsx';
+            ensureDirectoryExists(path.dirname(layoutPath));
+            const layout = generateLayoutFile(config.meta);
+            fs.writeFileSync(layoutPath, layout);
+            console.log(`✅ Generated: ${layoutPath}`);
+        }
+
+        // 3. Генерация секций
         if (config.sections) {
             for (const [sectionName, sectionData] of Object.entries(config.sections)) {
                 const sectionDir = `./src/sections/${sectionName}`;
                 ensureDirectoryExists(sectionDir);
 
-                // Генерация styled.tsx
+                // Генерация index.module.css
                 if (sectionData.styles) {
-                    const styledPath = path.join(sectionDir, 'styled.tsx');
-                    const styledContent = generateStyledFile(sectionData.styles);
+                    const styledPath = path.join(sectionDir, 'index.module.css');
+                    const styledContent = generateStylesFile(sectionData.styles);
                     fs.writeFileSync(styledPath, styledContent);
                     console.log(`✅ Generated: ${styledPath}`);
                 }
