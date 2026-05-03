@@ -1,14 +1,12 @@
 module.exports = {
     apps: [{
         name: 'tyumen',
-        script: 'npm',
-        args: 'start',
-        cwd: '/var/www/html/TyumenPhoto',
+        script: 'server.js',
+        cwd: './',
 
         env: {
             NODE_ENV: 'production',
-            PORT: 3001,
-            host: "0.0.0.0"
+            PORT: 3001
         },
 
         max_memory_restart: '1G',
