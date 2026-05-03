@@ -1,0 +1,19 @@
+.footerWrapper {
+  background: var(--primary);
+  padding: 2rem;
+  text-align: center;
+  font-family: var(--font-main);
+  color: var(--text-inverse);
+}
+
+.footerText {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  margin: 0;
+}
+
+@media(max-width: 768px) {
+  .footerWrapper {
+    padding: 1.5rem 1rem;
+  }
+}

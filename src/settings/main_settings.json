@@ -1,7 +1,7 @@
 {
     "meta": {
-        "title": "TeaFlow | Премиальный чай со всего мира",
-        "description": "Откройте вкус настоящего чая. Ручной сбор, доставка по России.",
+        "title": "Алиса Морозова | Фотограф в Тюмени",
+        "description": "Профессиональная фотосъемка в Тюмени. Экспресс, семейные, индивидуальные и Love Story съемки. Более 300 успешных проектов.",
         "robots": {
             "index": true,
             "follow": true,
@@ -14,16 +14,16 @@
             }
         },
         "openGraph": {
-            "title": "TeaFlow | Премиальный чай со всего мира",
-            "description": "Откройте вкус настоящего чая. Ручной сбор, доставка по России.",
-            "url": "https://teaflow.ru",
-            "siteName": "TeaFlow",
+            "title": "Алиса Морозова | Фотограф в Тюмени",
+            "description": "Профессиональная фотосъемка в Тюмени. Экспресс, семейные, индивидуальные и Love Story съемки.",
+            "url": "https://alisamorozova.ru",
+            "siteName": "Алиса Морозова",
             "images": [
                 {
-                    "url": "https://teaflow.ru/images/og-image.jpg",
+                    "url": "https://alisamorozova.ru/images/og-image.jpg",
                     "width": 1200,
                     "height": 630,
-                    "alt": "TeaFlow - премиальный чай"
+                    "alt": "Алиса Морозова - фотограф"
                 }
             ],
             "locale": "ru_RU",
@@ -32,63 +32,277 @@
         "icons": {
             "icon": [
                 {
-                    "url": "https://teaflow.ru/favicon.ico",
+                    "url": "https://alisamorozova.ru/favicon.ico",
                     "sizes": "any"
                 },
                 {
-                    "url": "https://teaflow.ru/favicon-16x16.png",
+                    "url": "https://alisamorozova.ru/favicon-16x16.png",
                     "sizes": "16x16",
                     "type": "image/png"
                 },
                 {
-                    "url": "https://teaflow.ru/favicon-32x32.png",
+                    "url": "https://alisamorozova.ru/favicon-32x32.png",
                     "sizes": "32x32",
                     "type": "image/png"
                 }
             ],
-            "apple": "https://teaflow.ru/apple-touch-icon.png"
+            "apple": "https://alisamorozova.ru/apple-touch-icon.png"
         },
         "appleWebApp": {
-            "title": "TeaFlow",
+            "title": "Алиса Морозова",
             "statusBarStyle": "black-translucent"
         }
     },
     "globalCssTokens": {
         "base": {
-            "--transition-smooth": "0.4s ease",
-            "--border-radius-sm": "8px",
-            "--border-radius-md": "16px",
+            "--transition-fast": "0.2s ease",
+            "--transition-smooth": "0.35s cubic-bezier(0.4, 0, 0.2, 1)",
+            "--border-radius-sm": "6px",
+            "--border-radius-md": "12px",
             "--border-radius-lg": "24px",
-            "--font-main": "'Inter', sans-serif",
-            "--font-display": "'Cormorant Garamond', serif",
+            "--border-radius-full": "9999px",
+            "--font-main": "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
+            "--font-display": "'Playfair Display', 'Times New Roman', serif",
+            "--font-mono": "'Space Mono', monospace",
             "--container-width": "1200px"
         },
         "light": {
-            "--primary": "#1a3320",
-            "--accent": "#c9a13b",
-            "--accent-soft": "#fdf8ee",
-            "--background": "#fdfbf9",
+            "--primary": "#1a1a2e",
+            "--primary-light": "#2d2d4e",
+            "--accent": "#e84a7a",
+            "--accent-glow": "#ff6b9d",
+            "--accent-soft": "#fff0f5",
+            "--secondary": "#5bc0be",
+            "--secondary-glow": "#7eddd6",
+            "--secondary-soft": "#e8faf8",
+            "--lavender": "#8b7fc7",
+            "--lavender-soft": "#f5f3ff",
+            "--background": "#ffffff",
+            "--background-alt": "#f8f7ff",
             "--surface": "#ffffff",
-            "--text-main": "#1a3320",
-            "--text-muted": "#5a6a55",
-            "--border-light": "#e0e8dd",
-            "--shadow-md": "0 8px 30px rgba(26, 51, 32, 0.08)",
-            "--gradient-hero": "linear-gradient(135deg, #fdfbf9 0%, #f5ede1 100%)"
+            "--surface-elevated": "#fafaff",
+            "--text-main": "#1a1a2e",
+            "--text-muted": "#4a4a6a",
+            "--text-light": "#8a8aaa",
+            "--text-inverse": "#ffffff",
+            "--border-light": "#e8e8f0",
+            "--border-accent": "#e84a7a",
+            "--shadow-sm": "0 2px 8px rgba(26, 26, 46, 0.04)",
+            "--shadow-md": "0 8px 24px rgba(26, 26, 46, 0.08)",
+            "--shadow-lg": "0 16px 48px rgba(26, 26, 46, 0.12)",
+            "--shadow-pink": "0 8px 30px rgba(232, 74, 122, 0.15)",
+            "--gradient-hero": "linear-gradient(135deg, #f8f7ff 0%, #fff0f5 50%, #e8faf8 100%)",
+            "--gradient-card": "linear-gradient(145deg, #ffffff 0%, #fafaff 100%)",
+            "--gradient-accent": "linear-gradient(135deg, #e84a7a 0%, #ff6b9d 100%)"
         },
         "dark": {
-            "--primary": "#e8f0e0",
-            "--accent": "#d4af37",
-            "--accent-soft": "#2d2410",
-            "--background": "#0f1a10",
-            "--surface": "#1a2a1a",
-            "--text-main": "#e8f0e0",
-            "--text-muted": "#a0b0a0",
-            "--border-light": "#2a3a2a",
-            "--shadow-md": "0 8px 30px rgba(0, 0, 0, 0.4)",
-            "--gradient-hero": "linear-gradient(135deg, #0f1a10 0%, #1a2a1a 100%)"
+            "--primary": "#f0f0ff",
+            "--primary-light": "#c8c8e8",
+            "--accent": "#ff6b9d",
+            "--accent-glow": "#ffb3cc",
+            "--accent-soft": "#3d1a2e",
+            "--secondary": "#7eddd6",
+            "--secondary-glow": "#a8f0ec",
+            "--secondary-soft": "#1a3333",
+            "--lavender": "#a78bfa",
+            "--lavender-soft": "#2d1a4a",
+            "--background": "#0f0f1a",
+            "--background-alt": "#151528",
+            "--surface": "#1a1a2e",
+            "--surface-elevated": "#222240",
+            "--text-main": "#f0f0ff",
+            "--text-muted": "#b8b8d0",
+            "--text-light": "#7878a0",
+            "--text-inverse": "#1a1a2e",
+            "--border-light": "#2a2a45",
+            "--border-accent": "#ff6b9d",
+            "--shadow-sm": "0 2px 8px rgba(0, 0, 0, 0.3)",
+            "--shadow-md": "0 8px 24px rgba(0, 0, 0, 0.4)",
+            "--shadow-lg": "0 16px 48px rgba(0, 0, 0, 0.5)",
+            "--shadow-pink": "0 8px 30px rgba(255, 107, 157, 0.25)",
+            "--gradient-hero": "linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 50%, #151528 100%)",
+            "--gradient-card": "linear-gradient(145deg, #1a1a2e 0%, #222240 100%)",
+            "--gradient-accent": "linear-gradient(135deg, #e84a7a 0%, #ff6b9d 100%)"
         }
     },
     "sections": {
+        "Header": {
+            "styles": {
+                "headerWrapper": {
+                    "base": {
+                        "position": "fixed",
+                        "top": "0",
+                        "left": "0",
+                        "right": "0",
+                        "z-index": "100",
+                        "background": "var(--surface)",
+                        "border-bottom": "1px solid var(--border-light)",
+                        "font-family": "var(--font-main)",
+                        "box-shadow": "var(--shadow-sm)",
+                        "animation": "slideDown 0.5s ease-out"
+                    },
+                    "mobile": {}
+                },
+                "headerContainer": {
+                    "base": {
+                        "max-width": "var(--container-width)",
+                        "margin": "0 auto",
+                        "padding": "1rem 2rem",
+                        "display": "flex",
+                        "align-items": "center",
+                        "justify-content": "space-between"
+                    },
+                    "mobile": {
+                        "padding": "0.75rem 1rem"
+                    }
+                },
+                "logoText": {
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "1.5rem",
+                        "font-weight": "700",
+                        "color": "var(--text-main)",
+                        "letter-spacing": "-0.02em"
+                    },
+                    "mobile": {
+                        "font-size": "1.25rem"
+                    }
+                },
+                "logoDot": {
+                    "base": {
+                        "color": "var(--accent)"
+                    },
+                    "mobile": {}
+                },
+                "navContainer": {
+                    "base": {
+                        "display": "flex",
+                        "align-items": "center",
+                        "gap": "2.5rem"
+                    },
+                    "mobile": {
+                        "display": "none"
+                    }
+                },
+                "navLink": {
+                    "base": {
+                        "color": "var(--text-muted)",
+                        "font-weight": "500",
+                        "font-size": "0.9rem",
+                        "cursor": "pointer",
+                        "text-decoration": "none",
+                        "transition": "color var(--transition-fast)",
+                        "padding": "0.5rem 0",
+                        "border-bottom": "2px solid transparent"
+                    },
+                    "mobile": {}
+                },
+                "headerButton": {
+                    "base": {
+                        "background": "var(--gradient-accent)",
+                        "color": "white",
+                        "border": "none",
+                        "border-radius": "var(--border-radius-full)",
+                        "padding": "0.65rem 1.5rem",
+                        "font-weight": "600",
+                        "font-size": "0.85rem",
+                        "cursor": "pointer",
+                        "text-decoration": "none",
+                        "transition": "opacity var(--transition-fast)",
+                        "box-shadow": "var(--shadow-pink)",
+                        "font-family": "var(--font-main)"
+                    },
+                    "mobile": {
+                        "display": "none"
+                    }
+                },
+                "__keyframes": {
+                    "slideDown": {
+                        "from": {
+                            "opacity": 0,
+                            "transform": "translateY(-100%)"
+                        },
+                        "to": {
+                            "opacity": 1,
+                            "transform": "translateY(0)"
+                        }
+                    }
+                }
+            },
+            "mainContent": {
+                "tag": "header",
+                "className": "headerWrapper",
+                "childrens": [
+                    {
+                        "tag": "div",
+                        "className": "headerContainer",
+                        "childrens": [
+                            {
+                                "tag": "span",
+                                "className": "logoText",
+                                "childrens": [
+                                    {
+                                        "tag": "span",
+                                        "content": "Алиса"
+                                    },
+                                    {
+                                        "tag": "span",
+                                        "className": "logoDot",
+                                        "content": "."
+                                    }
+                                ]
+                            },
+                            {
+                                "tag": "nav",
+                                "className": "navContainer",
+                                "childrens": [
+                                    {
+                                        "tag": "a",
+                                        "className": "navLink",
+                                        "props": {
+                                            "href": "#services"
+                                        },
+                                        "content": "Услуги"
+                                    },
+                                    {
+                                        "tag": "a",
+                                        "className": "navLink",
+                                        "props": {
+                                            "href": "#portfolio"
+                                        },
+                                        "content": "Портфолио"
+                                    },
+                                    {
+                                        "tag": "a",
+                                        "className": "navLink",
+                                        "props": {
+                                            "href": "#reviews"
+                                        },
+                                        "content": "Отзывы"
+                                    },
+                                    {
+                                        "tag": "a",
+                                        "className": "navLink",
+                                        "props": {
+                                            "href": "#contact"
+                                        },
+                                        "content": "Контакты"
+                                    }
+                                ]
+                            },
+                            {
+                                "tag": "a",
+                                "className": "headerButton",
+                                "props": {
+                                    "href": "#contact"
+                                },
+                                "content": "Записаться"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
         "Hero": {
             "styles": {
                 "heroSection": {
@@ -97,56 +311,80 @@
                         "min-height": "100vh",
                         "display": "flex",
                         "align-items": "center",
-                        "justify-content": "center",
-                        "padding": "4rem 2rem",
+                        "padding": "6rem 2rem 4rem",
                         "background": "var(--gradient-hero)",
                         "font-family": "var(--font-main)",
-                        "text-align": "center",
-                        "animation": "fadeIn 0.6s ease-out"
+                        "position": "relative",
+                        "overflow": "hidden"
                     },
                     "mobile": {
-                        "padding": "3rem 1rem"
+                        "min-height": "auto",
+                        "padding": "5rem 1rem 3rem"
                     }
                 },
                 "heroContainer": {
                     "base": {
-                        "max-width": "600px",
+                        "max-width": "var(--container-width)",
                         "margin": "0 auto",
-                        "display": "flex",
-                        "flex-direction": "column",
-                        "align-items": "center",
-                        "gap": "1.5rem"
+                        "width": "100%",
+                        "position": "relative",
+                        "z-index": "2",
+                        "animation": "fadeInUp 0.8s ease-out"
+                    },
+                    "mobile": {}
+                },
+                "heroGrid": {
+                    "base": {
+                        "display": "grid",
+                        "grid-template-columns": "1fr 1fr",
+                        "gap": "4rem",
+                        "align-items": "center"
                     },
                     "mobile": {
-                        "gap": "1rem"
+                        "grid-template-columns": "1fr",
+                        "gap": "2.5rem"
                     }
                 },
-                "heroIcon": {
+                "heroContent": {
                     "base": {
-                        "font-size": "4rem",
-                        "animation": "float 3s ease-in-out infinite"
+                        "display": "flex",
+                        "flex-direction": "column",
+                        "gap": "1.25rem"
                     },
                     "mobile": {
-                        "font-size": "3rem"
+                        "text-align": "center"
+                    }
+                },
+                "heroEyebrow": {
+                    "base": {
+                        "font-family": "var(--font-mono)",
+                        "font-size": "0.8rem",
+                        "color": "var(--accent)",
+                        "text-transform": "uppercase",
+                        "letter-spacing": "3px",
+                        "font-weight": "600"
+                    },
+                    "mobile": {
+                        "font-size": "0.75rem"
                     }
                 },
                 "heroTitle": {
                     "base": {
                         "font-family": "var(--font-display)",
-                        "font-size": "clamp(2.5rem, 6vw, 4rem)",
+                        "font-size": "clamp(2.8rem, 5vw, 4rem)",
                         "font-weight": "700",
-                        "color": "var(--text-main)",
                         "line-height": "1.15",
+                        "color": "var(--text-main)",
                         "margin": "0"
                     },
                     "mobile": {
-                        "font-size": "clamp(2rem, 10vw, 3rem)"
+                        "font-size": "clamp(2rem, 8vw, 2.8rem)"
                     }
                 },
                 "heroTitleAccent": {
                     "base": {
-                        "display": "block",
-                        "color": "var(--accent)"
+                        "color": "var(--accent)",
+                        "display": "block"
                     },
                     "mobile": {}
                 },
@@ -158,41 +396,128 @@
                         "max-width": "450px"
                     },
                     "mobile": {
-                        "font-size": "1rem"
+                        "font-size": "1rem",
+                        "max-width": "100%"
                     }
                 },
-                "heroButton": {
+                "heroCta": {
                     "base": {
-                        "display": "inline-block",
-                        "background": "var(--accent)",
-                        "color": "white",
-                        "padding": "1rem 2.5rem",
-                        "border-radius": "var(--border-radius-sm)",
-                        "font-weight": "600",
-                        "font-size": "1rem",
-                        "cursor": "pointer",
-                        "border": "none",
-                        "text-decoration": "none",
-                        "transition": "opacity var(--transition-smooth)",
-                        "animation": "fadeInUp 0.6s ease-out 0.3s both"
+                        "display": "flex",
+                        "gap": "1rem",
+                        "margin-top": "0.5rem"
                     },
                     "mobile": {
-                        "padding": "0.85rem 2rem"
+                        "flex-direction": "column",
+                        "align-items": "center"
                     }
                 },
-                "__keyframes": {
-                    "fadeIn": {
-                        "from": {
-                            "opacity": 0
-                        },
-                        "to": {
-                            "opacity": 1
-                        }
+                "primaryButton": {
+                    "base": {
+                        "background": "var(--gradient-accent)",
+                        "color": "white",
+                        "border": "none",
+                        "border-radius": "var(--border-radius-full)",
+                        "padding": "1rem 2.5rem",
+                        "font-weight": "600",
+                        "font-size": "0.95rem",
+                        "cursor": "pointer",
+                        "text-decoration": "none",
+                        "transition": "opacity var(--transition-fast)",
+                        "box-shadow": "var(--shadow-pink)",
+                        "font-family": "var(--font-main)"
                     },
+                    "mobile": {
+                        "width": "100%",
+                        "max-width": "300px",
+                        "text-align": "center"
+                    }
+                },
+                "secondaryButton": {
+                    "base": {
+                        "background": "transparent",
+                        "color": "var(--text-main)",
+                        "border": "1px solid var(--border-light)",
+                        "border-radius": "var(--border-radius-full)",
+                        "padding": "1rem 2.5rem",
+                        "font-weight": "600",
+                        "font-size": "0.95rem",
+                        "cursor": "pointer",
+                        "text-decoration": "none",
+                        "transition": "border-color var(--transition-fast)",
+                        "font-family": "var(--font-main)"
+                    },
+                    "mobile": {
+                        "width": "100%",
+                        "max-width": "300px",
+                        "text-align": "center"
+                    }
+                },
+                "heroStats": {
+                    "base": {
+                        "display": "flex",
+                        "gap": "2.5rem",
+                        "margin-top": "1.5rem"
+                    },
+                    "mobile": {
+                        "justify-content": "center",
+                        "gap": "2rem"
+                    }
+                },
+                "statItem": {
+                    "base": {
+                        "display": "flex",
+                        "flex-direction": "column"
+                    },
+                    "mobile": {}
+                },
+                "statValue": {
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "2rem",
+                        "font-weight": "700",
+                        "color": "var(--accent)"
+                    },
+                    "mobile": {
+                        "font-size": "1.5rem"
+                    }
+                },
+                "statLabel": {
+                    "base": {
+                        "font-size": "0.8rem",
+                        "color": "var(--text-light)",
+                        "text-transform": "uppercase",
+                        "letter-spacing": "1px"
+                    },
+                    "mobile": {}
+                },
+                "heroImage": {
+                    "base": {
+                        "width": "100%",
+                        "aspect-ratio": "3/4",
+                        "border-radius": "var(--border-radius-lg)",
+                        "overflow": "hidden",
+                        "box-shadow": "var(--shadow-lg)",
+                        "border": "2px solid var(--border-light)",
+                        "animation": "float 5s ease-in-out infinite"
+                    },
+                    "mobile": {
+                        "max-width": "350px",
+                        "margin": "0 auto"
+                    }
+                },
+                "heroImg": {
+                    "base": {
+                        "width": "100%",
+                        "height": "100%",
+                        "object-fit": "cover"
+                    },
+                    "mobile": {}
+                },
+                "__keyframes": {
                     "fadeInUp": {
                         "from": {
                             "opacity": 0,
-                            "transform": "translateY(20px)"
+                            "transform": "translateY(30px)"
                         },
                         "to": {
                             "opacity": 1,
@@ -225,38 +550,1345 @@
                         "childrens": [
                             {
                                 "tag": "div",
-                                "className": "heroIcon",
-                                "content": "🍃"
-                            },
-                            {
-                                "tag": "h1",
-                                "className": "heroTitle",
+                                "className": "heroGrid",
                                 "childrens": [
                                     {
-                                        "tag": "span",
-                                        "content": "Чай, который "
+                                        "tag": "div",
+                                        "className": "heroContent",
+                                        "childrens": [
+                                            {
+                                                "tag": "p",
+                                                "className": "heroEyebrow",
+                                                "content": "Фотограф в Тюмени"
+                                            },
+                                            {
+                                                "tag": "h1",
+                                                "className": "heroTitle",
+                                                "childrens": [
+                                                    {
+                                                        "tag": "span",
+                                                        "content": "Алиса "
+                                                    },
+                                                    {
+                                                        "tag": "span",
+                                                        "className": "heroTitleAccent",
+                                                        "content": "Морозова"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "tag": "p",
+                                                "className": "heroDescription",
+                                                "content": "Создаю искренние кадры, в которых отражается ваша личность. Снимаю истории, эмоции и мгновения, которые хочется пересматривать."
+                                            },
+                                            {
+                                                "tag": "div",
+                                                "className": "heroCta",
+                                                "childrens": [
+                                                    {
+                                                        "tag": "a",
+                                                        "className": "primaryButton",
+                                                        "props": {
+                                                            "href": "#contact"
+                                                        },
+                                                        "content": "Записаться на съёмку"
+                                                    },
+                                                    {
+                                                        "tag": "a",
+                                                        "className": "secondaryButton",
+                                                        "props": {
+                                                            "href": "#portfolio"
+                                                        },
+                                                        "content": "Смотреть портфолио"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "tag": "div",
+                                                "className": "heroStats",
+                                                "childrens": [
+                                                    {
+                                                        "tag": "div",
+                                                        "className": "statItem",
+                                                        "childrens": [
+                                                            {
+                                                                "tag": "span",
+                                                                "className": "statValue",
+                                                                "content": "7 лет"
+                                                            },
+                                                            {
+                                                                "tag": "span",
+                                                                "className": "statLabel",
+                                                                "content": "Опыта"
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "tag": "div",
+                                                        "className": "statItem",
+                                                        "childrens": [
+                                                            {
+                                                                "tag": "span",
+                                                                "className": "statValue",
+                                                                "content": "300+"
+                                                            },
+                                                            {
+                                                                "tag": "span",
+                                                                "className": "statLabel",
+                                                                "content": "Съёмок"
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "tag": "div",
+                                                        "className": "statItem",
+                                                        "childrens": [
+                                                            {
+                                                                "tag": "span",
+                                                                "className": "statValue",
+                                                                "content": "4.9"
+                                                            },
+                                                            {
+                                                                "tag": "span",
+                                                                "className": "statLabel",
+                                                                "content": "Рейтинг"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     },
                                     {
-                                        "tag": "span",
-                                        "className": "heroTitleAccent",
-                                        "content": "вдохновляет"
+                                        "tag": "div",
+                                        "className": "heroImage",
+                                        "childrens": [
+                                            {
+                                                "tag": "img",
+                                                "className": "heroImg",
+                                                "props": {
+                                                    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wide_Field_Imager_view_of_a_Milky_Way_look-alike_NGC_6744.jpg/1280px-Wide_Field_Imager_view_of_a_Milky_Way_look-alike_NGC_6744.jpg",
+                                                    "alt": "Алиса Морозова — фотограф"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "Services": {
+            "styles": {
+                "servicesSection": {
+                    "base": {
+                        "padding": "5rem 2rem",
+                        "background": "var(--background)",
+                        "font-family": "var(--font-main)"
+                    },
+                    "mobile": {
+                        "padding": "3rem 1rem"
+                    }
+                },
+                "servicesContainer": {
+                    "base": {
+                        "max-width": "var(--container-width)",
+                        "margin": "0 auto"
+                    },
+                    "mobile": {}
+                },
+                "sectionHeader": {
+                    "base": {
+                        "text-align": "center",
+                        "margin-bottom": "4rem"
+                    },
+                    "mobile": {
+                        "margin-bottom": "2.5rem"
+                    }
+                },
+                "sectionEyebrow": {
+                    "base": {
+                        "font-family": "var(--font-mono)",
+                        "font-size": "0.8rem",
+                        "color": "var(--accent)",
+                        "text-transform": "uppercase",
+                        "letter-spacing": "3px",
+                        "font-weight": "600",
+                        "margin-bottom": "0.5rem"
+                    },
+                    "mobile": {}
+                },
+                "sectionTitle": {
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "clamp(2rem, 3vw, 2.5rem)",
+                        "font-weight": "700",
+                        "color": "var(--text-main)"
+                    },
+                    "mobile": {
+                        "font-size": "1.8rem"
+                    }
+                },
+                "servicesGrid": {
+                    "base": {
+                        "display": "grid",
+                        "grid-template-columns": "repeat(2, 1fr)",
+                        "gap": "1.5rem"
+                    },
+                    "mobile": {
+                        "grid-template-columns": "1fr",
+                        "gap": "1rem"
+                    }
+                },
+                "serviceCard": {
+                    "base": {
+                        "background": "var(--surface-elevated)",
+                        "border": "1px solid var(--border-light)",
+                        "border-radius": "var(--border-radius-md)",
+                        "padding": "2.5rem",
+                        "display": "grid",
+                        "grid-template-columns": "auto 1fr",
+                        "gap": "2rem",
+                        "align-items": "start",
+                        "transition": "transform var(--transition-smooth), box-shadow var(--transition-smooth)",
+                        "box-shadow": "var(--shadow-sm)",
+                        "animation": "cardReveal 0.5s ease-out both"
+                    },
+                    "mobile": {
+                        "padding": "1.5rem",
+                        "grid-template-columns": "1fr",
+                        "gap": "1rem",
+                        "text-align": "center"
+                    }
+                },
+                "serviceIcon": {
+                    "base": {
+                        "font-size": "2.5rem",
+                        "line-height": "1"
+                    },
+                    "mobile": {
+                        "font-size": "2rem"
+                    }
+                },
+                "serviceInfo": {
+                    "base": {},
+                    "mobile": {}
+                },
+                "serviceName": {
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "1.4rem",
+                        "font-weight": "600",
+                        "color": "var(--text-main)",
+                        "margin-bottom": "0.5rem"
+                    },
+                    "mobile": {
+                        "font-size": "1.2rem"
+                    }
+                },
+                "serviceDesc": {
+                    "base": {
+                        "font-size": "0.95rem",
+                        "color": "var(--text-muted)",
+                        "line-height": "1.6",
+                        "margin-bottom": "0.75rem"
+                    },
+                    "mobile": {
+                        "font-size": "0.9rem"
+                    }
+                },
+                "serviceMeta": {
+                    "base": {
+                        "display": "flex",
+                        "gap": "1.5rem"
+                    },
+                    "mobile": {
+                        "justify-content": "center"
+                    }
+                },
+                "serviceDuration": {
+                    "base": {
+                        "font-size": "0.8rem",
+                        "color": "var(--text-light)",
+                        "display": "flex",
+                        "align-items": "center",
+                        "gap": "0.25rem"
+                    },
+                    "mobile": {}
+                },
+                "servicePrice": {
+                    "base": {
+                        "font-size": "1.1rem",
+                        "font-weight": "700",
+                        "color": "var(--accent)"
+                    },
+                    "mobile": {}
+                },
+                "__keyframes": {
+                    "cardReveal": {
+                        "from": {
+                            "opacity": 0,
+                            "transform": "translateY(20px)"
+                        },
+                        "to": {
+                            "opacity": 1,
+                            "transform": "translateY(0)"
+                        }
+                    }
+                }
+            },
+            "mainContent": {
+                "tag": "section",
+                "className": "servicesSection",
+                "props": {
+                    "id": "services"
+                },
+                "childrens": [
+                    {
+                        "tag": "div",
+                        "className": "servicesContainer",
+                        "childrens": [
+                            {
+                                "tag": "div",
+                                "className": "sectionHeader",
+                                "childrens": [
+                                    {
+                                        "tag": "p",
+                                        "className": "sectionEyebrow",
+                                        "content": "Услуги и цены"
+                                    },
+                                    {
+                                        "tag": "h2",
+                                        "className": "sectionTitle",
+                                        "content": "Что я предлагаю"
                                     }
                                 ]
                             },
                             {
-                                "tag": "p",
-                                "className": "heroDescription",
-                                "content": "Премиальные сорта со всего мира. Ручной сбор, бережная ферментация, доставка до двери."
-                            },
-                            {
-                                "tag": "a",
-                                "className": "heroButton",
-                                "props": {
-                                    "href": "#catalog"
-                                },
-                                "content": "Смотреть каталог"
+                                "tag": "div",
+                                "className": "servicesGrid",
+                                "childrens": [
+                                    {
+                                        "tag": "div",
+                                        "className": "serviceCard",
+                                        "childrens": [
+                                            {
+                                                "tag": "span",
+                                                "className": "serviceIcon",
+                                                "content": "⚡"
+                                            },
+                                            {
+                                                "tag": "div",
+                                                "className": "serviceInfo",
+                                                "childrens": [
+                                                    {
+                                                        "tag": "h3",
+                                                        "className": "serviceName",
+                                                        "content": "Экспресс-съёмка"
+                                                    },
+                                                    {
+                                                        "tag": "p",
+                                                        "className": "serviceDesc",
+                                                        "content": "Быстрая съёмка для соцсетей, портфолио или срочных задач. 30 минут, одна локация, готовые фото через 24 часа."
+                                                    },
+                                                    {
+                                                        "tag": "div",
+                                                        "className": "serviceMeta",
+                                                        "childrens": [
+                                                            {
+                                                                "tag": "span",
+                                                                "className": "serviceDuration",
+                                                                "content": "⏱ 30 мин"
+                                                            },
+                                                            {
+                                                                "tag": "span",
+                                                                "className": "servicePrice",
+                                                                "content": "от 3 000 ₽"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "tag": "div",
+                                        "className": "serviceCard",
+                                        "childrens": [
+                                            {
+                                                "tag": "span",
+                                                "className": "serviceIcon",
+                                                "content": "👨‍👩‍👧‍👦"
+                                            },
+                                            {
+                                                "tag": "div",
+                                                "className": "serviceInfo",
+                                                "childrens": [
+                                                    {
+                                                        "tag": "h3",
+                                                        "className": "serviceName",
+                                                        "content": "Семейная съёмка"
+                                                    },
+                                                    {
+                                                        "tag": "p",
+                                                        "className": "serviceDesc",
+                                                        "content": "Тёплые кадры с самыми близкими. В студии или на природе. Помогаю раскрепоститься перед камерой и взрослым, и детям."
+                                                    },
+                                                    {
+                                                        "tag": "div",
+                                                        "className": "serviceMeta",
+                                                        "childrens": [
+                                                            {
+                                                                "tag": "span",
+                                                                "className": "serviceDuration",
+                                                                "content": "⏱ 1-2 часа"
+                                                            },
+                                                            {
+                                                                "tag": "span",
+                                                                "className": "servicePrice",
+                                                                "content": "от 5 000 ₽"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "tag": "div",
+                                        "className": "serviceCard",
+                                        "childrens": [
+                                            {
+                                                "tag": "span",
+                                                "className": "serviceIcon",
+                                                "content": "🌸"
+                                            },
+                                            {
+                                                "tag": "div",
+                                                "className": "serviceInfo",
+                                                "childrens": [
+                                                    {
+                                                        "tag": "h3",
+                                                        "className": "serviceName",
+                                                        "content": "Индивидуальная съёмка"
+                                                    },
+                                                    {
+                                                        "tag": "p",
+                                                        "className": "serviceDesc",
+                                                        "content": "Ваш личный фотопроект. Образ, локация, настроение — разрабатываем вместе. Идеально для портфолио, блога или подарка себе."
+                                                    },
+                                                    {
+                                                        "tag": "div",
+                                                        "className": "serviceMeta",
+                                                        "childrens": [
+                                                            {
+                                                                "tag": "span",
+                                                                "className": "serviceDuration",
+                                                                "content": "⏱ 1-3 часа"
+                                                            },
+                                                            {
+                                                                "tag": "span",
+                                                                "className": "servicePrice",
+                                                                "content": "от 4 000 ₽"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "tag": "div",
+                                        "className": "serviceCard",
+                                        "childrens": [
+                                            {
+                                                "tag": "span",
+                                                "className": "serviceIcon",
+                                                "content": "💕"
+                                            },
+                                            {
+                                                "tag": "div",
+                                                "className": "serviceInfo",
+                                                "childrens": [
+                                                    {
+                                                        "tag": "h3",
+                                                        "className": "serviceName",
+                                                        "content": "Love Story"
+                                                    },
+                                                    {
+                                                        "tag": "p",
+                                                        "className": "serviceDesc",
+                                                        "content": "История вашей любви в кадрах. Свидание, прогулка или романтический вечер — снимаю так, что вы забудете о камере."
+                                                    },
+                                                    {
+                                                        "tag": "div",
+                                                        "className": "serviceMeta",
+                                                        "childrens": [
+                                                            {
+                                                                "tag": "span",
+                                                                "className": "serviceDuration",
+                                                                "content": "⏱ 2-3 часа"
+                                                            },
+                                                            {
+                                                                "tag": "span",
+                                                                "className": "servicePrice",
+                                                                "content": "от 6 000 ₽"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
                             }
                         ]
+                    }
+                ]
+            }
+        },
+        "Portfolio": {
+            "styles": {
+                "portfolioSection": {
+                    "base": {
+                        "padding": "5rem 2rem",
+                        "background": "var(--background-alt)",
+                        "font-family": "var(--font-main)"
+                    },
+                    "mobile": {
+                        "padding": "3rem 1rem"
+                    }
+                },
+                "portfolioContainer": {
+                    "base": {
+                        "max-width": "var(--container-width)",
+                        "margin": "0 auto"
+                    },
+                    "mobile": {}
+                },
+                "sectionHeader": {
+                    "base": {
+                        "text-align": "center",
+                        "margin-bottom": "3rem"
+                    },
+                    "mobile": {}
+                },
+                "sectionEyebrow": {
+                    "base": {
+                        "font-family": "var(--font-mono)",
+                        "font-size": "0.8rem",
+                        "color": "var(--lavender)",
+                        "text-transform": "uppercase",
+                        "letter-spacing": "3px",
+                        "font-weight": "600",
+                        "margin-bottom": "0.5rem"
+                    },
+                    "mobile": {}
+                },
+                "sectionTitle": {
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "clamp(2rem, 3vw, 2.5rem)",
+                        "font-weight": "700",
+                        "color": "var(--text-main)"
+                    },
+                    "mobile": {
+                        "font-size": "1.8rem"
+                    }
+                },
+                "portfolioGrid": {
+                    "base": {
+                        "display": "grid",
+                        "grid-template-columns": "repeat(3, 1fr)",
+                        "gap": "1rem"
+                    },
+                    "mobile": {
+                        "grid-template-columns": "1fr 1fr",
+                        "gap": "0.75rem"
+                    }
+                },
+                "portfolioItem": {
+                    "base": {
+                        "aspect-ratio": "1",
+                        "border-radius": "var(--border-radius-sm)",
+                        "overflow": "hidden",
+                        "border": "1px solid var(--border-light)",
+                        "transition": "transform var(--transition-smooth)",
+                        "animation": "fadeIn 0.5s ease-out both"
+                    },
+                    "mobile": {}
+                },
+                "portfolioImg": {
+                    "base": {
+                        "width": "100%",
+                        "height": "100%",
+                        "object-fit": "cover"
+                    },
+                    "mobile": {}
+                },
+                "__keyframes": {
+                    "fadeIn": {
+                        "from": {
+                            "opacity": 0
+                        },
+                        "to": {
+                            "opacity": 1
+                        }
+                    }
+                }
+            },
+            "mainContent": {
+                "tag": "section",
+                "className": "portfolioSection",
+                "props": {
+                    "id": "portfolio"
+                },
+                "childrens": [
+                    {
+                        "tag": "div",
+                        "className": "portfolioContainer",
+                        "childrens": [
+                            {
+                                "tag": "div",
+                                "className": "sectionHeader",
+                                "childrens": [
+                                    {
+                                        "tag": "p",
+                                        "className": "sectionEyebrow",
+                                        "content": "Мои работы"
+                                    },
+                                    {
+                                        "tag": "h2",
+                                        "className": "sectionTitle",
+                                        "content": "Портфолио"
+                                    }
+                                ]
+                            },
+                            {
+                                "tag": "div",
+                                "className": "portfolioGrid",
+                                "childrens": [
+                                    {
+                                        "tag": "div",
+                                        "className": "portfolioItem",
+                                        "childrens": [
+                                            {
+                                                "tag": "img",
+                                                "className": "portfolioImg",
+                                                "props": {
+                                                    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wide_Field_Imager_view_of_a_Milky_Way_look-alike_NGC_6744.jpg/1280px-Wide_Field_Imager_view_of_a_Milky_Way_look-alike_NGC_6744.jpg",
+                                                    "alt": "Фото 1"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "tag": "div",
+                                        "className": "portfolioItem",
+                                        "childrens": [
+                                            {
+                                                "tag": "img",
+                                                "className": "portfolioImg",
+                                                "props": {
+                                                    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wide_Field_Imager_view_of_a_Milky_Way_look-alike_NGC_6744.jpg/1280px-Wide_Field_Imager_view_of_a_Milky_Way_look-alike_NGC_6744.jpg",
+                                                    "alt": "Фото 2"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "tag": "div",
+                                        "className": "portfolioItem",
+                                        "childrens": [
+                                            {
+                                                "tag": "img",
+                                                "className": "portfolioImg",
+                                                "props": {
+                                                    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wide_Field_Imager_view_of_a_Milky_Way_look-alike_NGC_6744.jpg/1280px-Wide_Field_Imager_view_of_a_Milky_Way_look-alike_NGC_6744.jpg",
+                                                    "alt": "Фото 3"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "tag": "div",
+                                        "className": "portfolioItem",
+                                        "childrens": [
+                                            {
+                                                "tag": "img",
+                                                "className": "portfolioImg",
+                                                "props": {
+                                                    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wide_Field_Imager_view_of_a_Milky_Way_look-alike_NGC_6744.jpg/1280px-Wide_Field_Imager_view_of_a_Milky_Way_look-alike_NGC_6744.jpg",
+                                                    "alt": "Фото 4"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "tag": "div",
+                                        "className": "portfolioItem",
+                                        "childrens": [
+                                            {
+                                                "tag": "img",
+                                                "className": "portfolioImg",
+                                                "props": {
+                                                    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wide_Field_Imager_view_of_a_Milky_Way_look-alike_NGC_6744.jpg/1280px-Wide_Field_Imager_view_of_a_Milky_Way_look-alike_NGC_6744.jpg",
+                                                    "alt": "Фото 5"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "tag": "div",
+                                        "className": "portfolioItem",
+                                        "childrens": [
+                                            {
+                                                "tag": "img",
+                                                "className": "portfolioImg",
+                                                "props": {
+                                                    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wide_Field_Imager_view_of_a_Milky_Way_look-alike_NGC_6744.jpg/1280px-Wide_Field_Imager_view_of_a_Milky_Way_look-alike_NGC_6744.jpg",
+                                                    "alt": "Фото 6"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "tag": "div",
+                                        "className": "portfolioItem",
+                                        "childrens": [
+                                            {
+                                                "tag": "img",
+                                                "className": "portfolioImg",
+                                                "props": {
+                                                    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wide_Field_Imager_view_of_a_Milky_Way_look-alike_NGC_6744.jpg/1280px-Wide_Field_Imager_view_of_a_Milky_Way_look-alike_NGC_6744.jpg",
+                                                    "alt": "Фото 7"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "tag": "div",
+                                        "className": "portfolioItem",
+                                        "childrens": [
+                                            {
+                                                "tag": "img",
+                                                "className": "portfolioImg",
+                                                "props": {
+                                                    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wide_Field_Imager_view_of_a_Milky_Way_look-alike_NGC_6744.jpg/1280px-Wide_Field_Imager_view_of_a_Milky_Way_look-alike_NGC_6744.jpg",
+                                                    "alt": "Фото 8"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "tag": "div",
+                                        "className": "portfolioItem",
+                                        "childrens": [
+                                            {
+                                                "tag": "img",
+                                                "className": "portfolioImg",
+                                                "props": {
+                                                    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wide_Field_Imager_view_of_a_Milky_Way_look-alike_NGC_6744.jpg/1280px-Wide_Field_Imager_view_of_a_Milky_Way_look-alike_NGC_6744.jpg",
+                                                    "alt": "Фото 9"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "tag": "div",
+                                        "className": "portfolioItem",
+                                        "childrens": [
+                                            {
+                                                "tag": "img",
+                                                "className": "portfolioImg",
+                                                "props": {
+                                                    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wide_Field_Imager_view_of_a_Milky_Way_look-alike_NGC_6744.jpg/1280px-Wide_Field_Imager_view_of_a_Milky_Way_look-alike_NGC_6744.jpg",
+                                                    "alt": "Фото 10"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "tag": "div",
+                                        "className": "portfolioItem",
+                                        "childrens": [
+                                            {
+                                                "tag": "img",
+                                                "className": "portfolioImg",
+                                                "props": {
+                                                    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wide_Field_Imager_view_of_a_Milky_Way_look-alike_NGC_6744.jpg/1280px-Wide_Field_Imager_view_of_a_Milky_Way_look-alike_NGC_6744.jpg",
+                                                    "alt": "Фото 11"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "tag": "div",
+                                        "className": "portfolioItem",
+                                        "childrens": [
+                                            {
+                                                "tag": "img",
+                                                "className": "portfolioImg",
+                                                "props": {
+                                                    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wide_Field_Imager_view_of_a_Milky_Way_look-alike_NGC_6744.jpg/1280px-Wide_Field_Imager_view_of_a_Milky_Way_look-alike_NGC_6744.jpg",
+                                                    "alt": "Фото 12"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "tag": "div",
+                                        "className": "portfolioItem",
+                                        "childrens": [
+                                            {
+                                                "tag": "img",
+                                                "className": "portfolioImg",
+                                                "props": {
+                                                    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wide_Field_Imager_view_of_a_Milky_Way_look-alike_NGC_6744.jpg/1280px-Wide_Field_Imager_view_of_a_Milky_Way_look-alike_NGC_6744.jpg",
+                                                    "alt": "Фото 13"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "tag": "div",
+                                        "className": "portfolioItem",
+                                        "childrens": [
+                                            {
+                                                "tag": "img",
+                                                "className": "portfolioImg",
+                                                "props": {
+                                                    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wide_Field_Imager_view_of_a_Milky_Way_look-alike_NGC_6744.jpg/1280px-Wide_Field_Imager_view_of_a_Milky_Way_look-alike_NGC_6744.jpg",
+                                                    "alt": "Фото 14"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "tag": "div",
+                                        "className": "portfolioItem",
+                                        "childrens": [
+                                            {
+                                                "tag": "img",
+                                                "className": "portfolioImg",
+                                                "props": {
+                                                    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wide_Field_Imager_view_of_a_Milky_Way_look-alike_NGC_6744.jpg/1280px-Wide_Field_Imager_view_of_a_Milky_Way_look-alike_NGC_6744.jpg",
+                                                    "alt": "Фото 15"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "Reviews": {
+            "styles": {
+                "reviewsSection": {
+                    "base": {
+                        "padding": "5rem 2rem",
+                        "background": "var(--background)",
+                        "font-family": "var(--font-main)"
+                    },
+                    "mobile": {
+                        "padding": "3rem 1rem"
+                    }
+                },
+                "reviewsContainer": {
+                    "base": {
+                        "max-width": "var(--container-width)",
+                        "margin": "0 auto"
+                    },
+                    "mobile": {}
+                },
+                "sectionHeader": {
+                    "base": {
+                        "text-align": "center",
+                        "margin-bottom": "3rem"
+                    },
+                    "mobile": {}
+                },
+                "sectionEyebrow": {
+                    "base": {
+                        "font-family": "var(--font-mono)",
+                        "font-size": "0.8rem",
+                        "color": "var(--secondary)",
+                        "text-transform": "uppercase",
+                        "letter-spacing": "3px",
+                        "font-weight": "600",
+                        "margin-bottom": "0.5rem"
+                    },
+                    "mobile": {}
+                },
+                "sectionTitle": {
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "clamp(2rem, 3vw, 2.5rem)",
+                        "font-weight": "700",
+                        "color": "var(--text-main)"
+                    },
+                    "mobile": {
+                        "font-size": "1.8rem"
+                    }
+                },
+                "reviewsGrid": {
+                    "base": {
+                        "display": "grid",
+                        "grid-template-columns": "repeat(3, 1fr)",
+                        "gap": "1.5rem"
+                    },
+                    "mobile": {
+                        "grid-template-columns": "1fr",
+                        "gap": "1rem"
+                    }
+                },
+                "reviewCard": {
+                    "base": {
+                        "background": "var(--surface-elevated)",
+                        "border": "1px solid var(--border-light)",
+                        "border-radius": "var(--border-radius-md)",
+                        "padding": "2rem",
+                        "display": "flex",
+                        "flex-direction": "column",
+                        "gap": "1rem"
+                    },
+                    "mobile": {
+                        "padding": "1.5rem"
+                    }
+                },
+                "reviewStars": {
+                    "base": {
+                        "color": "var(--accent)",
+                        "font-size": "1.2rem"
+                    },
+                    "mobile": {}
+                },
+                "reviewText": {
+                    "base": {
+                        "font-size": "0.95rem",
+                        "color": "var(--text-main)",
+                        "line-height": "1.7",
+                        "flex-grow": "1"
+                    },
+                    "mobile": {}
+                },
+                "reviewAuthor": {
+                    "base": {
+                        "display": "flex",
+                        "align-items": "center",
+                        "gap": "0.75rem",
+                        "border-top": "1px solid var(--border-light)",
+                        "padding-top": "1rem"
+                    },
+                    "mobile": {}
+                },
+                "reviewAvatar": {
+                    "base": {
+                        "width": "40px",
+                        "height": "40px",
+                        "border-radius": "var(--border-radius-full)",
+                        "background": "var(--lavender-soft)",
+                        "display": "flex",
+                        "align-items": "center",
+                        "justify-content": "center",
+                        "color": "var(--lavender)",
+                        "font-weight": "700",
+                        "font-size": "0.9rem"
+                    },
+                    "mobile": {}
+                },
+                "reviewName": {
+                    "base": {
+                        "font-weight": "600",
+                        "color": "var(--text-main)",
+                        "font-size": "0.9rem"
+                    },
+                    "mobile": {}
+                }
+            },
+            "mainContent": {
+                "tag": "section",
+                "className": "reviewsSection",
+                "props": {
+                    "id": "reviews"
+                },
+                "childrens": [
+                    {
+                        "tag": "div",
+                        "className": "reviewsContainer",
+                        "childrens": [
+                            {
+                                "tag": "div",
+                                "className": "sectionHeader",
+                                "childrens": [
+                                    {
+                                        "tag": "p",
+                                        "className": "sectionEyebrow",
+                                        "content": "Тёплые слова"
+                                    },
+                                    {
+                                        "tag": "h2",
+                                        "className": "sectionTitle",
+                                        "content": "Отзывы клиентов"
+                                    }
+                                ]
+                            },
+                            {
+                                "tag": "div",
+                                "className": "reviewsGrid",
+                                "childrens": [
+                                    {
+                                        "tag": "div",
+                                        "className": "reviewCard",
+                                        "childrens": [
+                                            {
+                                                "tag": "p",
+                                                "className": "reviewStars",
+                                                "content": "★★★★★"
+                                            },
+                                            {
+                                                "tag": "p",
+                                                "className": "reviewText",
+                                                "content": "Алиса — потрясающий фотограф! Снимала нашу свадьбу и смогла передать абсолютно все эмоции того дня. Кадры живые, искренние, без постановочной фальши. Пересматриваем до сих пор со слезами счастья!"
+                                            },
+                                            {
+                                                "tag": "div",
+                                                "className": "reviewAuthor",
+                                                "childrens": [
+                                                    {
+                                                        "tag": "div",
+                                                        "className": "reviewAvatar",
+                                                        "content": "Е"
+                                                    },
+                                                    {
+                                                        "tag": "span",
+                                                        "className": "reviewName",
+                                                        "content": "Екатерина и Дмитрий"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "tag": "div",
+                                        "className": "reviewCard",
+                                        "childrens": [
+                                            {
+                                                "tag": "p",
+                                                "className": "reviewStars",
+                                                "content": "★★★★★"
+                                            },
+                                            {
+                                                "tag": "p",
+                                                "className": "reviewText",
+                                                "content": "Заказывали семейную съёмку с двумя детьми (3 и 7 лет). Алиса нашла подход к малышам за пять минут! Фотографии получились тёплыми и естественными. Это именно то, что мы хотели."
+                                            },
+                                            {
+                                                "tag": "div",
+                                                "className": "reviewAuthor",
+                                                "childrens": [
+                                                    {
+                                                        "tag": "div",
+                                                        "className": "reviewAvatar",
+                                                        "content": "А"
+                                                    },
+                                                    {
+                                                        "tag": "span",
+                                                        "className": "reviewName",
+                                                        "content": "Алексей и Мария"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "tag": "div",
+                                        "className": "reviewCard",
+                                        "childrens": [
+                                            {
+                                                "tag": "p",
+                                                "className": "reviewStars",
+                                                "content": "★★★★★"
+                                            },
+                                            {
+                                                "tag": "p",
+                                                "className": "reviewText",
+                                                "content": "Хотела индивидуальную съёмку для обновления портфолио. Алиса помогла с подбором локации, образа и поз. Итог превзошёл ожидания — фото как из глянцевого журнала, а процесс был супер-комфортным."
+                                            },
+                                            {
+                                                "tag": "div",
+                                                "className": "reviewAuthor",
+                                                "childrens": [
+                                                    {
+                                                        "tag": "div",
+                                                        "className": "reviewAvatar",
+                                                        "content": "О"
+                                                    },
+                                                    {
+                                                        "tag": "span",
+                                                        "className": "reviewName",
+                                                        "content": "Ольга В."
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "Contact": {
+            "styles": {
+                "contactSection": {
+                    "base": {
+                        "padding": "5rem 2rem",
+                        "background": "var(--background-alt)",
+                        "font-family": "var(--font-main)"
+                    },
+                    "mobile": {
+                        "padding": "3rem 1rem"
+                    }
+                },
+                "contactContainer": {
+                    "base": {
+                        "max-width": "650px",
+                        "margin": "0 auto",
+                        "text-align": "center"
+                    },
+                    "mobile": {}
+                },
+                "sectionEyebrow": {
+                    "base": {
+                        "font-family": "var(--font-mono)",
+                        "font-size": "0.8rem",
+                        "color": "var(--accent)",
+                        "text-transform": "uppercase",
+                        "letter-spacing": "3px",
+                        "font-weight": "600",
+                        "margin-bottom": "0.5rem"
+                    },
+                    "mobile": {}
+                },
+                "sectionTitle": {
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "clamp(2rem, 3vw, 2.5rem)",
+                        "font-weight": "700",
+                        "color": "var(--text-main)",
+                        "margin-bottom": "2rem"
+                    },
+                    "mobile": {
+                        "font-size": "1.8rem"
+                    }
+                },
+                "contactCard": {
+                    "base": {
+                        "background": "var(--surface)",
+                        "border": "1px solid var(--border-light)",
+                        "border-radius": "var(--border-radius-lg)",
+                        "padding": "3rem",
+                        "display": "flex",
+                        "flex-direction": "column",
+                        "gap": "1.25rem",
+                        "box-shadow": "var(--shadow-md)"
+                    },
+                    "mobile": {
+                        "padding": "2rem 1.5rem"
+                    }
+                },
+                "contactRow": {
+                    "base": {
+                        "display": "flex",
+                        "align-items": "center",
+                        "gap": "1rem",
+                        "justify-content": "center",
+                        "font-size": "1.05rem",
+                        "color": "var(--text-main)"
+                    },
+                    "mobile": {
+                        "font-size": "0.95rem"
+                    }
+                },
+                "contactIcon": {
+                    "base": {
+                        "color": "var(--accent)",
+                        "font-size": "1.4rem",
+                        "width": "2rem",
+                        "text-align": "center"
+                    },
+                    "mobile": {}
+                },
+                "socialRow": {
+                    "base": {
+                        "display": "flex",
+                        "gap": "2rem",
+                        "justify-content": "center",
+                        "margin-top": "0.5rem",
+                        "padding-top": "1rem",
+                        "border-top": "1px solid var(--border-light)"
+                    },
+                    "mobile": {
+                        "gap": "1.5rem"
+                    }
+                },
+                "socialLink": {
+                    "base": {
+                        "font-size": "1.6rem",
+                        "cursor": "pointer",
+                        "text-decoration": "none",
+                        "transition": "transform var(--transition-fast)"
+                    },
+                    "mobile": {
+                        "font-size": "1.4rem"
+                    }
+                }
+            },
+            "mainContent": {
+                "tag": "section",
+                "className": "contactSection",
+                "props": {
+                    "id": "contact"
+                },
+                "childrens": [
+                    {
+                        "tag": "div",
+                        "className": "contactContainer",
+                        "childrens": [
+                            {
+                                "tag": "p",
+                                "className": "sectionEyebrow",
+                                "content": "Связь"
+                            },
+                            {
+                                "tag": "h2",
+                                "className": "sectionTitle",
+                                "content": "Контакты"
+                            },
+                            {
+                                "tag": "div",
+                                "className": "contactCard",
+                                "childrens": [
+                                    {
+                                        "tag": "div",
+                                        "className": "contactRow",
+                                        "childrens": [
+                                            {
+                                                "tag": "span",
+                                                "className": "contactIcon",
+                                                "content": "📍"
+                                            },
+                                            {
+                                                "tag": "span",
+                                                "content": "г. Тюмень, выезд по городу и области"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "tag": "div",
+                                        "className": "contactRow",
+                                        "childrens": [
+                                            {
+                                                "tag": "span",
+                                                "className": "contactIcon",
+                                                "content": "📱"
+                                            },
+                                            {
+                                                "tag": "span",
+                                                "content": "+7 (999) 123-45-67"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "tag": "div",
+                                        "className": "contactRow",
+                                        "childrens": [
+                                            {
+                                                "tag": "span",
+                                                "className": "contactIcon",
+                                                "content": "✉️"
+                                            },
+                                            {
+                                                "tag": "span",
+                                                "content": "hello@alisamorozova.ru"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "tag": "div",
+                                        "className": "socialRow",
+                                        "childrens": [
+                                            {
+                                                "tag": "a",
+                                                "className": "socialLink",
+                                                "props": {
+                                                    "href": "https://instagram.com"
+                                                },
+                                                "content": "📸"
+                                            },
+                                            {
+                                                "tag": "a",
+                                                "className": "socialLink",
+                                                "props": {
+                                                    "href": "https://t.me"
+                                                },
+                                                "content": "💬"
+                                            },
+                                            {
+                                                "tag": "a",
+                                                "className": "socialLink",
+                                                "props": {
+                                                    "href": "https://vk.com"
+                                                },
+                                                "content": "📘"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "Footer": {
+            "styles": {
+                "footerWrapper": {
+                    "base": {
+                        "background": "var(--primary)",
+                        "padding": "2rem",
+                        "text-align": "center",
+                        "font-family": "var(--font-main)",
+                        "color": "var(--text-inverse)"
+                    },
+                    "mobile": {
+                        "padding": "1.5rem 1rem"
+                    }
+                },
+                "footerText": {
+                    "base": {
+                        "font-size": "0.85rem",
+                        "opacity": "0.8",
+                        "margin": "0"
+                    },
+                    "mobile": {}
+                }
+            },
+            "mainContent": {
+                "tag": "footer",
+                "className": "footerWrapper",
+                "childrens": [
+                    {
+                        "tag": "p",
+                        "className": "footerText",
+                        "content": "© 2026 Алиса Морозова. Все права защищены."
                     }
                 ]
             }

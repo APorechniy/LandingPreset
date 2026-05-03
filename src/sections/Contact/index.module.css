@@ -1,0 +1,93 @@
+.contactSection {
+  padding: 5rem 2rem;
+  background: var(--background-alt);
+  font-family: var(--font-main);
+}
+
+.contactContainer {
+  max-width: 650px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sectionEyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.sectionTitle {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 2rem;
+}
+
+.contactCard {
+  background: var(--surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius-lg);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  box-shadow: var(--shadow-md);
+}
+
+.contactRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  font-size: 1.05rem;
+  color: var(--text-main);
+}
+
+.contactIcon {
+  color: var(--accent);
+  font-size: 1.4rem;
+  width: 2rem;
+  text-align: center;
+}
+
+.socialRow {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.socialLink {
+  font-size: 1.6rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform var(--transition-fast);
+}
+
+@media(max-width: 768px) {
+  .contactSection {
+    padding: 3rem 1rem;
+  }
+  .sectionTitle {
+    font-size: 1.8rem;
+  }
+  .contactCard {
+    padding: 2rem 1.5rem;
+  }
+  .contactRow {
+    font-size: 0.95rem;
+  }
+  .socialRow {
+    gap: 1.5rem;
+  }
+  .socialLink {
+    font-size: 1.4rem;
+  }
+}
