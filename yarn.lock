@@ -552,6 +552,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/nodemailer@npm:^8":
+  version: 8.0.0
+  resolution: "@types/nodemailer@npm:8.0.0"
+  dependencies:
+    "@types/node": "npm:*"
+  checksum: 10/d1178b557e8c547018e708459af06fdf2e9cfd6d65fed109517cddfe6b5add6201d941882a2e4eeede529de08ae71a68fb2a1d8f1c41cb3761d3a6c2458025fe
+  languageName: node
+  linkType: hard
+
 "@types/react-dom@npm:^19.2.3":
   version: 19.2.3
   resolution: "@types/react-dom@npm:19.2.3"
@@ -1573,6 +1582,7 @@ __metadata:
   dependencies:
     "@next/eslint-plugin-next": "npm:^16.2.3"
     "@types/node": "npm:^25.6.0"
+    "@types/nodemailer": "npm:^8"
     "@types/react": "npm:^19.2.14"
     "@types/react-dom": "npm:^19.2.3"
     "@typescript-eslint/eslint-plugin": "npm:^8.58.2"
@@ -1581,6 +1591,7 @@ __metadata:
     eslint: "npm:^10.2.0"
     eslint-config-prettier: "npm:^10.1.8"
     next: "npm:^16.2.3"
+    nodemailer: "npm:^8.0.7"
     prettier: "npm:^3.8.2"
     react: "npm:^19.2.5"
     react-dom: "npm:^19.2.5"
@@ -1750,6 +1761,13 @@ __metadata:
   bin:
     next: dist/bin/next
   checksum: 10/5164885daacbb36a771380e1b5efba524863e1bdf2b5a6c80413cbf1e3ab4e8ddab5716cd91ff94ca5c5c5deb2a12d1312d6d6ae994e16ebfa985fdda6134bc6
+  languageName: node
+  linkType: hard
+
+"nodemailer@npm:^8.0.7":
+  version: 8.0.7
+  resolution: "nodemailer@npm:8.0.7"
+  checksum: 10/f0afea43af7f7deb55913811362b5d255e9d70c87024eb8b5161acd8a3a3c765454a52eefbfe40a5fe79ff0475b5445acafd20cb187826222b895dee15470c8f
   languageName: node
   linkType: hard
 
