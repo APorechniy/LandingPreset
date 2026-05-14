@@ -1,0 +1,77 @@
+.casesSection {
+  width: 100%;
+  padding: 5rem 2rem;
+  background: var(--surface);
+  font-family: var(--font-main);
+}
+
+.casesContainer {
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+.casesTitle {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 500;
+  color: var(--text-main);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.casesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.caseCard {
+  background: var(--background);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  transition: transform var(--transition-smooth);
+  border: 1px solid var(--border-light);
+}
+
+.caseImageWrapper {
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+}
+
+.caseImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.caseContent {
+  padding: 1.25rem;
+}
+
+.caseTitle {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-main);
+  margin-bottom: 0.25rem;
+}
+
+.caseSubtitle {
+  font-size: 0.75rem;
+  color: var(--accent);
+}
+
+.caseStats {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+}
+
+@media(max-width: 768px) {
+  .casesSection {
+    padding: 3rem 1rem;
+  }
+
+  .casesGrid {
+    grid-template-columns: 1fr;
+  }
+}

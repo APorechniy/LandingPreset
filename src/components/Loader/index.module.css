@@ -1,0 +1,24 @@
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loaderWrapper {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid var(--accent-light);
+  border-top-color: '#333';
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}

@@ -1,9 +1,8 @@
 module.exports = {
     apps: [{
-        name: 'nextjs-app',
-        script: 'npm',
-        args: 'start',
-        cwd: '/var/www/html',
+        name: 'landing',
+        script: 'server.js',
+        cwd: './',
 
         env: {
             NODE_ENV: 'production',
@@ -13,8 +12,8 @@ module.exports = {
 
         max_memory_restart: '1G',
 
-        error_file: '/var/log/nextjs-error.log',
-        out_file: '/var/log/nextjs-out.log',
+        error_file: '/var/log/landing-error.log',
+        out_file: '/var/log/landing-out.log',
         time: true
     }]
 }
