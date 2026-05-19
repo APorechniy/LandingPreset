@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:demo": "yarn build && node scripts/build-demo.js",
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
@@ -30,6 +31,7 @@
     "eslint": "^10.2.0",
     "eslint-config-prettier": "^10.1.8",
     "prettier": "^3.8.2",
+    "tar": "^7.5.15",
     "typescript": "^6.0.2"
   }
 }
