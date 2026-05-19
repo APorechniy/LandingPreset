@@ -1,0 +1,358 @@
+@keyframes floatCard1 {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-12px) rotate(1deg);
+  }
+
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+@keyframes floatCard2 {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-15px) rotate(-1deg);
+  }
+
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+@keyframes floatCard3 {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+@keyframes floatCard4 {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-18px) rotate(-2deg);
+  }
+
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+@keyframes floatCard5 {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+@keyframes rotateGeometry {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes floatGeometry {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.reviewsSection {
+  width: 100%;
+  padding: 6rem 2rem;
+  background: var(--background);
+  font-family: var(--font-main);
+  position: relative;
+  overflow: hidden;
+  min-height: 700px;
+}
+
+.reviewsBgGlow1 {
+  position: absolute;
+  top: 10%;
+  left: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+  opacity: 0.03;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.reviewsBgGlow2 {
+  position: absolute;
+  bottom: 5%;
+  right: -5%;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+  opacity: 0.03;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.reviewsGeometry1 {
+  position: absolute;
+  top: 20%;
+  right: 10%;
+  width: 60px;
+  height: 60px;
+  border: 2px solid var(--accent);
+  opacity: 0.08;
+  transform: rotate(45deg);
+  animation: rotateGeometry 25s linear infinite;
+  z-index: 0;
+}
+
+.reviewsGeometry2 {
+  position: absolute;
+  bottom: 15%;
+  left: 5%;
+  width: 40px;
+  height: 40px;
+  background: var(--accent);
+  opacity: 0.04;
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+  animation: floatGeometry 8s ease-in-out infinite;
+  z-index: 0;
+}
+
+.reviewsContainer {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  min-height: 550px;
+}
+
+.reviewsTitle {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+  font-weight: 500;
+  color: var(--text-main);
+  text-align: center;
+  margin-bottom: 3rem;
+  letter-spacing: -0.01em;
+}
+
+.reviewCard1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 300px;
+  background: var(--surface);
+  padding: 1.5rem;
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-md);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 3;
+  animation: floatCard1 6s ease-in-out infinite;
+}
+
+.reviewCard2 {
+  position: absolute;
+  top: 5%;
+  right: 0;
+  max-width: 320px;
+  background: var(--surface);
+  padding: 1.5rem;
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-md);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 3;
+  animation: floatCard2 7s ease-in-out infinite;
+}
+
+.reviewCard3 {
+  position: absolute;
+  top: 50%;
+  left: 12%;
+  max-width: 280px;
+  background: var(--surface);
+  padding: 1.5rem;
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-md);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 3;
+  animation: floatCard3 8s ease-in-out infinite;
+}
+
+.reviewCard4 {
+  position: absolute;
+  bottom: 5%;
+  right: 8%;
+  max-width: 310px;
+  background: var(--surface);
+  padding: 1.5rem;
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-md);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 3;
+  animation: floatCard4 6.5s ease-in-out infinite;
+}
+
+.reviewCard5 {
+  position: absolute;
+  bottom: 25%;
+  left: 40%;
+  max-width: 290px;
+  background: var(--surface);
+  padding: 1.5rem;
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-md);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 3;
+  animation: floatCard5 7.5s ease-in-out infinite;
+}
+
+.reviewQuote {
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--accent);
+  opacity: 0.3;
+  margin-bottom: 0.5rem;
+  font-family: Georgia, serif;
+}
+
+.reviewText {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-main);
+  margin-bottom: 1.25rem;
+  font-style: normal;
+}
+
+.reviewAuthor {
+  font-weight: 600;
+  color: var(--text-main);
+  font-size: 0.85rem;
+  margin-bottom: 0.2rem;
+}
+
+.reviewCompany {
+  font-size: 0.7rem;
+  color: var(--accent);
+  letter-spacing: 0.3px;
+}
+
+.reviewStars {
+  display: flex;
+  gap: 0.2rem;
+  margin-top: 0.75rem;
+  color: var(--accent);
+  font-size: 0.7rem;
+}
+
+@media(max-width: 768px) {
+  .reviewsSection {
+    padding: 4rem 1rem;
+    min-height: auto;
+  }
+
+  .reviewsBgGlow1 {
+    display: none;
+  }
+
+  .reviewsBgGlow2 {
+    display: none;
+  }
+
+  .reviewsGeometry1 {
+    display: none;
+  }
+
+  .reviewsGeometry2 {
+    display: none;
+  }
+
+  .reviewsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    min-height: auto;
+  }
+
+  .reviewsTitle {
+    margin-bottom: 2rem;
+  }
+
+  .reviewCard1 {
+    position: relative;
+    max-width: 100%;
+    animation: none;
+    top: auto;
+    left: auto;
+  }
+
+  .reviewCard2 {
+    position: relative;
+    max-width: 100%;
+    animation: none;
+    top: auto;
+    right: auto;
+  }
+
+  .reviewCard3 {
+    position: relative;
+    max-width: 100%;
+    animation: none;
+    top: auto;
+    left: auto;
+  }
+
+  .reviewCard4 {
+    position: relative;
+    max-width: 100%;
+    animation: none;
+    bottom: auto;
+    right: auto;
+  }
+
+  .reviewCard5 {
+    position: relative;
+    max-width: 100%;
+    animation: none;
+    bottom: auto;
+    left: auto;
+  }
+}
