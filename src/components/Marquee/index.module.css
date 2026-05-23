@@ -1,0 +1,101 @@
+.marqueeContainer {
+    position: relative;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    /* Полное растягивание за пределы контейнера страницы */
+    margin-right: calc(-50vw + 50%);
+    overflow: hidden;
+    background-color: #05070c;
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    padding: 16px 0;
+    display: flex;
+}
+
+/* Бесшовный трек, двигающий обе ленты */
+.track {
+    display: flex;
+    width: max-content;
+    animation: scroll 25s linear infinite;
+}
+
+.list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-width: 100%;
+}
+
+/* Стили элементов */
+.item {
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #64748b;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+.item:hover {
+    color: #fff;
+}
+
+/* Светящийся разделитель между фразами */
+.separator {
+    font-size: 0.8rem;
+    color: var(--primary);
+    margin: 0 30px;
+    text-shadow: 0 0 8px var(--primary);
+    user-select: none;
+}
+
+/* Мягкое градиентное затухание по левому и правому краям экрана */
+.overlayLeft {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 15%;
+    background: linear-gradient(to right, #090d16 0%, transparent 100%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+.overlayRight {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 15%;
+    background: linear-gradient(to left, #090d16 0%, transparent 100%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Анимация бесконечного смещения ровно на 50% длины трека */
+@keyframes scroll {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(-50%, 0, 0);
+    }
+}
+
+/* Оптимизация производительности на мобильных */
+@media (max-width: 768px) {
+    .marqueeContainer {
+        padding: 12px 0;
+    }
+
+    .item {
+        font-size: 0.8rem;
+        letter-spacing: 1.5px;
+    }
+
+    .separator {
+        margin: 0 20px;
+    }
+}
