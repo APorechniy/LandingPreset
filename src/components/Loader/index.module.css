@@ -1,24 +1,126 @@
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .loaderWrapper {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
 }
 
-.spinner {
-  width: 20px;
-  height: 20px;
-  border: 3px solid var(--accent-light);
-  border-top-color: '#333';
-  border-radius: 50%;
-  animation: spin 0.8s linear infinite;
+/* Размеры */
+.sm {
+    width: 16px;
+    height: 16px;
+}
+
+.md {
+    width: 22px;
+    height: 22px;
+}
+
+.lg {
+    width: 32px;
+    height: 32px;
+}
+
+/* Цветовые темы (Неоновые градиенты) */
+.primary {
+    --color-main: #9333ea;
+    /* Фиолетовый */
+    --color-second: #ec4899;
+    /* Розовый */
+}
+
+.cyan {
+    --color-main: #06b6d4;
+    /* Бирюзовый */
+    --color-second: #3b82f6;
+    /* Синий */
+}
+
+.white {
+    --color-main: rgba(255, 255, 255, 0.9);
+    --color-second: rgba(255, 255, 255, 0.4);
+}
+
+/* Общие стили для вращающихся элементов */
+.ring {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 2px solid transparent;
+}
+
+/* Внешнее кольцо */
+.outerRing {
+    border-top-color: var(--color-main);
+    border-bottom-color: var(--color-second);
+    animation: spinClockwise 1s cubic-bezier(0.5, 0.1, 0.4, 0.9) infinite;
+}
+
+/* Внутреннее кольцо */
+.innerRing {
+    inset: 3px;
+    /* Меньше внешнего */
+    border-left-color: var(--color-second);
+    border-right-color: var(--color-main);
+    opacity: 0.8;
+    animation: spinCounterClockwise 0.8s cubic-bezier(0.5, 0.1, 0.4, 0.9) infinite;
+}
+
+/* Пульсирующая точка в центре */
+.core {
+    width: 4px;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--color-main), 0 0 16px var(--color-second);
+    animation: pulseCore 1.2s ease-in-out infinite;
+}
+
+/* Скейлинг ядра для разных размеров */
+.sm .core {
+    width: 3px;
+    height: 3px;
+}
+
+.lg .core {
+    width: 6px;
+    height: 6px;
+}
+
+/* Анимация: по часовой стрелке */
+@keyframes spinClockwise {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Анимация: против часовой стрелки */
+@keyframes spinCounterClockwise {
+    0% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* Анимация: Пульсация центрального ядра */
+@keyframes pulseCore {
+
+    0%,
+    100% {
+        transform: scale(0.85);
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: scale(1.3);
+        opacity: 1;
+    }
 }

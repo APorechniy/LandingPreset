@@ -8,9 +8,10 @@ export const useForm = () => {
     const [name, setName] = useState<string>("")
     const [phone, setPhone] = useState<string>("")
     const [email, setEmail] = useState<string>("")
+    const [message, setMessage] = useState<string>("")
     const [service, setService] = useState<string>("landing")
 
-    const handleChange = (value: string, type: "name" | "phone" | "email" | "service") => {
+    const handleChange = (value: string, type: "name" | "phone" | "email" | "service" | "message") => {
         if (type === "name") {
             setName(value)
         }
@@ -25,6 +26,10 @@ export const useForm = () => {
 
         if (type === "service") {
             setService(value)
+        }
+
+        if (type === "message") {
+            setMessage(value)
         }
     }
 
@@ -64,13 +69,23 @@ export const useForm = () => {
         }
     }
 
+    const resetForm = () => {
+        setName("")
+        setEmail("")
+        setPhone("")
+        setService("")
+        setSendingStatus("IDLE")
+    }
+
     return {
         name,
         phone,
         email,
         service,
+        message,
         sendingStatus,
         handleChange,
-        handleSubmit
+        handleSubmit,
+        resetForm
     }
 }

@@ -113,7 +113,7 @@ const appName = process.argv[2]
 const directoryName = process.argv[3]
 const port = process.argv[4]
 
-const distPath = "./dist2"
+const distPath = "./dist"
 const standaloneFilesPath = ".next/standalone/"
 const staticFilesPath = ".next/static"
 const distStaticPath = `${distPath}/${staticFilesPath}`

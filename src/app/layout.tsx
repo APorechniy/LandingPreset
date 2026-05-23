@@ -1,77 +1,28 @@
-import type { Metadata, Viewport } from 'next';
-import './global.css'
+import './global.css';
+import { ReactNode } from 'react';
 
-export const metadata: Metadata = {
-  "title": "Beautifier | Digital-студия",
-  "description": "Разработка сайтов, SEO, маркетинг. Системный подход к росту бизнеса.",
-  "robots": {
-    "index": true,
-    "follow": true,
-    "googleBot": {
-      "index": true,
-      "follow": true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1
-    }
-  },
-  "openGraph": {
-    "title": "Beautifier — Digital-студия",
-    "description": "Сайты, которые решают задачи бизнеса. Разработка, SEO, маркетинг.",
-    "url": "https://beautifier.ru",
-    "siteName": "Beautifier",
-    "images": [
-      {
-        "url": "https://beautifier.ru/og-image.jpg",
-        "width": 1200,
-        "height": 630,
-        "alt": "Beautifier"
-      }
-    ],
-    "locale": "ru_RU",
-    "type": "website"
-  },
-  "icons": {
-    "icon": [
-      {
-        "url": "https://beautifier.ru/favicon.ico",
-        "sizes": "any"
-      },
-      {
-        "url": "https://beautifier.ru/favicon-16x16.png",
-        "sizes": "16x16",
-        "type": "image/png"
-      },
-      {
-        "url": "https://beautifier.ru/favicon-32x32.png",
-        "sizes": "32x32",
-        "type": "image/png"
-      }
-    ],
-    "apple": "https://beautifier.ru/apple-touch-icon.png"
-  },
-  "appleWebApp": {
-    "title": "Beautifier",
-    "statusBarStyle": "black-translucent"
-  }
-}
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="ru" data-theme="dark">
+    <html lang="ru">
       <head>
-        <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="shortcut icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <meta name="apple-mobile-web-app-title" content="Beautifier" />
-        <link rel="manifest" href="/site.webmanifest" />
+        <script
+          type="text/javascript"
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l] = w[l] || [];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TGJ6FVGN');`}}
+        >
+        </script>
+
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TGJ6FVGN"
+          height="0" width="0" style={{ display: "none", visibility: "hidden" }}></iframe></noscript>
+
+
       </head>
       <body>
+        <div className="bg-glow" />
         {children}
         <script
           type="text/javascript"
@@ -90,5 +41,5 @@ export default function RootLayout({
         <noscript><div><img src="https://mc.yandex.ru/watch/109216018" style={{ position: "absolute", left: "-9999px" }} alt="" /></div></noscript>
       </body>
     </html>
-  )
+  );
 }
