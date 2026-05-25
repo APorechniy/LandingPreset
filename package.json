@@ -13,7 +13,8 @@
     "format:check": "prettier --check .",
     "aigenerate:start": "node scripts/generate.js",
     "aigenerate:clear": "node scripts/clear.js",
-    "aigenerate:reload": "yarn aigenerate:clear && yarn aigenerate:start"
+    "aigenerate:reload": "yarn aigenerate:clear && yarn aigenerate:start",
+    "create:component": "node scripts/create-component.js"
   },
   "dependencies": {
     "next": "^16.2.3",

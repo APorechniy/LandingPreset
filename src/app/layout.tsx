@@ -1,45 +1,19 @@
-import './global.css';
-import { ReactNode } from 'react';
+import "./global.css";
+import type { Metadata } from "next";
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export const metadata: Metadata = {
+  title: "I-Tort | Авторские торты на заказ",
+  description: "Эксклюзивные торты из натуральных ингредиентов с индивидуальным дизайном",
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="ru">
-      <head>
-        <script
-          type="text/javascript"
-          dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l] = w[l] || [];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-TGJ6FVGN');`}}
-        >
-        </script>
-
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TGJ6FVGN"
-          height="0" width="0" style={{ display: "none", visibility: "hidden" }}></iframe></noscript>
-
-
-      </head>
-      <body>
-        <div className="bg-glow" />
-        {children}
-        <script
-          type="text/javascript"
-          dangerouslySetInnerHTML={{
-            __html: `(function(m,e,t,r,i,k,a){
-                    m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-                    m[i].l=1*new Date();
-                    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-                    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-                })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=109216018', 'ym');
-
-                ym(109216018, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
-              `,
-          }}
-        ></script>
-        <noscript><div><img src="https://mc.yandex.ru/watch/109216018" style={{ position: "absolute", left: "-9999px" }} alt="" /></div></noscript>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
